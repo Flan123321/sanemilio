@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios | San Emilio Propiedades</title>
+    <meta name="description"
+        content="Servicios inmobiliarios profesionales en Temuco: compra-venta, arriendo, tasaciones, asesoría legal y gestión integral.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': { 900: '#0B1A2E', 800: '#152844', 700: '#1F3654', 600: '#2C4A6E' },
+                        'orange': { primary: '#FF6B35', light: '#FF8A5C', dark: '#E65528' },
+                        'cream': { DEFAULT: '#F8F5F0', light: '#FFFBF5' }
+                    },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Montserrat', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #FF6B35, #E65528);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans bg-cream">
+    <!-- Header -->
+    <header class="header fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <nav class="navbar flex items-center justify-between py-4">
+                <a href="index.html" class="logo block">
+                    <img src="12.png" alt="San Emilio Propiedades"
+                        class="h-12 md:h-14 w-auto transition-all duration-300 hover:scale-105">
+                </a>
+                <ul class="nav-menu hidden lg:flex items-center gap-8">
+                    <li><a href="index.html"
+                            class="text-navy-900 hover:text-orange-primary transition font-medium">Inicio</a></li>
+                    <li><a href="propiedades.html"
+                            class="text-navy-900 hover:text-orange-primary transition font-medium">Propiedades</a></li>
+                    <li><a href="nosotros.html"
+                            class="text-navy-900 hover:text-orange-primary transition font-medium">Nosotros</a></li>
+                    <li><a href="servicios.html" class="text-orange-primary font-semibold">Servicios</a></li>
+                    <li><a href="blog.html"
+                            class="text-navy-900 hover:text-orange-primary transition font-medium">Blog</a></li>
+                </ul>
+                <div class="header-actions flex items-center gap-4">
+                    <a href="contacto.html"
+                        class="hidden md:inline-flex items-center gap-2 bg-orange-primary hover:bg-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105">Contactar
+                        Asesor</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-24 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="5317367-cheques-2672195_1280.jpg" alt="" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-br from-navy-900/95 via-navy-800/90 to-navy-700/85"></div>
+        </div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-primary/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-primary/5 rounded-full blur-[80px]"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="flex items-center justify-center gap-2 text-sm text-white/60 mb-8">
+                    <a href="index.html" class="hover:text-white transition">Inicio</a>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="text-orange-primary font-medium">Servicios</span>
+                </div>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Servicios <span class="text-orange-primary">Inmobiliarios</span> Integrales
+                </h1>
+                <p class="text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+                    Soluciones completas para compra, venta, arriendo y administración de propiedades con el respaldo de
+                    18 años de experiencia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-2 bg-orange-primary/10 text-orange-primary font-semibold rounded-full text-sm mb-4">NUESTROS
+                    SERVICIOS</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-4">¿Cómo podemos ayudarte?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Ofrecemos un acompañamiento integral en cada etapa de
+                    tu operación inmobiliaria</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service 1 -->
+                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Venta de Propiedades</h3>
+                    <p class="text-gray-600 mb-4">Vendemos tu propiedad al mejor precio del mercado con estrategias de
+                        marketing profesional y amplia red de contactos.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Tasación profesional gratuita</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Fotografía profesional</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Publicación en portales premium</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Compra de Propiedades</h3>
+                    <p class="text-gray-600 mb-4">Te ayudamos a encontrar la propiedad ideal según tus necesidades,
+                        presupuesto y preferencias de ubicación.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Búsqueda personalizada</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Visitas coordinadas</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Negociación experta</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Arriendo</h3>
+                    <p class="text-gray-600 mb-4">Gestionamos arriendos con contratos seguros, verificación de
+                        arrendatarios y garantías para tu tranquilidad.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Verificación de antecedentes</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Contratos legales</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Gestión de garantías</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Tasaciones</h3>
+                    <p class="text-gray-600 mb-4">Valuaciones profesionales basadas en análisis de mercado,
+                        características y ubicación de tu propiedad.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Informe detallado</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Análisis comparativo</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Válido para bancos</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Asesoría Legal</h3>
+                    <p class="text-gray-600 mb-4">Acompañamiento jurídico completo: estudio de títulos, redacción de
+                        contratos y representación notarial.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Estudio de títulos</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Contratos a medida</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Gestión notarial</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Administración</h3>
+                    <p class="text-gray-600 mb-4">Gestión integral de tu propiedad: cobro de arriendos, mantenciones,
+                        pagos de servicios y reportes mensuales.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Cobro garantizado</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Mantenciones coordinadas</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-orange-primary" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Reportes mensuales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 bg-cream">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-2 bg-orange-primary/10 text-orange-primary font-semibold rounded-full text-sm mb-4">NUESTRO
+                    PROCESO</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-4">¿Cómo trabajamos?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Un proceso simple y transparente de principio a fin
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
+                        1</div>
+                    <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Consulta Inicial</h3>
+                    <p class="text-gray-600">Conversamos sobre tus necesidades y objetivos sin compromiso</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
+                        2</div>
+                    <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Plan Personalizado</h3>
+                    <p class="text-gray-600">Diseñamos una estrategia a medida para tu situación</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
+                        3</div>
+                    <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Ejecución</h3>
+                    <p class="text-gray-600">Implementamos el plan con comunicación constante</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
+                        4</div>
+                    <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Cierre Exitoso</h3>
+                    <p class="text-gray-600">Celebramos juntos el logro de tu objetivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-primary/20 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">¿Necesitas alguno de nuestros
+                    servicios?</h2>
+                <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Conversemos sobre cómo podemos ayudarte.
+                    Primera consulta sin costo ni compromiso.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contacto.html"
+                        class="inline-flex items-center justify-center gap-2 bg-orange-primary hover:bg-orange-dark text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                            </path>
+                        </svg>
+                        Solicitar Consulta
+                    </a>
+                    <a href="https://wa.me/56951492209" target="_blank"
+                        class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 hover:scale-105">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        WhatsApp Directo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="block mb-6"><img src="12.png" alt="San Emilio Propiedades"
+                            class="h-14 w-auto"></a>
+                    <p class="text-gray-400 leading-relaxed mb-6">Más que propiedades, encontramos hogares. Tu aliado
+                        inmobiliario de confianza.</p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/56951492209" target="_blank"
+                            class="w-10 h-10 bg-white/10 hover:bg-orange-primary rounded-full flex items-center justify-center transition-all">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 hover:bg-orange-primary rounded-full flex items-center justify-center transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 hover:bg-orange-primary rounded-full flex items-center justify-center transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Propiedades</h4>
+                    <ul class="space-y-3">
+                        <li><a href="propiedades.html?tipo=casa"
+                                class="text-gray-400 hover:text-orange-primary transition">Casas</a></li>
+                        <li><a href="propiedades.html?tipo=departamento"
+                                class="text-gray-400 hover:text-orange-primary transition">Departamentos</a></li>
+                        <li><a href="propiedades.html?tipo=parcela"
+                                class="text-gray-400 hover:text-orange-primary transition">Parcelas</a></li>
+                        <li><a href="propiedades.html?tipo=terreno"
+                                class="text-gray-400 hover:text-orange-primary transition">Terrenos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Empresa</h4>
+                    <ul class="space-y-3">
+                        <li><a href="nosotros.html"
+                                class="text-gray-400 hover:text-orange-primary transition">Nosotros</a></li>
+                        <li><a href="servicios.html"
+                                class="text-gray-400 hover:text-orange-primary transition">Servicios</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-orange-primary transition">Blog</a></li>
+                        <li><a href="contacto.html"
+                                class="text-gray-400 hover:text-orange-primary transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400">Av. Alemania 685, Temuco</li>
+                        <li><a href="tel:+56951492209" class="text-gray-400 hover:text-orange-primary transition">+56 9
+                                5149 2209</a></li>
+                        <li><a href="mailto:contacto@sanemilio.cl"
+                                class="text-gray-400 hover:text-orange-primary transition">contacto@sanemilio.cl</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 San Emilio Propiedades. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 hover:text-orange-primary text-sm transition">Términos</a>
+                    <a href="#" class="text-gray-500 hover:text-orange-primary text-sm transition">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/56951492209?text=Hola,%20me%20interesa%20un%20servicio" target="_blank"
+        class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform duration-300"
+        style="box-shadow: 0 4px 20px rgba(37,211,102,0.4);">
+        <svg class="w-9 h-9" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

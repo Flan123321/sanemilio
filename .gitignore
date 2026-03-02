@@ -1,0 +1,12 @@
+node_modules/
+*.log
+.env
+.env.local
+__pycache__/
+*.pyc
+*.pyo
+_fix_encoding.py
+_fix_encoding.js
+_inspect.py
+.DS_Store
+Thumbs.db

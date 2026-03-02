@@ -1,0 +1,17 @@
+<!-- Pendiente: Copiar el grid de regiones desde regiones_reference.html líneas 18-206 y pegar aquí en index.html reemplazando líneas 443-623 -->
+
+<!-- Este archivo es solo una guía rápida para ti -->
+<!-- Las regiones que faltan por agregar son: -->
+
+1. Coquimbo
+2. Valparaíso  
+3. Metropolitana
+4. O'Higgins
+5. Maule
+6. Ñuble
+7. Biobío
+8. La Araucanía (DESTACADA - única con propiedades)
+9. Los Ríos
+10. Los Lagos
+11. Aysén
+12. Magallanes

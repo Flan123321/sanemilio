@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "titulo": "Casa Moderna Vista al Volcán",
+    "precioUF": 10500,
+    "precioCLP": 385000000,
+    "m2Totales": 5000,
+    "m2Utiles": 280,
+    "dormitorios": 4,
+    "banos": 3,
+    "lat": -38.7359,
+    "lng": -72.5904,
+    "descripcion": "Espectacular casa con vista privilegiada...",
+    "operacion": "Venta",
+    "tipo": "Casa",
+    "comuna": "Temuco",
+    "imagenes": [
+      "https://images.unsplash.com/photo-1600596542815-6000255adeba",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+    ],
+    "destacada": true,
+    "estado": "Disponible",
+    "imagenPrincipal": "https://images.unsplash.com/photo-1600596542815-6000255adeba"
+  },
+  {
+    "id": 2,
+    "titulo": "Departamento Centro Temuco",
+    "precioUF": 4500,
+    "precioCLP": 165000000,
+    "m2Totales": 120,
+    "m2Utiles": 110,
+    "dormitorios": 3,
+    "banos": 2,
+    "lat": -38.74,
+    "lng": -72.595,
+    "descripcion": "Departamento full equipo en centro.",
+    "operacion": "Venta",
+    "tipo": "Departamento",
+    "comuna": "Temuco",
+    "imagenes": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00"
+    ],
+    "destacada": false,
+    "estado": "Disponible",
+    "imagenPrincipal": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00"
+  }
+]

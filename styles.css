@@ -415,6 +415,8 @@ p {
         top: 72px;
         left: 0;
         right: 0;
+        display: flex;
+        /* siempre flex — max-height:0 oculta el contenido */
         flex-direction: column;
         align-items: stretch;
         gap: 2px;
@@ -429,6 +431,8 @@ p {
     }
 
     .nav-menu.is-open {
+        display: flex;
+        /* explícito — sobrescribe cualquier regla legacy */
         max-height: 520px;
         pointer-events: auto;
         padding: 10px 16px 18px;
@@ -1600,13 +1604,7 @@ section {
         --section-padding: 60px;
     }
 
-    .nav-menu {
-        display: none;
-    }
-
-    .mobile-toggle {
-        display: flex;
-    }
+    /* nav-menu y mobile-toggle ahora manejados por el bloque @media (max-width: 1023px) del header premium */
 
     .hero-content {
         padding: 40px 0 160px;

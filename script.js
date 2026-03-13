@@ -233,11 +233,16 @@ class PropertyManager {
             const imgWrapper = document.createElement('div');
             imgWrapper.className = 'property-image-wrapper';
 
+            const imgLink = document.createElement('a');
+            imgLink.href = `propiedad-detalle.html?id=${Number(prop.id)}`;
+            imgLink.style.display = 'block';
+            imgLink.style.height = '100%';
             const imgDiv = document.createElement('div');
             imgDiv.className = 'property-image';
-            imgDiv.style.cssText = 'background-size:cover;background-position:center;';
+            imgDiv.style.cssText = 'background-size:cover;background-position:center;height:100%;';
             imgDiv.style.backgroundImage = `url('${imgUrl}')`;
-            imgWrapper.appendChild(imgDiv);
+            imgLink.appendChild(imgDiv);
+            imgWrapper.appendChild(imgLink);
 
             if (prop.destacada) {
                 const badge = document.createElement('div');
@@ -258,7 +263,14 @@ class PropertyManager {
 
             const price = document.createElement('div');
             price.className = 'property-price';
-            price.textContent = formatCurrency(prop.precioCLP);
+            if (prop.precioCLP && prop.precioCLP > 0) {
+                price.textContent = formatCurrency(prop.precioCLP);
+            } else if (prop.precioUF) {
+                price.textContent = `UF ${prop.precioUF.toLocaleString('es-CL')}`;
+            } else {
+                price.textContent = 'Consultar precio';
+                price.style.color = '#FF6B35';
+            }
 
             const title = document.createElement('h3');
             title.className = 'property-title';
@@ -671,17 +683,21 @@ class SearchFormController {
         }
         this.loadRegions();
 
-        // On catalog page (no form): bind sidebar select changes to live filter
-        if (!this.form && this.regionSelect) {
+        // Siempre enlazar el cambio de región para actualizar comunas
+        if (this.regionSelect) {
             this.regionSelect.addEventListener('change', () => {
                 this.updateComunasFromSelect();
+                // En página de catálogo también filtra en tiempo real
+                if (!this.form && window.propertyManager) {
+                    window.propertyManager.applyFilters();
+                }
+            });
+        }
+        // En catálogo: también filtrar al cambiar comuna
+        if (!this.form && this.comunaSelect) {
+            this.comunaSelect.addEventListener('change', () => {
                 if (window.propertyManager) window.propertyManager.applyFilters();
             });
-            if (this.comunaSelect) {
-                this.comunaSelect.addEventListener('change', () => {
-                    if (window.propertyManager) window.propertyManager.applyFilters();
-                });
-            }
         }
     }
 

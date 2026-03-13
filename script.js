@@ -123,6 +123,14 @@ class PropertyManager {
     async init() {
         // Parse URL params IMMEDIATELY - store in instance before anything else
         this._parseURLFilters();
+
+        // Lee el radio de operación que esté marcado por defecto en el HTML
+        const radioChecked = document.querySelector('[name="operacion"]:checked');
+        // Solo pre-setear si NO viene de la URL (la URL tiene prioridad)
+        if (!this.activeFilters.operacion && radioChecked) {
+            this._manualOperacion = radioChecked.value;
+        }
+
         await this.loadProperties();
         this.setupFilters();
         // Apply filters (uses this.activeFilters set above)
@@ -196,17 +204,22 @@ class PropertyManager {
     }
 
     useFallbackData() {
-        console.warn('⚠️ Usando datos de respaldo');
+        console.warn('⚠️ Usando datos de respaldo – verifica que propiedades.json esté accesible');
+        const PH = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23E8E6E3'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='18' fill='%237A7A7A' text-anchor='middle' dy='.3em'%3ESin Imagen%3C/text%3E%3C/svg%3E`;
         this.properties = [
-            { id: 1, titulo: 'Casa Moderna Vista al Volcán', precioCLP: 385000000, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 4, banos: 3, m2Utiles: 280, lat: -38.7359, lng: -72.5904, imagenPrincipal: 'https://images.unsplash.com/photo-1600596542815-6000255adeba', destacada: true },
-            { id: 2, titulo: 'Departamento Centro Temuco', precioCLP: 165000000, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 3, banos: 2, m2Utiles: 110, lat: -38.7400, lng: -72.5950, imagenPrincipal: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00', destacada: false },
-            { id: 3, titulo: 'Hermosa Parcela en Pucón', precioCLP: 85000000, operacion: 'venta', tipo: 'parcela', region: 'La Araucanía', comuna: 'Pucón', dormitorios: 0, banos: 0, m2Utiles: 0, m2Terreno: 5000, lat: -39.2736, lng: -71.9754, imagenPrincipal: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef', destacada: true },
-            { id: 4, titulo: 'Departamento en Arriendo', precioCLP: 450000, operacion: 'arriendo', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 2, banos: 1, m2Utiles: 60, lat: -38.7410, lng: -72.5990, imagenPrincipal: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267', destacada: false }
+            { id: 9,  titulo: 'Casa en Venta – Sector Labranza', precioCLP: 70000000, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Labranza', dormitorios: 3, banos: 2, m2Utiles: 96, m2Terreno: 300, lat: -38.8120, lng: -72.6580, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','jardin'], destacada: true },
+            { id: 10, titulo: 'Casa Regularizada – Villa Portal Alegría, Labranza', precioCLP: 70000000, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Labranza', dormitorios: 3, banos: 1, m2Utiles: 55, m2Terreno: 75, lat: -38.8200, lng: -72.6650, imagenPrincipal: PH, galeria: [], caracteristicas: ['termopanel','patio'], destacada: false },
+            { id: 11, titulo: 'Casa en Venta – Lautaro', precioCLP: 0, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Lautaro', dormitorios: 3, banos: 1, m2Utiles: 80, m2Terreno: 200, lat: -38.5200, lng: -72.4400, imagenPrincipal: PH, galeria: [], caracteristicas: ['patio'], destacada: false },
+            { id: 12, titulo: 'Departamento Exclusivo – Sector Senador Estébanez, Temuco', precioCLP: 0, precioUF: 10500, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 3, banos: 4, m2Utiles: 160, lat: -38.7280, lng: -72.5750, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','bodega','terraza','quincho'], destacada: true },
+            { id: 13, titulo: 'Departamento Remodelado – Avenida Alemania, Temuco', precioCLP: 125000000, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 1, banos: 1, m2Utiles: 60, lat: -38.7320, lng: -72.5800, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','terraza','calefaccion central'], destacada: false },
+            { id: 14, titulo: 'Departamento Edificio Don Simón XII – Avenida Alemania, Temuco', precioCLP: 190000000, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 2, banos: 2, m2Utiles: 69, lat: -38.7310, lng: -72.5820, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','termopanel','piscina'], destacada: true },
+            { id: 15, titulo: 'Parcela – Camino a Huichahue, Temuco', precioCLP: 55000000, operacion: 'venta', tipo: 'parcela', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 0, banos: 0, m2Utiles: 0, m2Terreno: 5000, lat: -38.8500, lng: -72.5200, imagenPrincipal: PH, galeria: [], caracteristicas: ['agua pozo','rol propio'], destacada: false }
         ];
         this.filteredProperties = [...this.properties];
         this.renderProperties();
         this.initMap();
     }
+
 
     renderProperties() {
         if (!this.container) return;

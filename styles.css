@@ -158,24 +158,11 @@ p {
 /* .page-header completo en la sección CATALOG PAGE (línea ~1052) */
 
 /* Fade Animations — diferenciadas por tipo */
-[data-fade-in] {
-    opacity: 0;
-    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
+[data-fade-in] { opacity: 1 !important; visibility: visible !important; }
 
-[data-fade-up] {
-    opacity: 0;
-    transform: translateY(24px);
-    transition:
-        opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
+[data-fade-up] { opacity: 1 !important; visibility: visible !important; transform: none !important; }
 
-[data-fade-in].visible,
-[data-fade-up].visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* Visible state now handled by defaults */
 
 /* ===== HEADER — Premium Redesign ===== */
 .header {
@@ -1589,11 +1576,11 @@ section {
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-slow);
     border: 1px solid var(--pearl-gray);
-}
-
-.property-card-catalog:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Garantizar tamaño */
+    opacity: 1 !important; /* SEGURIDAD */
+    visibility: visible !important;
 }
 
 .property-card-catalog:hover .property-image {

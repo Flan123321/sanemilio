@@ -121,14 +121,18 @@ class PropertyManager {
     }
 
     async init() {
+        console.log('🚀 Initializing Property Manager...');
         this._parseURLFilters();
-        await this.loadProperties();
+        // 1. Sync sidebar UI to URL filters FIRST
+        this._syncSidebarToActiveFilters(); 
+        // 2. Setup listeners
         this.setupFilters();
-        this._syncSidebarToActiveFilters();
+        // 3. Load data (this calls applyFilters -> renderProperties internally)
+        await this.loadProperties();
+        console.log('✨ Property Manager ready.');
     }
 
     _parseURLFilters() {
-        // Parse URL params once and store them. These are the AUTHORITATIVE initial filters.
         const p = new URLSearchParams(window.location.search);
         this.activeFilters = {
             tipo:      p.get('tipo')      || '',
@@ -207,7 +211,12 @@ class PropertyManager {
     useFallbackData() { this._loadFallback(); this.applyFilters(); this.initMap(); }
 
     renderProperties() {
-        if (!this.container) return;
+        if (!this.container) {
+            console.error('❌ Error: #propertiesContainer not found!');
+            return;
+        }
+        
+        console.log(`🎨 Rendering ${this.filteredProperties.length} properties...`);
         this.container.innerHTML = '';
         this.updateResultsCount();
 

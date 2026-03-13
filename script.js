@@ -238,7 +238,7 @@ class PropertyManager {
 
         this.filteredProperties.forEach(prop => {
             const card = document.createElement('article');
-            card.className = 'property-card-catalog';
+            card.className = 'property-card';
             card.setAttribute('data-fade-up', '');
 
             const imgUrl = prop.imagenPrincipal || PLACEHOLDER_IMG;
@@ -248,11 +248,10 @@ class PropertyManager {
 
             const imgLink = document.createElement('a');
             imgLink.href = `propiedad-detalle.html?id=${Number(prop.id)}`;
-            imgLink.style.display = 'block';
-            imgLink.style.height = '100%';
+            imgLink.style.cssText = 'display:block;height:100%;width:100%;';
             const imgDiv = document.createElement('div');
             imgDiv.className = 'property-image';
-            imgDiv.style.cssText = 'background-size:cover;background-position:center;height:100%;';
+            imgDiv.style.cssText = 'background-size:cover;background-position:center;width:100%;height:100%;';
             imgDiv.style.backgroundImage = `url('${imgUrl}')`;
             imgLink.appendChild(imgDiv);
             imgWrapper.appendChild(imgLink);
@@ -312,6 +311,7 @@ class PropertyManager {
             const detailLink = document.createElement('a');
             detailLink.href = `propiedad-detalle.html?id=${Number(prop.id)}`;
             detailLink.className = 'btn-ver-detalles';
+            detailLink.style.cssText = 'opacity:1;transform:none;';
             detailLink.textContent = 'Ver Detalles';
 
             content.append(price, title, location, features, detailLink);

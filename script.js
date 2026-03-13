@@ -238,13 +238,14 @@ class PropertyManager {
 
         this.filteredProperties.forEach(prop => {
             const card = document.createElement('article');
-            card.className = 'property-card';
+            card.className = 'property-card-catalog';
             card.setAttribute('data-fade-up', '');
 
             const imgUrl = prop.imagenPrincipal || PLACEHOLDER_IMG;
 
             const imgWrapper = document.createElement('div');
             imgWrapper.className = 'property-image-wrapper';
+            imgWrapper.style.cssText = 'position:relative;overflow:hidden;height:240px;';
 
             const imgLink = document.createElement('a');
             imgLink.href = `propiedad-detalle.html?id=${Number(prop.id)}`;

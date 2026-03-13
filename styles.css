@@ -1596,6 +1596,20 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
+.property-card-catalog:hover .property-image {
+    transform: scale(1.06);
+}
+
+/* Btn ver detalles siempre visible en catálogo */
+.property-card-catalog .btn-ver-detalles {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.property-card-catalog .property-favorite {
+    opacity: 1;
+}
+
 /* Pagination */
 .pagination {
     display: flex;

@@ -355,12 +355,82 @@ class PropertyManager {
     }
 
     setupFilters() {
+        // ── "Aplicar Filtros" button & Reset ──────────────────────────────────
         const applyBtn = document.querySelector('#catalogSidebar .btn-primary');
         const resetBtn = document.querySelector('#resetFilters');
         applyBtn?.addEventListener('click', () => this.applyFilters());
         resetBtn?.addEventListener('click', () => this.resetFilters());
 
-        // Track manual operacion changes (radio click = user intent)
+        // ── Mobile sidebar toggle ──────────────────────────────────────────────
+        const toggleBtn = document.querySelector('#toggleSidebar');
+        const sidebar   = document.querySelector('#catalogSidebar');
+        if (toggleBtn && sidebar) {
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                toggleBtn.classList.toggle('active');
+            });
+        }
+
+        // ── Price range double-slider ──────────────────────────────────────────
+        const sliderMin  = document.querySelector('#priceMin');
+        const sliderMax  = document.querySelector('#priceMax');
+        const inputMin   = document.querySelector('[name="precioMin"]');
+        const inputMax   = document.querySelector('[name="precioMax"]');
+        const sliderWrap = document.querySelector('.price-range-slider');
+
+        const updateSliderTrack = () => {
+            if (!sliderMin || !sliderMax || !sliderWrap) return;
+            const min  = parseInt(sliderMin.min, 10)  || 0;
+            const max  = parseInt(sliderMax.max, 10)  || 500000000;
+            const low  = parseInt(sliderMin.value, 10);
+            const high = parseInt(sliderMax.value, 10);
+            const pLow  = ((low  - min) / (max - min)) * 100;
+            const pHigh = ((high - min) / (max - min)) * 100;
+            // Paint the filled track between the two thumbs
+            sliderWrap.style.setProperty('--range-low',  `${pLow}%`);
+            sliderWrap.style.setProperty('--range-high', `${pHigh}%`);
+        };
+
+        if (sliderMin && sliderMax) {
+            sliderMin.addEventListener('input', () => {
+                // Prevent crossing
+                if (parseInt(sliderMin.value) > parseInt(sliderMax.value)) {
+                    sliderMin.value = sliderMax.value;
+                }
+                if (inputMin) inputMin.value = parseInt(sliderMin.value).toLocaleString('es-CL');
+                updateSliderTrack();
+                this.applyFilters();
+            });
+
+            sliderMax.addEventListener('input', () => {
+                if (parseInt(sliderMax.value) < parseInt(sliderMin.value)) {
+                    sliderMax.value = sliderMin.value;
+                }
+                if (inputMax) inputMax.value = parseInt(sliderMax.value).toLocaleString('es-CL');
+                updateSliderTrack();
+                this.applyFilters();
+            });
+
+            // Also sync text inputs → sliders when user types
+            inputMin?.addEventListener('change', () => {
+                const raw = parseInt(inputMin.value.replace(/\D/g, ''), 10) || 0;
+                sliderMin.value = Math.min(raw, parseInt(sliderMax.value));
+                inputMin.value  = parseInt(sliderMin.value).toLocaleString('es-CL');
+                updateSliderTrack();
+                this.applyFilters();
+            });
+            inputMax?.addEventListener('change', () => {
+                const raw = parseInt(inputMax.value.replace(/\D/g, ''), 10) || parseInt(sliderMax.max);
+                sliderMax.value = Math.max(raw, parseInt(sliderMin.value));
+                inputMax.value  = parseInt(sliderMax.value).toLocaleString('es-CL');
+                updateSliderTrack();
+                this.applyFilters();
+            });
+
+            updateSliderTrack(); // initial paint
+        }
+
+        // ── Operacion radio ────────────────────────────────────────────────────
         document.querySelectorAll('[name="operacion"]').forEach(radio => {
             radio.addEventListener('change', () => {
                 this._manualOperacion = radio.value;
@@ -368,57 +438,81 @@ class PropertyManager {
             });
         });
 
-        // Track manual tipo/region/comuna select changes
+        // ── Tipo / Región / Comuna selects ────────────────────────────────────
         document.querySelectorAll('select[name="tipo"], select[name="region"], select[name="comuna"]').forEach(sel => {
             sel.addEventListener('change', () => this.applyFilters());
         });
 
+        // ── Dormitorios / Baños number buttons ────────────────────────────────
         document.querySelectorAll('.number-selector').forEach(selector => {
             selector.querySelectorAll('.number-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
+                    const wasActive = btn.classList.contains('active');
                     selector.querySelectorAll('.number-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+                    if (!wasActive) btn.classList.add('active'); // toggle off if same clicked
+                    this.applyFilters();
                 });
             });
+        });
+
+        // ── Superficie inputs ────────────────────────────────────────────────
+        document.querySelectorAll('[name="superficieMin"], [name="superficieMax"]').forEach(el => {
+            el.addEventListener('change', () => this.applyFilters());
+        });
+
+        // ── Características checkboxes ────────────────────────────────────────
+        document.querySelectorAll('[name="caracteristica"]').forEach(cb => {
+            cb.addEventListener('change', () => this.applyFilters());
         });
     }
 
     applyFilters() {
-        // Use stored activeFilters (from URL parsed at startup) as BASE.
-        // DOM values OVERRIDE them if user has changed them manually.
         const f = this.activeFilters || {};
 
-        // Operacion: URL param > manual radio click > ignore default checked radio
-        const urlOperacion = f.operacion || '';
-        const operacion = normalizeStr(this._manualOperacion || urlOperacion || '');
+        // Operacion
+        const operacion = normalizeStr(this._manualOperacion || f.operacion || '');
 
-        // Tipo: DOM select value > URL param
+        // Tipo
         const tipoEl = document.querySelector('[name="tipo"]');
         const tipo = normalizeStr(tipoEl?.value || f.tipo || '');
 
-        // Region: DOM select value > URL param
+        // Región / Comuna
         const regionEl = document.querySelector('[name="region"]');
         const region = normalizeStr(regionEl?.value || f.region || '');
-
-        // Comuna: DOM select value > URL param
         const comunaEl = document.querySelector('[name="comuna"]');
         const comuna = normalizeStr(comunaEl?.value || f.comuna || '');
 
-        // Dormitorios
-        const dormBtn = document.querySelector('.number-btn.active[data-value]');
-        const dormMin = dormBtn ? parseInt(dormBtn.dataset.value, 10) : 0;
-
-        // Precio max: DOM text input > URL parsed value at startup
+        // Precio Max — DOM input > URL stored value
         const precioMaxEl = document.querySelector('[name="precioMax"]');
         const precioMaxFromDom = precioMaxEl?.value ? parseInt(precioMaxEl.value.replace(/\D/g, ''), 10) : 0;
         const precioMax = precioMaxFromDom > 0 ? precioMaxFromDom : (f.precioMax ?? Infinity);
 
-        // Precio min: DOM text input > URL parsed value at startup
+        // Precio Min
         const precioMinEl = document.querySelector('[name="precioMin"]');
         const precioMinFromDom = precioMinEl?.value ? parseInt(precioMinEl.value.replace(/\D/g, ''), 10) : 0;
         const precioMin = precioMinFromDom > 0 ? precioMinFromDom : (f.precioMin ?? 0);
 
-        console.log(`🔎 Filtering: tipo=${tipo} region=${region} comuna=${comuna} op=${operacion} max=${precioMax} min=${precioMin}`);
+        // Dormitorios — first .number-selector group
+        const dormSelector = document.querySelectorAll('.number-selector')[0];
+        const dormBtn = dormSelector?.querySelector('.number-btn.active');
+        const dormMin = dormBtn ? parseInt(dormBtn.dataset.value, 10) : 0;
+
+        // Baños — second .number-selector group
+        const banosSelector = document.querySelectorAll('.number-selector')[1];
+        const banosBtn = banosSelector?.querySelector('.number-btn.active');
+        const banosMin = banosBtn ? parseInt(banosBtn.dataset.value, 10) : 0;
+
+        // Superficie
+        const supMinRaw = document.querySelector('[name="superficieMin"]')?.value || '';
+        const supMaxRaw = document.querySelector('[name="superficieMax"]')?.value || '';
+        const supMin = supMinRaw ? parseInt(supMinRaw.replace(/\D/g, ''), 10) : 0;
+        const supMax = supMaxRaw ? parseInt(supMaxRaw.replace(/\D/g, ''), 10) : Infinity;
+
+        // Características (checkboxes checked)
+        const caracChecked = Array.from(document.querySelectorAll('[name="caracteristica"]:checked'))
+            .map(cb => normalizeStr(cb.value));
+
+        console.log(`🔎 tipo=${tipo} region=${region} op=${operacion} max=${precioMax} dorm=${dormMin} baños=${banosMin}`);
 
         this.filteredProperties = this.properties.filter(p => {
             if (operacion && normalizeStr(p.operacion) !== operacion) return false;
@@ -426,8 +520,17 @@ class PropertyManager {
             if (region && normalizeStr(p.region) !== region) return false;
             if (comuna && normalizeStr(p.comuna) !== comuna) return false;
             if (dormMin && (p.dormitorios || 0) < dormMin) return false;
+            if (banosMin && (p.banos || 0) < banosMin) return false;
             if ((p.precioCLP || 0) < precioMin) return false;
             if (precioMax !== Infinity && (p.precioCLP || 0) > precioMax) return false;
+            const m2 = p.m2Utiles || p.m2Terreno || 0;
+            if (supMin && m2 < supMin) return false;
+            if (supMax !== Infinity && m2 > supMax) return false;
+            // Características: property must have ALL checked ones
+            if (caracChecked.length > 0) {
+                const pCarac = (p.caracteristicas || []).map(c => normalizeStr(c));
+                if (!caracChecked.every(c => pCarac.includes(c))) return false;
+            }
             return true;
         });
 

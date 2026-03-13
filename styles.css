@@ -1397,6 +1397,87 @@ section {
     gap: 10px;
 }
 
+/* ── Price Range Double Slider ──────────────────────────────── */
+.price-range-slider {
+    position: relative;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    /* CSS vars set by JS */
+    --range-low:  0%;
+    --range-high: 100%;
+}
+
+.price-range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 4px;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: none;
+}
+
+/* Track behind both sliders */
+.price-range-slider::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 4px;
+    background: var(--pearl-gray);
+    border-radius: 2px;
+    z-index: 0;
+}
+
+/* Filled track between thumbs — painted via background on the wrapper */
+.price-range-slider::after {
+    content: '';
+    position: absolute;
+    left: var(--range-low);
+    right: calc(100% - var(--range-high));
+    height: 4px;
+    background: var(--orange-primary);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+/* Thumb styling */
+.price-range-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--white);
+    border: 2px solid var(--orange-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.price-range-slider input[type="range"]::-webkit-slider-thumb:hover,
+.price-range-slider input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 6px rgba(255,107,53,0.15);
+}
+.price-range-slider input[type="range"]::-moz-range-thumb {
+    width: 18px; height: 18px;
+    background: var(--white);
+    border: 2px solid var(--orange-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* Mobile sidebar toggle button active state */
+.btn-toggle-sidebar.active {
+    background: var(--orange-primary);
+    color: var(--white);
+}
+
 /* Catalog Main */
 .catalog-toolbar {
     display: flex;

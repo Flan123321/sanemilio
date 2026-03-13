@@ -32,6 +32,8 @@ const formatCurrency = (value) => {
     return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value);
 };
 
+const normalizeStr = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
 //===== HEADER SCROLL EFFECT =====
 class HeaderController {
     constructor() {
@@ -45,7 +47,6 @@ class HeaderController {
     }
 
     handleScroll() {
-        // scrollY es el estándar moderno; pageYOffset está obsoleto
         this.header.classList.toggle('scrolled', window.scrollY > 50);
     }
 }
@@ -61,13 +62,11 @@ class MobileMenu {
     }
 
     init() {
-        // Toggle hamburger
         this.toggle.addEventListener('click', (e) => {
             e.stopPropagation();
             this.toggleMenu();
         });
 
-        // Mobile dropdowns: tap on parent link expands submenu
         this.menu.querySelectorAll('.dropdown > a').forEach(a => {
             a.addEventListener('click', (e) => {
                 if (window.innerWidth < 1024) {
@@ -77,19 +76,16 @@ class MobileMenu {
             });
         });
 
-        // Close when clicking a non-dropdown link
         this.menu.querySelectorAll('li:not(.dropdown) > a').forEach(link => {
             link.addEventListener('click', () => this.closeMenu());
         });
 
-        // Close on outside click
         document.addEventListener('click', (e) => {
             if (this.header && !this.header.contains(e.target)) {
                 this.closeMenu();
             }
         });
 
-        // Reset on desktop resize
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 1024) this.closeMenu();
         });
@@ -110,91 +106,79 @@ class MobileMenu {
 }
 
 
-// ===== PROPERTY DATA MANAGER (NEW) =====
+// ===== PROPERTY DATA MANAGER =====
 class PropertyManager {
     constructor() {
         this.properties = [];
         this.filteredProperties = [];
         this.container = $('#propertiesContainer');
         this.mapContainer = $('#catalogMap');
-        this.paginationContainer = $('#paginationControls');
         this.map = null;
         this.markers = [];
 
-        // Init only if we are on the catalog page
         if (!this.container) return;
-
         this.init();
     }
 
     async init() {
-        // loadProperties() ya llama a renderProperties() e initMap() internamente.
+        // Parse URL params IMMEDIATELY - store in instance before anything else
+        this._parseURLFilters();
         await this.loadProperties();
         this.setupFilters();
-        // ─── LEER PARÁMETROS URL y pre-filtrar el catálogo ───
-        // e.g. /propiedades.html?tipo=departamento&operacion=arriendo
-        this.applyURLParams();
+        // Apply filters (uses this.activeFilters set above)
+        this.applyFilters();
+        // Set visual state of sidebar to match URL params
+        this._syncSidebarToActiveFilters();
     }
 
-    /**
-     * Lee los query params de la URL y los aplica como filtros preseleccionados.
-     * Esto permite que links del tipo ?tipo=departamento abran el catálogo ya filtrado.
-     */
-    applyURLParams() {
-        const params = new URLSearchParams(window.location.search);
-
-        // Mapeo de param → selector en el formulario del sidebar
-        const mappings = {
-            tipo: '[name="tipo"]',
-            operacion: '[name="operacion"]',  // radio o select
-            comuna: '[name="comuna"]',
-            precio_max: '[name="precioMax"]',
-            precio_min: '[name="precioMin"]',
-            dormitorios: '[name="dormitorios"]',
+    _parseURLFilters() {
+        // Parse URL params once and store them. These are the AUTHORITATIVE initial filters.
+        const p = new URLSearchParams(window.location.search);
+        this.activeFilters = {
+            tipo:      p.get('tipo')      || '',
+            region:    p.get('region')    || '',
+            comuna:    p.get('comuna')    || '',
+            operacion: p.get('operacion') || '',
+            precioMax: p.get('precio_max') ? parseInt(p.get('precio_max'), 10) : Infinity,
+            precioMin: p.get('precio_min') ? parseInt(p.get('precio_min'), 10) : 0,
         };
+        console.log('🔍 Active filters from URL:', JSON.stringify(this.activeFilters));
+    }
 
-        let hasParams = false;
-
-        for (const [param, selector] of Object.entries(mappings)) {
-            const value = params.get(param);
-            if (!value) continue;
-            hasParams = true;
-
-            const el = document.querySelector(selector);
-            if (!el) continue;
-
-            if (el.type === 'radio') {
-                // Para radios buscamos el que tenga ese valor
-                const radio = document.querySelector(`${selector}[value="${value}"]`);
-                if (radio) radio.checked = true;
-            } else if (el.tagName === 'SELECT') {
-                // Buscar opción case-insensitive
-                const opt = Array.from(el.options).find(
-                    o => o.value.toLowerCase() === value.toLowerCase()
-                );
+    _syncSidebarToActiveFilters() {
+        const f = this.activeFilters;
+        // Tipo select
+        if (f.tipo) {
+            const el = document.querySelector('[name="tipo"]');
+            if (el) {
+                const opt = Array.from(el.options).find(o => normalizeStr(o.value) === normalizeStr(f.tipo));
                 if (opt) opt.selected = true;
-            } else {
-                el.value = value;
             }
         }
-
-        // Mostrar el chip de tipo activo en la UI si existe
-        const tipoParam = params.get('tipo');
-        if (tipoParam) {
-            // Actualizar el título de la página header para dar feedback
+        // Precio max text input + slider
+        if (f.precioMax !== Infinity) {
+            const elText = document.querySelector('[name="precioMax"]');
+            if (elText) elText.value = f.precioMax.toLocaleString('es-CL');
+            const elSlider = document.querySelector('#priceMax');
+            if (elSlider) elSlider.value = Math.min(f.precioMax, parseInt(elSlider.max, 10));
+        }
+        // Precio min text input + slider
+        if (f.precioMin > 0) {
+            const elText = document.querySelector('[name="precioMin"]');
+            if (elText) elText.value = f.precioMin.toLocaleString('es-CL');
+            const elSlider = document.querySelector('#priceMin');
+            if (elSlider) elSlider.value = Math.max(f.precioMin, parseInt(elSlider.min, 10));
+        }
+        // Page title
+        if (f.tipo) {
             const pageTitle = document.querySelector('.page-header h1, .page-header .page-title');
             if (pageTitle) {
-                const labels = {
-                    casa: 'Casas', departamento: 'Departamentos', parcela: 'Parcelas',
-                    terreno: 'Terrenos', comercial: 'Locales Comerciales'
-                };
-                pageTitle.textContent = labels[tipoParam.toLowerCase()] || pageTitle.textContent;
+                const labels = { casa: 'Casas', departamento: 'Departamentos', parcela: 'Parcelas', terreno: 'Terrenos', comercial: 'Locales Comerciales' };
+                pageTitle.textContent = labels[f.tipo.toLowerCase()] || pageTitle.textContent;
             }
         }
-
-        // Si había algún parámetro, aplicar los filtros automáticamente
-        if (hasParams) this.applyFilters();
     }
+
 
     async loadProperties() {
         try {
@@ -207,16 +191,17 @@ class PropertyManager {
             this.initMap();
         } catch (error) {
             console.error('Error loading properties:', error);
-            // Always show fallback if something fails, so user never sees specific 'loading' forever if detail fetch fails
             this.useFallbackData();
         }
     }
 
     useFallbackData() {
-        console.warn('⚠️ Usando datos de respaldo (Fallback Data)');
+        console.warn('⚠️ Usando datos de respaldo');
         this.properties = [
-            { id: 1, titulo: "Casa Moderna Vista al Volcán", precioCLP: 385000000, dormitorios: 4, banos: 3, m2Utiles: 280, comuna: "Temuco", lat: -38.7359, lng: -72.5904, imagenPrincipal: "https://images.unsplash.com/photo-1600596542815-6000255adeba", destacada: true },
-            { id: 2, titulo: "Departamento Centro Temuco", precioCLP: 165000000, dormitorios: 3, banos: 2, m2Utiles: 110, comuna: "Temuco", lat: -38.7400, lng: -72.5950, imagenPrincipal: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00", destacada: false }
+            { id: 1, titulo: 'Casa Moderna Vista al Volcán', precioCLP: 385000000, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 4, banos: 3, m2Utiles: 280, lat: -38.7359, lng: -72.5904, imagenPrincipal: 'https://images.unsplash.com/photo-1600596542815-6000255adeba', destacada: true },
+            { id: 2, titulo: 'Departamento Centro Temuco', precioCLP: 165000000, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 3, banos: 2, m2Utiles: 110, lat: -38.7400, lng: -72.5950, imagenPrincipal: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00', destacada: false },
+            { id: 3, titulo: 'Hermosa Parcela en Pucón', precioCLP: 85000000, operacion: 'venta', tipo: 'parcela', region: 'La Araucanía', comuna: 'Pucón', dormitorios: 0, banos: 0, m2Utiles: 0, m2Terreno: 5000, lat: -39.2736, lng: -71.9754, imagenPrincipal: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef', destacada: true },
+            { id: 4, titulo: 'Departamento en Arriendo', precioCLP: 450000, operacion: 'arriendo', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 2, banos: 1, m2Utiles: 60, lat: -38.7410, lng: -72.5990, imagenPrincipal: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267', destacada: false }
         ];
         this.filteredProperties = [...this.properties];
         this.renderProperties();
@@ -225,11 +210,7 @@ class PropertyManager {
 
     renderProperties() {
         if (!this.container) return;
-
-        // Limpiar el contenedor de forma segura
         this.container.innerHTML = '';
-
-        // Actualizar contador de resultados
         this.updateResultsCount();
 
         if (this.filteredProperties.length === 0) {
@@ -240,7 +221,6 @@ class PropertyManager {
             return;
         }
 
-        // Placeholder SVG local (sin dependencia de via.placeholder.com)
         const PLACEHOLDER_IMG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23E8E6E3'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='18' fill='%237A7A7A' text-anchor='middle' dy='.3em'%3ESin Imagen%3C/text%3E%3C/svg%3E`;
 
         this.filteredProperties.forEach(prop => {
@@ -250,7 +230,6 @@ class PropertyManager {
 
             const imgUrl = prop.imagenPrincipal || PLACEHOLDER_IMG;
 
-            // --- Construcción segura por DOM API (evita XSS) ---
             const imgWrapper = document.createElement('div');
             imgWrapper.className = 'property-image-wrapper';
 
@@ -324,74 +303,51 @@ class PropertyManager {
     }
 
     initFavoriteButtons() {
-        const favoriteButtons = $$('.property-favorite');
-        favoriteButtons.forEach(btn => {
+        $$('.property-favorite').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 btn.classList.toggle('active');
                 const icon = btn.querySelector('path');
-                if (btn.classList.contains('active')) {
-                    icon.setAttribute('fill', 'currentColor');
-                } else {
-                    icon.setAttribute('fill', 'none');
-                }
+                if (icon) icon.setAttribute('fill', btn.classList.contains('active') ? 'currentColor' : 'none');
             });
         });
     }
 
     initMap() {
         if (!this.mapContainer || typeof L === 'undefined') return;
-
-        // Default Temuco
-        const defaultLat = -38.7359;
-        const defaultLng = -72.5904;
-
-        this.map = L.map('catalogMap').setView([defaultLat, defaultLng], 12);
-
+        this.map = L.map('catalogMap').setView([-38.7359, -72.5904], 12);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
         }).addTo(this.map);
-
         this.updateMapMarkers();
-
-        // Refresh map when tab is switched (Leaflet needs resize trigger)
         const mapTabBtn = $('#viewMap');
         if (mapTabBtn) {
-            mapTabBtn.addEventListener('click', () => {
-                setTimeout(() => {
-                    this.map.invalidateSize();
-                }, 100);
-            });
+            mapTabBtn.addEventListener('click', () => setTimeout(() => this.map.invalidateSize(), 100));
         }
     }
 
     updateMapMarkers() {
         if (!this.map) return;
-
-        // Clear existing markers
         this.markers.forEach(marker => this.map.removeLayer(marker));
         this.markers = [];
-
         this.filteredProperties.forEach(prop => {
             if (prop.lat && prop.lng) {
                 const icon = L.divIcon({
                     className: 'custom-pin',
-                    html: `<div style="background-color: var(--orange-primary); width: 24px; height: 24px; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></div>`,
+                    html: `<div style="background-color:var(--orange-primary);width:24px;height:24px;border-radius:50%;border:2px solid white;box-shadow:0 4px 8px rgba(0,0,0,0.3);"></div>`,
                     iconSize: [24, 24],
                     iconAnchor: [12, 12]
                 });
-
-                const marker = L.marker([prop.lat, prop.lng], { icon: icon })
+                const marker = L.marker([prop.lat, prop.lng], { icon })
                     .bindPopup(`
-                        <div style="width: 200px;">
-                            <div style="height: 120px; background-image: url('${prop.imagenPrincipal || ''}'); background-size: cover; border-radius: 8px; margin-bottom: 8px;"></div>
+                        <div style="width:200px;">
+                            <div style="height:120px;background-image:url('${prop.imagenPrincipal || ''}');background-size:cover;border-radius:8px;margin-bottom:8px;"></div>
                             <b>${formatCurrency(prop.precioCLP)}</b><br>
                             ${prop.titulo}
-                            <a href="propiedad-detalle.html?id=${prop.id}" style="display:block; margin-top:8px; color: var(--orange-primary); font-weight:600;">Ver Ficha</a>
+                            <a href="propiedad-detalle.html?id=${prop.id}" style="display:block;margin-top:8px;color:var(--orange-primary);font-weight:600;">Ver Ficha</a>
                         </div>
                     `);
-
                 marker.addTo(this.map);
                 this.markers.push(marker);
             }
@@ -399,85 +355,95 @@ class PropertyManager {
     }
 
     setupFilters() {
-        // Usar ID específico en vez de selector de clase genérico para evitar colisiones
         const applyBtn = document.querySelector('#catalogSidebar .btn-primary');
         const resetBtn = document.querySelector('#resetFilters');
-
         applyBtn?.addEventListener('click', () => this.applyFilters());
         resetBtn?.addEventListener('click', () => this.resetFilters());
 
-        // Botones de número (dormitorios / baños) — solo un activo por grupo
+        // Track manual operacion changes (radio click = user intent)
+        document.querySelectorAll('[name="operacion"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                this._manualOperacion = radio.value;
+                this.applyFilters();
+            });
+        });
+
+        // Track manual tipo/region/comuna select changes
+        document.querySelectorAll('select[name="tipo"], select[name="region"], select[name="comuna"]').forEach(sel => {
+            sel.addEventListener('change', () => this.applyFilters());
+        });
+
         document.querySelectorAll('.number-selector').forEach(selector => {
             selector.querySelectorAll('.number-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     selector.querySelectorAll('.number-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.toggle('active', true);
+                    btn.classList.add('active');
                 });
             });
         });
     }
 
     applyFilters() {
-        // Operación: puede ser radio button o select
-        const operacionRadio = document.querySelector('[name="operacion"]:checked');
-        const operacionSelect = document.querySelector('select[name="operacion"]');
-        const operacion = (operacionRadio?.value || operacionSelect?.value || '').toLowerCase();
+        // Use stored activeFilters (from URL parsed at startup) as BASE.
+        // DOM values OVERRIDE them if user has changed them manually.
+        const f = this.activeFilters || {};
 
-        const tipoEl = document.querySelector('[name="tipo"]') ||
-            document.querySelector('select[name="tipo"]');
-        const tipo = (tipoEl?.value || '').toLowerCase();
+        // Operacion: URL param > manual radio click > ignore default checked radio
+        const urlOperacion = f.operacion || '';
+        const operacion = normalizeStr(this._manualOperacion || urlOperacion || '');
 
-        const comunaEl = document.querySelector('[name="comuna"]') ||
-            document.querySelector('select[name="comuna"]');
-        const comuna = (comunaEl?.value || '').toLowerCase();
+        // Tipo: DOM select value > URL param
+        const tipoEl = document.querySelector('[name="tipo"]');
+        const tipo = normalizeStr(tipoEl?.value || f.tipo || '');
 
-        // Dormitorios: primero busca button activo, luego input numérico
+        // Region: DOM select value > URL param
+        const regionEl = document.querySelector('[name="region"]');
+        const region = normalizeStr(regionEl?.value || f.region || '');
+
+        // Comuna: DOM select value > URL param
+        const comunaEl = document.querySelector('[name="comuna"]');
+        const comuna = normalizeStr(comunaEl?.value || f.comuna || '');
+
+        // Dormitorios
         const dormBtn = document.querySelector('.number-btn.active[data-value]');
-        const dormInput = document.querySelector('[name="dormitorios"]');
-        const dormMin = dormBtn
-            ? parseInt(dormBtn.dataset.value, 10)
-            : (dormInput ? parseInt(dormInput.value, 10) || 0 : 0);
+        const dormMin = dormBtn ? parseInt(dormBtn.dataset.value, 10) : 0;
 
-        const precioMaxRaw = document.querySelector('[name="precioMax"]')?.value;
-        const precioMax = precioMaxRaw
-            ? parseFloat(String(precioMaxRaw).replace(/[^0-9.]/g, ''))
-            : Infinity;
+        // Precio max: DOM text input > URL parsed value at startup
+        const precioMaxEl = document.querySelector('[name="precioMax"]');
+        const precioMaxFromDom = precioMaxEl?.value ? parseInt(precioMaxEl.value.replace(/\D/g, ''), 10) : 0;
+        const precioMax = precioMaxFromDom > 0 ? precioMaxFromDom : (f.precioMax ?? Infinity);
 
-        const precioMinRaw = document.querySelector('[name="precioMin"]')?.value;
-        const precioMin = precioMinRaw
-            ? parseFloat(String(precioMinRaw).replace(/[^0-9.]/g, ''))
-            : 0;
+        // Precio min: DOM text input > URL parsed value at startup
+        const precioMinEl = document.querySelector('[name="precioMin"]');
+        const precioMinFromDom = precioMinEl?.value ? parseInt(precioMinEl.value.replace(/\D/g, ''), 10) : 0;
+        const precioMin = precioMinFromDom > 0 ? precioMinFromDom : (f.precioMin ?? 0);
+
+        console.log(`🔎 Filtering: tipo=${tipo} region=${region} comuna=${comuna} op=${operacion} max=${precioMax} min=${precioMin}`);
 
         this.filteredProperties = this.properties.filter(p => {
-            if (operacion && p.operacion?.toLowerCase() !== operacion) return false;
-            if (tipo && p.tipo?.toLowerCase() !== tipo) return false;
-            if (comuna && p.comuna?.toLowerCase() !== comuna) return false;
+            if (operacion && normalizeStr(p.operacion) !== operacion) return false;
+            if (tipo && normalizeStr(p.tipo) !== tipo) return false;
+            if (region && normalizeStr(p.region) !== region) return false;
+            if (comuna && normalizeStr(p.comuna) !== comuna) return false;
             if (dormMin && (p.dormitorios || 0) < dormMin) return false;
             if ((p.precioCLP || 0) < precioMin) return false;
-            if ((p.precioCLP || 0) > precioMax) return false;
+            if (precioMax !== Infinity && (p.precioCLP || 0) > precioMax) return false;
             return true;
         });
 
+        console.log(`✅ ${this.filteredProperties.length} propiedades after filter`);
         this.renderProperties();
         this.updateMapMarkers();
     }
 
     resetFilters() {
-        // Limpiar todos los selects y inputs del sidebar
         document.querySelectorAll('.filter-select, select[name]').forEach(s => s.selectedIndex = 0);
         document.querySelectorAll('.filter-input, input[name]').forEach(i => {
             if (i.type !== 'radio') i.value = '';
         });
         document.querySelectorAll('.number-btn').forEach(b => b.classList.remove('active'));
-
-        // Reset radio de operación al primer valor disponible
-        const firstRadio = document.querySelector('[name="operacion"]');
-        if (firstRadio) firstRadio.checked = true;
-
-        // Limpiar URL sin recargar la página
-        const cleanUrl = window.location.pathname;
-        window.history.replaceState({}, '', cleanUrl);
-
+        this._manualOperacion = '';
+        window.history.replaceState({}, '', window.location.pathname);
         this.filteredProperties = [...this.properties];
         this.renderProperties();
         this.updateMapMarkers();
@@ -489,16 +455,12 @@ class PropertyManager {
 class HeroSlider {
     constructor() {
         this.slider = $('#heroSlider');
-        // Only run if slider exists (Home Page)
         if (!this.slider) return;
-
         this.slides = $$('.hero-slide');
         this.dots = $$('.dot');
         this.prevBtn = $('#sliderPrev');
         this.nextBtn = $('#sliderNext');
-
         if (this.slides.length === 0) return;
-
         this.currentSlide = 0;
         this.autoplayInterval = null;
         this.init();
@@ -517,29 +479,16 @@ class HeroSlider {
 
     goToSlide(index) {
         this.slides[this.currentSlide].classList.remove('active');
-        this.dots[this.currentSlide].classList.remove('active');
+        if (this.dots[this.currentSlide]) this.dots[this.currentSlide].classList.remove('active');
         this.currentSlide = index;
         this.slides[this.currentSlide].classList.add('active');
-        this.dots[this.currentSlide].classList.add('active');
+        if (this.dots[this.currentSlide]) this.dots[this.currentSlide].classList.add('active');
     }
 
-    next() {
-        const nextSlide = (this.currentSlide + 1) % this.slides.length;
-        this.goToSlide(nextSlide);
-    }
-
-    prev() {
-        const prevSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-        this.goToSlide(prevSlide);
-    }
-
-    startAutoplay() {
-        this.autoplayInterval = setInterval(() => this.next(), CONFIG.heroSlideInterval);
-    }
-
-    stopAutoplay() {
-        clearInterval(this.autoplayInterval);
-    }
+    next() { this.goToSlide((this.currentSlide + 1) % this.slides.length); }
+    prev() { this.goToSlide((this.currentSlide - 1 + this.slides.length) % this.slides.length); }
+    startAutoplay() { this.autoplayInterval = setInterval(() => this.next(), CONFIG.heroSlideInterval); }
+    stopAutoplay() { clearInterval(this.autoplayInterval); }
 }
 
 // ===== VIEW TOGGLES =====
@@ -548,48 +497,232 @@ class ViewToggles {
         this.gridBtn = $('#viewGrid');
         this.listBtn = $('#viewList');
         this.mapBtn = $('#viewMap');
-
         this.gridView = $('#gridView');
         this.mapView = $('#mapView');
-
         if (!this.gridBtn) return;
         this.init();
     }
 
     init() {
         this.gridBtn.addEventListener('click', () => this.switchView('grid'));
-        this.listBtn.addEventListener('click', () => this.switchView('list'));
-        this.mapBtn.addEventListener('click', () => this.switchView('map'));
+        this.listBtn?.addEventListener('click', () => this.switchView('list'));
+        this.mapBtn?.addEventListener('click', () => this.switchView('map'));
     }
 
     switchView(view) {
         $$('.view-toggle').forEach(btn => btn.classList.remove('active'));
         $$('.properties-view').forEach(v => v.classList.remove('active'));
-
         if (view === 'grid') {
             this.gridBtn.classList.add('active');
-            this.gridView.classList.add('active');
+            this.gridView?.classList.add('active');
         } else if (view === 'list') {
-            this.listBtn.classList.add('active');
-            this.gridView.classList.add('active'); // Reusing grid for now
+            this.listBtn?.classList.add('active');
+            this.gridView?.classList.add('active');
         } else if (view === 'map') {
-            this.mapBtn.classList.add('active');
-            this.mapView.classList.add('active');
+            this.mapBtn?.classList.add('active');
+            this.mapView?.classList.add('active');
         }
+    }
+}
+
+// ===== CHILE REGIONS DATA =====
+const CHILE_REGIONS = [
+    { nombre: 'Arica y Parinacota', comunas: ['Arica', 'Camarones', 'Putre', 'General Lagos'] },
+    { nombre: 'Tarapacá', comunas: ['Iquique', 'Alto Hospicio', 'Pozo Almonte', 'Camiña', 'Colchane', 'Huara', 'Pica'] },
+    { nombre: 'Antofagasta', comunas: ['Antofagasta', 'Mejillones', 'Sierra Gorda', 'Taltal', 'Calama', 'Ollagüe', 'San Pedro de Atacama', 'Tocopilla', 'María Elena'] },
+    { nombre: 'Atacama', comunas: ['Copiapó', 'Caldera', 'Tierra Amarilla', 'Chañaral', 'Diego de Almagro', 'Vallenar', 'Alto del Carmen', 'Freirina', 'Huasco'] },
+    { nombre: 'Coquimbo', comunas: ['La Serena', 'Coquimbo', 'Andacollo', 'La Higuera', 'Paihuano', 'Vicuña', 'Illapel', 'Canela', 'Los Vilos', 'Salamanca', 'Ovalle', 'Combarbalá', 'Monte Patria', 'Punitaqui', 'Río Hurtado'] },
+    { nombre: 'Valparaíso', comunas: ['Valparaíso', 'Casablanca', 'Concón', 'Juan Fernández', 'Puchuncaví', 'Quintero', 'Viña del Mar', 'Isla de Pascua', 'Los Andes', 'Calle Larga', 'Rinconada', 'San Esteban', 'La Ligua', 'Cabildo', 'Papudo', 'Petorca', 'Zapallar', 'Quillota', 'Calera', 'Hijuelas', 'La Cruz', 'Nogales', 'San Antonio', 'Algarrobo', 'Cartagena', 'El Quisco', 'El Tabo', 'Santo Domingo', 'San Felipe', 'Catemu', 'Llaillay', 'Panquehue', 'Putaendo', 'Santa María', 'Quilpué', 'Limache', 'Olmué', 'Villa Alemana'] },
+    { nombre: 'Metropolitana de Santiago', comunas: ['Santiago', 'Cerrillos', 'Cerro Navia', 'Conchalí', 'El Bosque', 'Estación Central', 'Huechuraba', 'Independencia', 'La Cisterna', 'La Florida', 'La Granja', 'La Pintana', 'La Reina', 'Las Condes', 'Lo Barnechea', 'Lo Espejo', 'Lo Prado', 'Macul', 'Maipú', 'Ñuñoa', 'Pedro Aguirre Cerda', 'Peñalolén', 'Providencia', 'Pudahuel', 'Quilicura', 'Quinta Normal', 'Recoleta', 'Renca', 'San Joaquín', 'San Miguel', 'San Ramón', 'Vitacura', 'Puente Alto', 'Pirque', 'San José de Maipo', 'Colina', 'Lampa', 'Tiltil', 'San Bernardo', 'Buin', 'Calera de Tango', 'Paine', 'Melipilla', 'Alhué', 'Curacaví', 'María Pinto', 'San Pedro', 'Talagante', 'El Monte', 'Isla de Maipo', 'Padre Hurtado', 'Peñaflor'] },
+    { nombre: "Libertador Gral. Bernardo O'Higgins", comunas: ['Rancagua', 'Codegua', 'Coinco', 'Coltauco', 'Doñihue', 'Graneros', 'Las Cabras', 'Machalí', 'Malloa', 'Mostazal', 'Olivar', 'Peumo', 'Pichidegua', 'Quinta de Tilcoco', 'Rengo', 'Requínoa', 'San Vicente', 'Pichilemu', 'La Estrella', 'Litueche', 'Marchihue', 'Navidad', 'Paredones', 'San Fernando', 'Chépica', 'Chimbarongo', 'Lolol', 'Nancagua', 'Palmilla', 'Peralillo', 'Placilla', 'Pumanque', 'Santa Cruz'] },
+    { nombre: 'Maule', comunas: ['Talca', 'Constitución', 'Curepto', 'Empedrado', 'Maule', 'Pelarco', 'Pencahue', 'Río Claro', 'San Clemente', 'San Rafael', 'Cauquenes', 'Chanco', 'Pelluhue', 'Curicó', 'Hualañé', 'Licantén', 'Molina', 'Rauco', 'Romeral', 'Sagrada Familia', 'Teno', 'Vichuquén', 'Linares', 'Colbún', 'Longaví', 'Parral', 'Retiro', 'San Javier', 'Villa Alegre', 'Yerbas Buenas'] },
+    { nombre: 'Ñuble', comunas: ['Cobquecura', 'Coelemu', 'Ninhue', 'Portezuelo', 'Quirihue', 'Ránquil', 'Treguaco', 'Bulnes', 'Chillán Viejo', 'Chillán', 'El Carmen', 'Pemuco', 'Pinto', 'Quillón', 'San Ignacio', 'Yungay', 'Coihueco', 'Ñiquén', 'San Carlos', 'San Fabián', 'San Nicolás'] },
+    { nombre: 'Biobío', comunas: ['Concepción', 'Coronel', 'Chiguayante', 'Florida', 'Hualqui', 'Lota', 'Penco', 'San Pedro de la Paz', 'Santa Juana', 'Talcahuano', 'Tomé', 'Hualpén', 'Lebu', 'Arauco', 'Cañete', 'Contulmo', 'Curanilahue', 'Los Álamos', 'Tirúa', 'Los Ángeles', 'Antuco', 'Cabrero', 'Laja', 'Mulchén', 'Nacimiento', 'Negrete', 'Quilaco', 'Quilleco', 'San Rosendo', 'Santa Bárbara', 'Tucapel', 'Yumbel', 'Alto Biobío'] },
+    { nombre: 'La Araucanía', comunas: ['Temuco', 'Carahue', 'Cunco', 'Curarrehue', 'Freire', 'Galvarino', 'Gorbea', 'Lautaro', 'Loncoche', 'Melipeuco', 'Nueva Imperial', 'Padre las Casas', 'Perquenco', 'Pitrufquén', 'Pucón', 'Saavedra', 'Teodoro Schmidt', 'Toltén', 'Vilcún', 'Villarrica', 'Cholchol', 'Angol', 'Collipulli', 'Curacautín', 'Ercilla', 'Lonquimay', 'Los Sauces', 'Lumaco', 'Purén', 'Renaico', 'Traiguén', 'Victoria'] },
+    { nombre: 'Los Ríos', comunas: ['Valdivia', 'Corral', 'Lanco', 'Los Lagos', 'Máfil', 'Mariquina', 'Paillaco', 'Panguipulli', 'La Unión', 'Futrono', 'Lago Ranco', 'Río Bueno'] },
+    { nombre: 'Los Lagos', comunas: ['Puerto Montt', 'Calbuco', 'Cochamó', 'Fresia', 'Frutillar', 'Los Muermos', 'Llanquihue', 'Maullín', 'Puerto Varas', 'Castro', 'Ancud', 'Chonchi', 'Curaco de Vélez', 'Dalcahue', 'Puqueldón', 'Queilén', 'Quellón', 'Quemchi', 'Quinchao', 'Osorno', 'Puerto Octay', 'Purranque', 'Puyehue', 'Río Negro', 'San Juan de la Costa', 'San Pablo', 'Chaitén', 'Futaleufú', 'Hualaihué', 'Palena'] },
+    { nombre: 'Aysén', comunas: ['Coihaique', 'Lago Verde', 'Aysén', 'Cisnes', 'Guaitecas', 'Cochrane', "O'Higgins", 'Tortel', 'Chile Chico', 'Río Ibáñez'] },
+    { nombre: 'Magallanes', comunas: ['Punta Arenas', 'Laguna Blanca', 'Río Verde', 'San Gregorio', 'Cabo de Hornos', 'Antártica', 'Porvenir', 'Primavera', 'Timaukel', 'Natales', 'Torres del Paine'] }
+];
+
+// ===== SEARCH FORM CONTROLLER =====
+class SearchFormController {
+    constructor() {
+        this.form = $('#searchForm');
+        this.operacionInput = $('#operacionInput');
+        this.regionSelect = $('#regionSelect') || document.querySelector('select[name="region"]');
+        this.comunaSelect = $('#comunaSelect') || document.querySelector('select[name="comuna"]');
+        this.precioInput = $('#precioInput');
+        this.submitBtn = $('#searchSubmitBtn');
+        this.tabs = $$('.search-tab-btn');
+
+        if (!this.form && !this.regionSelect) return;
+        this.init();
+    }
+
+    async init() {
+        if (this.form) {
+            this.setupTabs();
+            this.setupCurrencyFormat();
+            this.setupFormSubmit();
+        }
+        this.loadRegions();
+
+        // On catalog page (no form): bind sidebar select changes to live filter
+        if (!this.form && this.regionSelect) {
+            this.regionSelect.addEventListener('change', () => {
+                this.updateComunasFromSelect();
+                if (window.propertyManager) window.propertyManager.applyFilters();
+            });
+            if (this.comunaSelect) {
+                this.comunaSelect.addEventListener('change', () => {
+                    if (window.propertyManager) window.propertyManager.applyFilters();
+                });
+            }
+        }
+    }
+
+    loadRegions() {
+        if (!this.regionSelect) return;
+
+        const params = new URLSearchParams(window.location.search);
+        const urlRegion = params.get('region');
+        const urlComuna = params.get('comuna');
+
+        // Populate region select
+        this.regionSelect.innerHTML = '<option value="">Todas las regiones</option>';
+        let preselectedRegionIndex = -1;
+
+        CHILE_REGIONS.forEach((region, index) => {
+            const option = document.createElement('option');
+            option.value = region.nombre;
+            option.dataset.index = index;
+            option.textContent = region.nombre;
+            if (urlRegion && normalizeStr(urlRegion) === normalizeStr(region.nombre)) {
+                option.selected = true;
+                preselectedRegionIndex = index;
+            }
+            this.regionSelect.appendChild(option);
+        });
+
+        // Populate comunas if region was pre-selected
+        if (preselectedRegionIndex >= 0) {
+            this.populateComunas(preselectedRegionIndex, urlComuna);
+        }
+        // Do NOT call applyFilters() here — PropertyManager.applyURLParams() handles it
+        // after it has loaded the properties data.
+    }
+
+    populateComunas(regionIndex, preselectedComuna) {
+        if (!this.comunaSelect) return;
+        const region = CHILE_REGIONS[regionIndex];
+        if (!region) return;
+
+        this.comunaSelect.innerHTML = '<option value="">Todas las comunas</option>';
+        region.comunas.forEach(c => {
+            const option = document.createElement('option');
+            option.value = c;
+            option.textContent = c;
+            if (preselectedComuna && normalizeStr(preselectedComuna) === normalizeStr(c)) {
+                option.selected = true;
+            }
+            this.comunaSelect.appendChild(option);
+        });
+        this.comunaSelect.disabled = false;
+    }
+
+    updateComunasFromSelect() {
+        if (!this.regionSelect || !this.comunaSelect) return;
+        const selectedOption = this.regionSelect.options[this.regionSelect.selectedIndex];
+        const indexStr = selectedOption?.dataset?.index;
+
+        if (indexStr === undefined || indexStr === '') {
+            this.comunaSelect.innerHTML = '<option value="">Todas las comunas</option>';
+            this.comunaSelect.disabled = true;
+            return;
+        }
+        this.populateComunas(parseInt(indexStr, 10), null);
+    }
+
+    setupTabs() {
+        if (!this.tabs.length) return;
+        this.tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.tabs.forEach(t => {
+                    t.classList.remove('active', 'bg-orange-primary', 'text-white');
+                    t.classList.add('bg-gray-100', 'text-gray-700');
+                });
+                tab.classList.remove('bg-gray-100', 'text-gray-700');
+                tab.classList.add('active', 'bg-orange-primary', 'text-white');
+
+                const operacion = tab.dataset.tab === 'arrendar' ? 'arriendo' : 'venta';
+                if (this.operacionInput) this.operacionInput.value = operacion;
+
+                if (this.precioInput) {
+                    const label = $('#precioLabel');
+                    if (operacion === 'arriendo') {
+                        this.precioInput.placeholder = 'Ej: 500.000';
+                        if (label) label.textContent = 'Presupuesto Mensual';
+                    } else {
+                        this.precioInput.placeholder = 'Ej: 80.000.000';
+                        if (label) label.textContent = 'Presupuesto Máx';
+                    }
+                }
+            });
+        });
+    }
+
+    setupCurrencyFormat() {
+        $$('.format-currency').forEach(input => {
+            input.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value !== '') value = parseInt(value, 10).toLocaleString('es-CL');
+                e.target.value = value;
+            });
+        });
+    }
+
+    setupFormSubmit() {
+        this.form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Strip currency formatting dots before submit
+            if (this.precioInput && this.precioInput.value) {
+                this.precioInput.value = this.precioInput.value.replace(/\./g, '');
+            }
+
+            // Disable blank fields to keep URL clean
+            this.form.querySelectorAll('input, select').forEach(input => {
+                if (!input.value || input.value === 'Todas las regiones' || input.value === 'Todas las comunas') {
+                    input.disabled = true;
+                }
+            });
+
+            // Loading state
+            if (this.submitBtn) {
+                const content = this.submitBtn.querySelector('.btn-content');
+                const spinner = this.submitBtn.querySelector('.loading-spinner');
+                if (content) content.classList.add('opacity-0');
+                if (spinner) spinner.classList.remove('opacity-0');
+                this.submitBtn.classList.add('cursor-wait');
+                this.submitBtn.disabled = true;
+            }
+
+            setTimeout(() => this.form.submit(), 300);
+        });
     }
 }
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', () => {
-    // Shared components
     new HeaderController();
     new MobileMenu();
 
-    // Page specific
-    new HeroSlider();
-    new PropertyManager(); // Handles fetching and rendering
-    new ViewToggles();
+    // Init PropertyManager first (loads data), then SearchFormController (populates selects + triggers filter)
+    window.propertyManager = new PropertyManager();
+    new SearchFormController();
 
-    // Others...
-    // Note: ScrollReveal and others can be re-enabled if needed
+    new HeroSlider();
+    new ViewToggles();
 });

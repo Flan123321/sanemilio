@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -106,7 +106,6 @@
                     </li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                 </ul>
 
                 <!-- Actions -->
@@ -250,12 +249,12 @@
                 </div>
 
                 <!-- Search Form -->
-                <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-end" id="searchForm">
+                <form action="propiedades.html" method="GET" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-end relative" id="searchForm">
+                    <input type="hidden" name="operacion" id="operacionInput" value="venta">
 
                     <!-- Tipo de Propiedad -->
                     <div class="space-y-2">
-                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider">Tipo de
-                            Propiedad</label>
+                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider">Propiedad</label>
                         <div class="relative">
                             <select name="tipo"
                                 class="w-full px-4 py-4 pr-10 border-2 border-gray-200 rounded-xl font-medium text-gray-700 focus:border-orange-primary focus:ring-4 focus:ring-orange-primary/20 transition-all duration-300 appearance-none bg-white cursor-pointer hover:border-gray-300">
@@ -266,79 +265,62 @@
                                 <option value="terreno">Terreno</option>
                                 <option value="comercial">Local Comercial</option>
                             </select>
-                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                     </div>
 
-                    <!-- Ubicación -->
-                    <div class="space-y-2 lg:col-span-2">
-                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider">Ubicación</label>
-                        <div class="relative">
-                            <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <input type="text" name="ubicacion" placeholder="Ej: Temuco, Vilcún, Lautaro..."
-                                class="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl font-medium text-gray-700 placeholder-gray-400 focus:border-orange-primary focus:ring-4 focus:ring-orange-primary/20 transition-all duration-300 hover:border-gray-300">
-                        </div>
-                    </div>
-
-                    <!-- Precio Desde -->
+                    <!-- Región -->
                     <div class="space-y-2">
-                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider">Precio
-                            Desde</label>
+                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider">Región</label>
                         <div class="relative">
-                            <span
-                                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">$</span>
-                            <input type="text" name="precioDesde" placeholder="Min"
-                                class="w-full pl-8 pr-4 py-4 border-2 border-gray-200 rounded-xl font-medium text-gray-700 placeholder-gray-400 focus:border-orange-primary focus:ring-4 focus:ring-orange-primary/20 transition-all duration-300 hover:border-gray-300">
+                            <select name="region" id="regionSelect" class="w-full px-4 py-4 pr-10 border-2 border-gray-200 rounded-xl font-medium text-gray-700 bg-white cursor-pointer hover:border-gray-300 focus:border-orange-primary focus:ring-4 focus:ring-orange-primary/20 transition-all duration-300 appearance-none">
+                                <option value="">Cargando...</option>
+                            </select>
+                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                     </div>
 
-                    <!-- Precio Hasta -->
+                    <!-- Comuna -->
                     <div class="space-y-2">
-                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider">Precio
-                            Hasta</label>
+                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider">Comuna</label>
                         <div class="relative">
-                            <span
-                                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">$</span>
-                            <input type="text" name="precioHasta" placeholder="Máx"
-                                class="w-full pl-8 pr-4 py-4 border-2 border-gray-200 rounded-xl font-medium text-gray-700 placeholder-gray-400 focus:border-orange-primary focus:ring-4 focus:ring-orange-primary/20 transition-all duration-300 hover:border-gray-300">
+                            <select name="comuna" id="comunaSelect" disabled class="w-full px-4 py-4 pr-10 border-2 border-gray-200 rounded-xl font-medium text-gray-700 bg-gray-50 cursor-not-allowed hover:border-gray-300 focus:border-orange-primary focus:ring-4 focus:ring-orange-primary/20 transition-all duration-300 appearance-none disabled:opacity-70">
+                                <option value="">- Selecciona Región -</option>
+                            </select>
+                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </div>
+
+                    <!-- Precio Máx -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold text-gray-600 uppercase tracking-wider" id="precioLabel">Presupuesto Máx</label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">$</span>
+                            <input type="text" name="precio_max" id="precioInput" placeholder="Ej: 80.000.000" class="w-full pl-8 pr-4 py-4 border-2 border-gray-200 rounded-xl font-medium text-gray-700 placeholder-gray-400 focus:border-orange-primary focus:ring-4 focus:ring-orange-primary/20 transition-all duration-300 hover:border-gray-300 format-currency">
                         </div>
                     </div>
 
                     <!-- Search Button -->
-                    <button type="submit"
-                        class="lg:col-span-5 bg-gradient-to-r from-orange-primary to-orange-dark hover:from-orange-dark hover:to-orange-primary text-white font-bold py-5 px-8 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-primary/50 flex items-center justify-center gap-3 group">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                        <span class="text-lg">Buscar Propiedades</span>
-                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
+                    <button type="submit" id="searchSubmitBtn" class="bg-gradient-to-r from-orange-primary to-orange-dark hover:from-orange-dark hover:to-orange-primary text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-primary/50 flex items-center justify-center gap-2 group relative overflow-hidden h-14">
+                        <div class="btn-content flex items-center justify-center gap-2 w-full transition-opacity duration-300">
+                            <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <span class="text-base whitespace-nowrap">Buscar</span>
+                        </div>
+                        <div class="loading-spinner absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                            <svg class="animate-spin w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+                        </div>
                     </button>
+                    
                 </form>
 
                 <!-- Quick Filters -->
                 <div class="mt-8 pt-6 border-t border-gray-200">
                     <p class="text-sm text-gray-500 mb-3 font-medium">Búsquedas Rápidas:</p>
                     <div class="flex flex-wrap gap-2">
-                        <a href="propiedades.html?tipo=casa"
+                        <a href="propiedades.html?tipo=casa&comuna=Temuco"
                             class="px-4 py-2 bg-gray-100 hover:bg-orange-primary hover:text-white text-gray-700 rounded-lg text-sm font-medium transition-all duration-300">Casas
                             en Temuco</a>
-                        <a href="propiedades.html?tipo=parcela"
+                        <a href="propiedades.html?tipo=parcela&region=La%20Araucan%C3%ADa"
                             class="px-4 py-2 bg-gray-100 hover:bg-orange-primary hover:text-white text-gray-700 rounded-lg text-sm font-medium transition-all duration-300">Parcelas
                             Araucanía</a>
                         <a href="propiedades.html?tipo=departamento"
@@ -644,7 +626,7 @@
                 <!-- Brand -->
                 <div class="md:col-span-1">
                     <a href="index.html" class="block mb-6">
-                        <img src="12.png" alt="San Emilio Propiedades" class="h-14 w-auto">
+                        <img src="12.png" alt="San Emilio Propiedades" class="h-16 w-auto object-contain">
                     </a>
                     <p class="text-gray-400 leading-relaxed mb-6">
                         Más que propiedades, encontramos hogares. Tu aliado inmobiliario de confianza en la Araucanía
@@ -697,7 +679,6 @@
                                 class="text-gray-400 hover:text-orange-primary transition">Nosotros</a></li>
                         <li><a href="servicios.html"
                                 class="text-gray-400 hover:text-orange-primary transition">Servicios</a></li>
-                        <li><a href="blog.html" class="text-gray-400 hover:text-orange-primary transition">Blog</a></li>
                         <li><a href="contacto.html"
                                 class="text-gray-400 hover:text-orange-primary transition">Contacto</a></li>
                     </ul>

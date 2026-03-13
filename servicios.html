@@ -62,73 +62,118 @@
 </head>
 
 <body class="font-sans bg-cream">
-    <!-- Header -->
-    <header class="header fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300">
+    <!-- ═══ HEADER PREMIUM ═══ -->
+    <header class="header" id="header">
         <div class="container mx-auto px-6">
-            <nav class="navbar flex items-center justify-between py-4">
-                <a href="index.html" class="logo block">
-                    <img src="12.png" alt="San Emilio Propiedades"
-                        class="h-12 md:h-14 w-auto transition-all duration-300 hover:scale-105">
+            <nav class="navbar">
+                <a href="index.html" class="logo" aria-label="San Emilio Propiedades - Inicio">
+                    <img src="12.png" alt="San Emilio Propiedades">
                 </a>
-                <ul class="nav-menu hidden lg:flex items-center gap-8">
-                    <li><a href="index.html"
-                            class="text-navy-900 hover:text-orange-primary transition font-medium">Inicio</a></li>
-                    <li><a href="propiedades.html"
-                            class="text-navy-900 hover:text-orange-primary transition font-medium">Propiedades</a></li>
-                    <li><a href="nosotros.html"
-                            class="text-navy-900 hover:text-orange-primary transition font-medium">Nosotros</a></li>
-                    <li><a href="servicios.html" class="text-orange-primary font-semibold">Servicios</a></li>
-                    <li><a href="blog.html"
-                            class="text-navy-900 hover:text-orange-primary transition font-medium">Blog</a></li>
+
+                <ul class="nav-menu" id="navMenu" role="list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="propiedades.html" aria-haspopup="true">
+                            Propiedades
+                            <svg width="10" height="7" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                                <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="propiedades.html?tipo=casa" role="menuitem">🏠 Casas</a></li>
+                            <li><a href="propiedades.html?tipo=departamento" role="menuitem">🏙️ Departamentos</a></li>
+                            <li><a href="propiedades.html?tipo=parcela" role="menuitem">🌿 Parcelas</a></li>
+                            <li><a href="propiedades.html?tipo=terreno" role="menuitem">🗺️ Terrenos</a></li>
+                            <li><a href="propiedades.html?tipo=comercial" role="menuitem">🏪 Locales Comerciales</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html" class="active">Servicios</a></li>
                 </ul>
-                <div class="header-actions flex items-center gap-4">
-                    <a href="contacto.html"
-                        class="hidden md:inline-flex items-center gap-2 bg-orange-primary hover:bg-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105">Contactar
-                        Asesor</a>
+
+                <div class="header-actions">
+                    <a href="contacto.html" class="header-cta">Contactar Asesor</a>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false"
+                        aria-controls="navMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="relative pt-32 pb-24 overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0">
-            <img src="5317367-cheques-2672195_1280.jpg" alt="" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-br from-navy-900/95 via-navy-800/90 to-navy-700/85"></div>
+    <!-- Editorial Hero Section -->
+    <section class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--cream-bg) 55%);">
+        
+        <!-- Subtle Pattern Overlay (crema tint) -->
+        <div class="absolute inset-0 z-0 opacity-5" 
+             style="background-image: repeating-linear-gradient(45deg, #152844 0, #152844 1px, transparent 1px, transparent 20px);">
         </div>
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-primary/10 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-primary/5 rounded-full blur-[80px]"></div>
+
         <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="flex items-center justify-center gap-2 text-sm text-white/60 mb-8">
-                    <a href="index.html" class="hover:text-white transition">Inicio</a>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                    <span class="text-orange-primary font-medium">Servicios</span>
+            <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-24">
+                
+                <!-- Left Column: Tangible Services Image -->
+                <div class="w-full lg:w-5/12 relative mt-10 lg:mt-0 flex flex-col justify-end">
+                    <!-- Decoración verde musgo sutil -->
+                    <div class="absolute -top-10 -left-10 w-64 h-64 bg-[#4A5D23]/10 rounded-full blur-3xl mix-blend-multiply"></div>
+                    
+                    <div class="relative z-10 lg:-ml-8 rounded-[2rem] overflow-hidden shadow-[0_40px_80px_rgba(11,26,46,0.25)] border-4 border-[#FDFBF7] transform lg:-translate-y-6 transition-all duration-1000 hover:-translate-y-10 group bg-gray-100">
+                        <img src="services_hero.png" alt="Servicios Inmobiliarios San Emilio" class="w-full h-auto min-h-[400px] lg:min-h-[600px] object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out">
+                    </div>
+
+                    <!-- Acento terracota -->
+                    <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-[#E65528]/15 rounded-full blur-3xl mix-blend-multiply"></div>
                 </div>
-                <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Servicios <span class="text-orange-primary">Inmobiliarios</span> Integrales
-                </h1>
-                <p class="text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-                    Soluciones completas para compra, venta, arriendo y administración de propiedades con el respaldo de
-                    18 años de experiencia.
-                </p>
+
+                <!-- Right Column: Editorial Typography & Content -->
+                <div class="w-full lg:w-7/12 flex flex-col justify-center pt-8 pb-4">
+                    
+                    <div class="flex items-center gap-2 text-sm text-navy-600 mb-8 font-semibold uppercase tracking-widest">
+                        <a href="index.html" class="hover:text-orange-primary transition">Inicio</a>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span class="text-orange-primary">Servicios</span>
+                    </div>
+
+                    <!-- Título Editorial -->
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-[72px] text-navy-900 leading-[1.05] tracking-tight mb-8">
+                        Servicios Inmobiliarios Integrales
+                    </h1>
+                    
+                    <!-- Subtítulo -->
+                    <p class="font-sans text-xl md:text-2xl text-navy-700 font-light mb-12 max-w-2xl leading-[1.6]">
+                        Soluciones completas para compra, venta, arriendo y administración de propiedades con el respaldo de 18 años de experiencia.
+                    </p>
+                    
+                    <!-- Párrafo Descriptivo Principal -->
+                    <div class="bg-white/60 backdrop-blur-xl p-8 rounded-[1.5rem] shadow-lg border border-white/50 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1.5 h-full bg-[#E65528] opacity-80"></div>
+                        <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">¿Cómo podemos ayudarte?</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed font-light">
+                            Ofrecemos un acompañamiento integral en cada etapa de tu operación inmobiliaria. Nos alejamos de los procesos genéricos para entregarte un servicio boutique, basado en la confianza, la transparencia y el conocimiento tangible del mercado de la Araucanía.
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Main Services -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span
-                    class="inline-block px-4 py-2 bg-orange-primary/10 text-orange-primary font-semibold rounded-full text-sm mb-4">NUESTROS
-                    SERVICIOS</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-4">¿Cómo podemos ayudarte?</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Ofrecemos un acompañamiento integral en cada etapa de
-                    tu operación inmobiliaria</p>
+    <section class="py-24 bg-cream relative">
+        <!-- Fondo con patrón mapuche sutil -->
+        <div class="absolute inset-0 z-0 opacity-[0.03]" 
+             style="background-image: linear-gradient(30deg, #E65528 12%, transparent 12.5%, transparent 87%, #E65528 87.5%, #E65528), linear-gradient(150deg, #E65528 12%, transparent 12.5%, transparent 87%, #E65528 87.5%, #E65528), linear-gradient(30deg, #E65528 12%, transparent 12.5%, transparent 87%, #E65528 87.5%, #E65528), linear-gradient(150deg, #E65528 12%, transparent 12.5%, transparent 87%, #E65528 87.5%, #E65528), linear-gradient(60deg, #4A5D2377 25%, transparent 25.5%, transparent 75%, #4A5D2377 75%, #4A5D2377), linear-gradient(60deg, #4A5D2377 25%, transparent 25.5%, transparent 75%, #4A5D2377 75%, #4A5D2377); background-size: 40px 70px;">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="mb-16">
+                <!-- No header here since intro is in hero block -->
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -408,7 +453,7 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div class="md:col-span-1">
                     <a href="index.html" class="block mb-6"><img src="12.png" alt="San Emilio Propiedades"
-                            class="h-14 w-auto"></a>
+                            class="h-16 w-auto object-contain"></a>
                     <p class="text-gray-400 leading-relaxed mb-6">Más que propiedades, encontramos hogares. Tu aliado
                         inmobiliario de confianza.</p>
                     <div class="flex gap-4">
@@ -455,7 +500,6 @@
                                 class="text-gray-400 hover:text-orange-primary transition">Nosotros</a></li>
                         <li><a href="servicios.html"
                                 class="text-gray-400 hover:text-orange-primary transition">Servicios</a></li>
-                        <li><a href="blog.html" class="text-gray-400 hover:text-orange-primary transition">Blog</a></li>
                         <li><a href="contacto.html"
                                 class="text-gray-400 hover:text-orange-primary transition">Contacto</a></li>
                     </ul>

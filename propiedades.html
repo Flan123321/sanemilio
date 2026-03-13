@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -53,7 +53,6 @@
                     </li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                 </ul>
 
                 <div class="header-actions">
@@ -68,19 +67,11 @@
             </nav>
         </div>
     </header>
-    <!-- Page Header -->
-    <!-- Catalog Section -->
-    <section class="page-header"
-        style="background-image: linear-gradient(rgba(11, 26, 46, 0.7), rgba(11, 26, 46, 0.7)), url('klau2018-metropolis-7100464_1280.jpg'); background-size: cover; background-position: center;">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="index.html" style="color: rgba(255,255,255,0.8);">Inicio</a>
-                <span style="color: rgba(255,255,255,0.6);">/</span>
-                <span style="color: var(--white);">Propiedades</span>
-            </div>
-            <h1 class="page-title" style="color: var(--white); margin-bottom: 8px;">Catálogo de Propiedades</h1>
-            <p class="page-subtitle" style="color: rgba(255,255,255,0.9);">Encuentra tu próximo hogar entre nuestras
-                propiedades seleccionadas</p>
+    <!-- Page Header Premium -->
+    <section class="page-header catalog-header">
+        <div class="container-fluid catalog-header-container">
+            <h1 class="page-title">Catálogo de Propiedades</h1>
+            <p class="page-subtitle">Encuentra tu próximo hogar entre nuestras propiedades seleccionadas</p>
         </div>
     </section>
 
@@ -124,25 +115,15 @@
 
                     <div class="filter-group">
                         <label class="filter-label">Región</label>
-                        <select class="filter-select" name="region" id="regionSelect">
+                        <select class="filter-select" name="region" id="regionSelectCatalog">
                             <option value="">Todas las regiones</option>
-                            <option value="araucania" selected>Araucanía</option>
-                            <option value="los-rios">Los Ríos</option>
-                            <option value="biobio">Biobío</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
                         <label class="filter-label">Ubicación</label>
-                        <select class="filter-select" name="comuna">
+                        <select class="filter-select" name="comuna" id="comunaSelectCatalog">
                             <option value="">Todas las comunas</option>
-                            <option value="temuco">Temuco</option>
-                            <option value="padre-las-casas">Padre Las Casas</option>
-                            <option value="vilcun">Vilcún</option>
-                            <option value="cunco">Cunco</option>
-                            <option value="lautaro">Lautaro</option>
-                            <option value="freire">Freire</option>
-                            <option value="pitrufquen">Pitrufquén</option>
                         </select>
                     </div>
 
@@ -346,7 +327,6 @@
                         <h4>Empresa</h4>
                         <a href="nosotros.html">Nosotros</a>
                         <a href="servicios.html">Servicios</a>
-                        <a href="blog.html">Blog</a>
                         <a href="contacto.html">Contacto</a>
                     </div>
 

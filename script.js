@@ -121,21 +121,9 @@ class PropertyManager {
     }
 
     async init() {
-        // Parse URL params IMMEDIATELY - store in instance before anything else
         this._parseURLFilters();
-
-        // Lee el radio de operación que esté marcado por defecto en el HTML
-        const radioChecked = document.querySelector('[name="operacion"]:checked');
-        // Solo pre-setear si NO viene de la URL (la URL tiene prioridad)
-        if (!this.activeFilters.operacion && radioChecked) {
-            this._manualOperacion = radioChecked.value;
-        }
-
         await this.loadProperties();
         this.setupFilters();
-        // Apply filters (uses this.activeFilters set above)
-        this.applyFilters();
-        // Set visual state of sidebar to match URL params
         this._syncSidebarToActiveFilters();
     }
 
@@ -191,35 +179,32 @@ class PropertyManager {
     async loadProperties() {
         try {
             const response = await fetch(CONFIG.dataFile);
-            if (!response.ok) throw new Error('Error al cargar propiedades');
+            if (!response.ok) throw new Error('HTTP ' + response.status);
             this.properties = await response.json();
-            this.filteredProperties = [...this.properties];
-            console.log(`✅ ${this.properties.length} propiedades cargadas.`);
-            this.renderProperties();
-            this.initMap();
+            console.log(`✅ ${this.properties.length} propiedades cargadas desde JSON.`);
         } catch (error) {
-            console.error('Error loading properties:', error);
-            this.useFallbackData();
+            console.warn('⚠️ JSON no disponible, usando fallback:', error.message);
+            this._loadFallback();
         }
+        this.applyFilters();
+        this.initMap();
     }
 
-    useFallbackData() {
-        console.warn('⚠️ Usando datos de respaldo – verifica que propiedades.json esté accesible');
+    _loadFallback() {
         const PH = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23E8E6E3'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='18' fill='%237A7A7A' text-anchor='middle' dy='.3em'%3ESin Imagen%3C/text%3E%3C/svg%3E`;
         this.properties = [
             { id: 9,  titulo: 'Casa en Venta – Sector Labranza', precioCLP: 70000000, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Labranza', dormitorios: 3, banos: 2, m2Utiles: 96, m2Terreno: 300, lat: -38.8120, lng: -72.6580, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','jardin'], destacada: true },
             { id: 10, titulo: 'Casa Regularizada – Villa Portal Alegría, Labranza', precioCLP: 70000000, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Labranza', dormitorios: 3, banos: 1, m2Utiles: 55, m2Terreno: 75, lat: -38.8200, lng: -72.6650, imagenPrincipal: PH, galeria: [], caracteristicas: ['termopanel','patio'], destacada: false },
             { id: 11, titulo: 'Casa en Venta – Lautaro', precioCLP: 0, operacion: 'venta', tipo: 'casa', region: 'La Araucanía', comuna: 'Lautaro', dormitorios: 3, banos: 1, m2Utiles: 80, m2Terreno: 200, lat: -38.5200, lng: -72.4400, imagenPrincipal: PH, galeria: [], caracteristicas: ['patio'], destacada: false },
-            { id: 12, titulo: 'Departamento Exclusivo – Sector Senador Estébanez, Temuco', precioCLP: 0, precioUF: 10500, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 3, banos: 4, m2Utiles: 160, lat: -38.7280, lng: -72.5750, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','bodega','terraza','quincho'], destacada: true },
+            { id: 12, titulo: 'Departamento Exclusivo – Senador Estébanez, Temuco', precioCLP: 0, precioUF: 10500, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 3, banos: 4, m2Utiles: 160, lat: -38.7280, lng: -72.5750, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','bodega','terraza','quincho'], destacada: true },
             { id: 13, titulo: 'Departamento Remodelado – Avenida Alemania, Temuco', precioCLP: 125000000, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 1, banos: 1, m2Utiles: 60, lat: -38.7320, lng: -72.5800, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','terraza','calefaccion central'], destacada: false },
-            { id: 14, titulo: 'Departamento Edificio Don Simón XII – Avenida Alemania, Temuco', precioCLP: 190000000, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 2, banos: 2, m2Utiles: 69, lat: -38.7310, lng: -72.5820, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','termopanel','piscina'], destacada: true },
+            { id: 14, titulo: 'Edificio Don Simón XII – Avenida Alemania, Temuco', precioCLP: 190000000, operacion: 'venta', tipo: 'departamento', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 2, banos: 2, m2Utiles: 69, lat: -38.7310, lng: -72.5820, imagenPrincipal: PH, galeria: [], caracteristicas: ['estacionamiento','termopanel','piscina'], destacada: true },
             { id: 15, titulo: 'Parcela – Camino a Huichahue, Temuco', precioCLP: 55000000, operacion: 'venta', tipo: 'parcela', region: 'La Araucanía', comuna: 'Temuco', dormitorios: 0, banos: 0, m2Utiles: 0, m2Terreno: 5000, lat: -38.8500, lng: -72.5200, imagenPrincipal: PH, galeria: [], caracteristicas: ['agua pozo','rol propio'], destacada: false }
         ];
-        this.filteredProperties = [...this.properties];
-        this.renderProperties();
-        this.initMap();
     }
 
+    // Legacy alias
+    useFallbackData() { this._loadFallback(); this.applyFilters(); this.initMap(); }
 
     renderProperties() {
         if (!this.container) return;
@@ -239,7 +224,7 @@ class PropertyManager {
         this.filteredProperties.forEach(prop => {
             const card = document.createElement('article');
             card.className = 'property-card-catalog';
-            card.setAttribute('data-fade-up', '');
+            // NO usar data-fade-up: el observer no re-observa cards dinámicas → quedan opacity:0
 
             const imgUrl = prop.imagenPrincipal || PLACEHOLDER_IMG;
 
@@ -458,10 +443,7 @@ class PropertyManager {
 
         // ── Operacion radio ────────────────────────────────────────────────────
         document.querySelectorAll('[name="operacion"]').forEach(radio => {
-            radio.addEventListener('change', () => {
-                this._manualOperacion = radio.value;
-                this.applyFilters();
-            });
+            radio.addEventListener('change', () => this.applyFilters());
         });
 
         // ── Tipo / Región / Comuna selects ────────────────────────────────────
@@ -493,66 +475,58 @@ class PropertyManager {
     }
 
     applyFilters() {
-        const f = this.activeFilters || {};
+        // ── Leer estado actual del DOM ──────────────────────────────────────────
+        // Operación: radio seleccionado (si hay alguno)
+        const radioOp = document.querySelector('[name="operacion"]:checked');
+        const operacion = normalizeStr(radioOp ? radioOp.value : '');
 
-        // Operacion
-        const operacion = normalizeStr(this._manualOperacion || f.operacion || '');
-
-        // Tipo
+        // Tipo de propiedad
         const tipoEl = document.querySelector('[name="tipo"]');
-        const tipo = normalizeStr(tipoEl?.value || f.tipo || '');
+        const tipo = normalizeStr(tipoEl?.value || '');
 
         // Región / Comuna
         const regionEl = document.querySelector('[name="region"]');
-        const region = normalizeStr(regionEl?.value || f.region || '');
+        const region = normalizeStr(regionEl?.value || '');
         const comunaEl = document.querySelector('[name="comuna"]');
-        const comuna = normalizeStr(comunaEl?.value || f.comuna || '');
+        const comuna = normalizeStr(comunaEl?.value || '');
 
-        // Precio Max — DOM input > URL stored value
-        const precioMaxEl = document.querySelector('[name="precioMax"]');
-        const precioMaxFromDom = precioMaxEl?.value ? parseInt(precioMaxEl.value.replace(/\D/g, ''), 10) : 0;
-        const precioMax = precioMaxFromDom > 0 ? precioMaxFromDom : (f.precioMax ?? Infinity);
+        // Precio (slider range)
+        const sliderMin = document.querySelector('#priceMin');
+        const sliderMax = document.querySelector('#priceMax');
+        const precioMin = sliderMin ? parseInt(sliderMin.value, 10) : 0;
+        const precioMax = sliderMax ? parseInt(sliderMax.value, 10) : Infinity;
+        const isMaxDefault = sliderMax ? parseInt(sliderMax.value, 10) >= parseInt(sliderMax.max, 10) : true;
 
-        // Precio Min
-        const precioMinEl = document.querySelector('[name="precioMin"]');
-        const precioMinFromDom = precioMinEl?.value ? parseInt(precioMinEl.value.replace(/\D/g, ''), 10) : 0;
-        const precioMin = precioMinFromDom > 0 ? precioMinFromDom : (f.precioMin ?? 0);
-
-        // Dormitorios — first .number-selector group
-        const dormSelector = document.querySelectorAll('.number-selector')[0];
-        const dormBtn = dormSelector?.querySelector('.number-btn.active');
+        // Dormitorios / Baños
+        const dormBtn = document.querySelector('.number-selector:nth-child(1) .number-btn.active, [data-filter-dorm] .number-btn.active');
         const dormMin = dormBtn ? parseInt(dormBtn.dataset.value, 10) : 0;
-
-        // Baños — second .number-selector group
-        const banosSelector = document.querySelectorAll('.number-selector')[1];
-        const banosBtn = banosSelector?.querySelector('.number-btn.active');
+        const banosBtn = document.querySelector('.number-selector:nth-child(2) .number-btn.active, [data-filter-banos] .number-btn.active');
         const banosMin = banosBtn ? parseInt(banosBtn.dataset.value, 10) : 0;
 
-        // Superficie
-        const supMinRaw = document.querySelector('[name="superficieMin"]')?.value || '';
-        const supMaxRaw = document.querySelector('[name="superficieMax"]')?.value || '';
-        const supMin = supMinRaw ? parseInt(supMinRaw.replace(/\D/g, ''), 10) : 0;
-        const supMax = supMaxRaw ? parseInt(supMaxRaw.replace(/\D/g, ''), 10) : Infinity;
-
-        // Características (checkboxes checked)
+        // Características
         const caracChecked = Array.from(document.querySelectorAll('[name="caracteristica"]:checked'))
             .map(cb => normalizeStr(cb.value));
 
-        console.log(`🔎 tipo=${tipo} region=${region} op=${operacion} max=${precioMax} dorm=${dormMin} baños=${banosMin}`);
+        console.log(`🔎 Filtros → op:${operacion||'todos'} tipo:${tipo||'todos'} region:${region||'todas'} precioMin:${precioMin} precioMax:${isMaxDefault?'∞':precioMax}`);
 
         this.filteredProperties = this.properties.filter(p => {
+            // Operación
             if (operacion && normalizeStr(p.operacion) !== operacion) return false;
+            // Tipo
             if (tipo && normalizeStr(p.tipo) !== tipo) return false;
+            // Región
             if (region && normalizeStr(p.region) !== region) return false;
+            // Comuna
             if (comuna && normalizeStr(p.comuna) !== comuna) return false;
-            if (dormMin && (p.dormitorios || 0) < dormMin) return false;
-            if (banosMin && (p.banos || 0) < banosMin) return false;
-            if ((p.precioCLP || 0) < precioMin) return false;
-            if (precioMax !== Infinity && (p.precioCLP || 0) > precioMax) return false;
-            const m2 = p.m2Utiles || p.m2Terreno || 0;
-            if (supMin && m2 < supMin) return false;
-            if (supMax !== Infinity && m2 > supMax) return false;
-            // Características: property must have ALL checked ones
+            // Dormitorios
+            if (dormMin > 0 && (p.dormitorios || 0) < dormMin) return false;
+            // Baños
+            if (banosMin > 0 && (p.banos || 0) < banosMin) return false;
+            // Precio mínimo del slider
+            if (precioMin > 0 && (p.precioCLP || p.precioUF || 0) < precioMin) return false;
+            // Precio máximo (solo si no está en el valor máximo default)
+            if (!isMaxDefault && (p.precioCLP || 0) > precioMax) return false;
+            // Características
             if (caracChecked.length > 0) {
                 const pCarac = (p.caracteristicas || []).map(c => normalizeStr(c));
                 if (!caracChecked.every(c => pCarac.includes(c))) return false;
@@ -560,22 +534,31 @@ class PropertyManager {
             return true;
         });
 
-        console.log(`✅ ${this.filteredProperties.length} propiedades after filter`);
         this.renderProperties();
-        this.updateMapMarkers();
+        this.updateResultsCount();
+        if (this.map) this.updateMapMarkers();
     }
 
     resetFilters() {
-        document.querySelectorAll('.filter-select, select[name]').forEach(s => s.selectedIndex = 0);
-        document.querySelectorAll('.filter-input, input[name]').forEach(i => {
-            if (i.type !== 'radio') i.value = '';
-        });
+        // Reiniciar selects
+        document.querySelectorAll('.filter-select').forEach(s => { s.selectedIndex = 0; });
+        // Reiniciar inputs de texto/precio
+        document.querySelectorAll('.filter-input').forEach(i => { i.value = ''; });
+        // Reiniciar radio de operación al primero
+        const firstRadio = document.querySelector('[name="operacion"]');
+        if (firstRadio) firstRadio.checked = true;
+        // Reiniciar sliders de precio al max
+        const sMax = document.querySelector('#priceMax');
+        const sMin = document.querySelector('#priceMin');
+        if (sMax) sMax.value = sMax.max;
+        if (sMin) sMin.value = sMin.min;
+        // Reiniciar botones de número
         document.querySelectorAll('.number-btn').forEach(b => b.classList.remove('active'));
-        this._manualOperacion = '';
+        // Reiniciar checkboxes
+        document.querySelectorAll('[name="caracteristica"]').forEach(c => { c.checked = false; });
+        // Limpiar URL y aplicar
         window.history.replaceState({}, '', window.location.pathname);
-        this.filteredProperties = [...this.properties];
-        this.renderProperties();
-        this.updateMapMarkers();
+        this.applyFilters();
     }
 }
 

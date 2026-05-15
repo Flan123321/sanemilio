@@ -8,6 +8,32 @@
     <meta name="description"
         content="Más que propiedades, encontramos tu próximo hogar en la Araucanía. Inmobiliaria de confianza con certeza jurídica y acompañamiento personalizado en Temuco.">
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="San Emilio Propiedades | Inmobiliaria Premium en Temuco">
+    <meta property="og:description" content="Más que propiedades, encontramos tu próximo hogar en la Araucanía. Acompañamiento personalizado con certeza jurídica.">
+    <meta property="og:image" content="https://sanemilio.cl/12.png">
+    <meta property="og:url" content="https://sanemilio.cl/">
+    <meta property="og:type" content="website">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "San Emilio Propiedades",
+      "image": "https://sanemilio.cl/12.png",
+      "telephone": "+56951492209",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Alemania 685",
+        "addressLocality": "Temuco",
+        "addressRegion": "Araucanía",
+        "addressCountry": "CL"
+      },
+      "url": "https://sanemilio.cl/"
+    }
+    </script>
+
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,62 +43,8 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'navy': {
-                            900: '#0B1A2E',
-                            800: '#152844',
-                            700: '#1F3654',
-                            600: '#2C4A6E',
-                        },
-                        'orange': {
-                            primary: '#FF6B35',
-                            light: '#FF8A5C',
-                            dark: '#E65528',
-                        },
-                        'cream': {
-                            DEFAULT: '#F8F5F0',
-                            light: '#FFFBF5',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        @keyframes fade-in-up {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fade-in-up 0.8s ease-out forwards;
-        }
-
-        .animate-fade-in {
-            animation: fade-in-up 0.8s ease-out forwards;
-        }
-    </style>
+    <!-- Custom & Tailwind Styles -->
+    <link rel="stylesheet" href="dist/styles.css">
 </head>
 
 <body class="font-sans bg-cream">
@@ -134,7 +106,7 @@
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-gradient-to-br from-navy-900/60 via-navy-700/40 to-transparent"></div>
             <img src="clickerhappy-kitchen-2165756_1280.jpg" alt="Modern Kitchen" class="w-full h-full object-cover"
-                style="filter: brightness(0.85);">
+                style="filter: brightness(0.85);" width="1280" height="853" fetchpriority="high">
         </div>
 
         <!-- Animated Accent Lines -->
@@ -189,23 +161,23 @@
                 </div>
 
                 <!-- Stats Cards -->
-                <div class="grid grid-cols-3 gap-4 mt-12 animate-fade-in-up" style="animation-delay: 0.6s">
+                <dl class="grid grid-cols-3 gap-4 mt-12 animate-fade-in-up" style="animation-delay: 0.6s">
                     <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50">
-                        <div class="text-3xl font-bold text-white mb-1">18+</div>
-                        <div class="text-white/70 text-sm font-medium">Años Experiencia</div>
+                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50 flex flex-col">
+                        <dd class="text-3xl font-bold text-white mb-1 order-1">18+</dd>
+                        <dt class="text-white/70 text-sm font-medium order-2">Años Experiencia</dt>
                     </div>
                     <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50">
-                        <div class="text-3xl font-bold text-white mb-1">500+</div>
-                        <div class="text-white/70 text-sm font-medium">Familias Felices</div>
+                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50 flex flex-col">
+                        <dd class="text-3xl font-bold text-white mb-1 order-1">500+</dd>
+                        <dt class="text-white/70 text-sm font-medium order-2">Familias Felices</dt>
                     </div>
                     <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50">
-                        <div class="text-3xl font-bold text-white mb-1">98%</div>
-                        <div class="text-white/70 text-sm font-medium">Satisfacción</div>
+                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50 flex flex-col">
+                        <dd class="text-3xl font-bold text-white mb-1 order-1">98%</dd>
+                        <dt class="text-white/70 text-sm font-medium order-2">Satisfacción</dt>
                     </div>
-                </div>
+                </dl>
 
             </div>
         </div>
@@ -226,7 +198,7 @@
 
                 <!-- Search Tabs -->
                 <div class="flex gap-3 mb-8 border-b border-gray-200 pb-6">
-                    <button
+                    <button type="button" aria-pressed="true"
                         class="search-tab-btn active px-8 py-3 rounded-xl font-semibold text-sm transition-all duration-300 bg-orange-primary text-white hover:bg-orange-dark"
                         data-tab="comprar">
                         <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,7 +208,7 @@
                         </svg>
                         Comprar
                     </button>
-                    <button
+                    <button type="button" aria-pressed="false"
                         class="search-tab-btn px-8 py-3 rounded-xl font-semibold text-sm transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200"
                         data-tab="arrendar">
                         <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -301,7 +273,7 @@
                     </div>
 
                     <!-- Search Button -->
-                    <button type="submit" id="searchSubmitBtn" class="bg-gradient-to-r from-orange-primary to-orange-dark hover:from-orange-dark hover:to-orange-primary text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-primary/50 flex items-center justify-center gap-2 group relative overflow-hidden h-14">
+                    <button type="submit" id="searchSubmitBtn" class="bg-gradient-to-r from-orange-primary to-orange-dark hover:from-orange-dark hover:to-orange-primary text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-primary/50 flex items-center justify-center gap-2 group relative overflow-hidden h-full min-h-[56px]">
                         <div class="btn-content flex items-center justify-center gap-2 w-full transition-opacity duration-300">
                             <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                             <span class="text-base whitespace-nowrap">Buscar</span>
@@ -363,7 +335,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Arica y Parinacota</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Arica y Parinacota</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -378,7 +350,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Tarapacá</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Tarapacá</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -393,7 +365,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Antofagasta</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Antofagasta</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -408,7 +380,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Atacama</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Atacama</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -423,7 +395,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Coquimbo</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Coquimbo</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -438,7 +410,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Valparaíso</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Valparaíso</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -453,7 +425,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Metropolitana</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Metropolitana</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -468,7 +440,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">O'Higgins</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">O'Higgins</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -483,7 +455,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Maule</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Maule</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -498,7 +470,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Ñuble</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Ñuble</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -513,7 +485,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Biobío</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Biobío</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -536,7 +508,7 @@
                             </svg>
                             <span class="text-white text-xs font-bold">NUESTRA ESPECIALIDAD</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-white">La Araucanía</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">La Araucanía</h3>
                         <p class="text-white/90 text-sm mt-2">Ver propiedades exclusivas</p>
                     </div>
                     <div
@@ -552,7 +524,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Los Ríos</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Los Ríos</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -567,7 +539,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Los Lagos</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Los Lagos</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -582,7 +554,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Aysén</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Aysén</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">
@@ -597,7 +569,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <h3 class="text-3xl font-bold text-white">Magallanes</h3>
+                        <h3 class="text-3xl font-bold text-white drop-shadow-md">Magallanes</h3>
                     </div>
                     <div
                         class="absolute inset-0 bg-orange-primary/0 group-hover:bg-orange-primary/10 transition-colors duration-300">

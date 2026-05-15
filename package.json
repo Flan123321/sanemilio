@@ -4,7 +4,9 @@
   "description": "---",
   "main": "importar_propiedades.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "dev:css": "tailwindcss -i ./src/input.css -o ./styles.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +14,10 @@
   "type": "commonjs",
   "dependencies": {
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   }
 }

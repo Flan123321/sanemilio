@@ -714,26 +714,32 @@ class SearchFormController {
         const urlRegion = params.get('region');
         const urlComuna = params.get('comuna');
 
-        // Populate region select
-        this.regionSelect.innerHTML = '<option value="">Todas las regiones</option>';
-        let preselectedRegionIndex = -1;
+        this.regionSelect.innerHTML = '<option value="">Cargando regiones...</option>';
+        this.regionSelect.disabled = true;
 
-        CHILE_REGIONS.forEach((region, index) => {
-            const option = document.createElement('option');
-            option.value = region.nombre;
-            option.dataset.index = index;
-            option.textContent = region.nombre;
-            if (urlRegion && normalizeStr(urlRegion) === normalizeStr(region.nombre)) {
-                option.selected = true;
-                preselectedRegionIndex = index;
+        setTimeout(() => {
+            // Populate region select
+            this.regionSelect.innerHTML = '<option value="">Todas las regiones</option>';
+            let preselectedRegionIndex = -1;
+
+            CHILE_REGIONS.forEach((region, index) => {
+                const option = document.createElement('option');
+                option.value = region.nombre;
+                option.dataset.index = index;
+                option.textContent = region.nombre;
+                if (urlRegion && normalizeStr(urlRegion) === normalizeStr(region.nombre)) {
+                    option.selected = true;
+                    preselectedRegionIndex = index;
+                }
+                this.regionSelect.appendChild(option);
+            });
+            this.regionSelect.disabled = false;
+
+            // Populate comunas if region was pre-selected
+            if (preselectedRegionIndex >= 0) {
+                this.populateComunas(preselectedRegionIndex, urlComuna);
             }
-            this.regionSelect.appendChild(option);
-        });
-
-        // Populate comunas if region was pre-selected
-        if (preselectedRegionIndex >= 0) {
-            this.populateComunas(preselectedRegionIndex, urlComuna);
-        }
+        }, 300);
         // Do NOT call applyFilters() here — PropertyManager.applyURLParams() handles it
         // after it has loaded the properties data.
     }
@@ -743,17 +749,22 @@ class SearchFormController {
         const region = CHILE_REGIONS[regionIndex];
         if (!region) return;
 
-        this.comunaSelect.innerHTML = '<option value="">Todas las comunas</option>';
-        region.comunas.forEach(c => {
-            const option = document.createElement('option');
-            option.value = c;
-            option.textContent = c;
-            if (preselectedComuna && normalizeStr(preselectedComuna) === normalizeStr(c)) {
-                option.selected = true;
-            }
-            this.comunaSelect.appendChild(option);
-        });
-        this.comunaSelect.disabled = false;
+        this.comunaSelect.innerHTML = '<option value="">Cargando comunas...</option>';
+        this.comunaSelect.disabled = true;
+
+        setTimeout(() => {
+            this.comunaSelect.innerHTML = '<option value="">Todas las comunas</option>';
+            region.comunas.forEach(c => {
+                const option = document.createElement('option');
+                option.value = c;
+                option.textContent = c;
+                if (preselectedComuna && normalizeStr(preselectedComuna) === normalizeStr(c)) {
+                    option.selected = true;
+                }
+                this.comunaSelect.appendChild(option);
+            });
+            this.comunaSelect.disabled = false;
+        }, 300);
     }
 
     updateComunasFromSelect() {

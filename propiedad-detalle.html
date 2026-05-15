@@ -566,6 +566,9 @@
                 L.marker([prop.lat, prop.lng], { icon }).addTo(map)
                     .bindPopup(`<b>${prop.titulo}</b><br>${fmt(prop.precioCLP) || 'Consultar precio'}`, { maxWidth: 220 })
                     .openPopup();
+                    
+                // Fix map rendering by invalidating size after the container becomes visible
+                setTimeout(() => map.invalidateSize(), 100);
             } else {
                 $('map').style.display = 'none';
             }

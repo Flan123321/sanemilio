@@ -554,18 +554,20 @@
 
             // Map
             if (prop.lat && prop.lng && typeof L !== 'undefined') {
-                const map = L.map('map').setView([prop.lat, prop.lng], 15);
+                const map = L.map('map').setView([prop.lat, prop.lng], 14);
                 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
                 }).addTo(map);
-                const icon = L.divIcon({
-                    className: '',
-                    html: `<div style="background:#FF6B35;width:32px;height:32px;border-radius:50%;border:3px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);">🏠</div>`,
-                    iconSize: [32, 32], iconAnchor: [16, 16]
-                });
-                L.marker([prop.lat, prop.lng], { icon }).addTo(map)
-                    .bindPopup(`<b>${prop.titulo}</b><br>${fmt(prop.precioCLP) || 'Consultar precio'}`, { maxWidth: 220 })
-                    .openPopup();
+                
+                // Ubicación aproximada (Círculo en lugar de Marcador exacto)
+                L.circle([prop.lat, prop.lng], {
+                    color: '#FF6B35',
+                    fillColor: '#FF6B35',
+                    fillOpacity: 0.25,
+                    radius: 800 // 800 metros de radio
+                }).addTo(map)
+                .bindPopup(`<b>Zona Aproximada</b><br>${prop.comuna}, ${prop.region}`, { maxWidth: 220 })
+                .openPopup();
                     
                 // Fix map rendering by invalidating size after the container becomes visible
                 setTimeout(() => map.invalidateSize(), 100);

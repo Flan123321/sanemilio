@@ -353,21 +353,20 @@ class PropertyManager {
         this.markers = [];
         this.filteredProperties.forEach(prop => {
             if (prop.lat && prop.lng) {
-                const icon = L.divIcon({
-                    className: 'custom-pin',
-                    html: `<div style="background-color:var(--orange-primary);width:24px;height:24px;border-radius:50%;border:2px solid white;box-shadow:0 4px 8px rgba(0,0,0,0.3);"></div>`,
-                    iconSize: [24, 24],
-                    iconAnchor: [12, 12]
-                });
-                const marker = L.marker([prop.lat, prop.lng], { icon })
-                    .bindPopup(`
-                        <div style="width:200px;">
-                            <div style="height:120px;background-image:url('${prop.imagenPrincipal || ''}');background-size:cover;border-radius:8px;margin-bottom:8px;"></div>
-                            <b>${formatCurrency(prop.precioCLP)}</b><br>
-                            ${prop.titulo}
-                            <a href="propiedad-detalle.html?id=${prop.id}" style="display:block;margin-top:8px;color:var(--orange-primary);font-weight:600;">Ver Ficha</a>
-                        </div>
-                    `);
+                const marker = L.circle([prop.lat, prop.lng], {
+                    color: 'var(--orange-primary)',
+                    fillColor: 'var(--orange-primary)',
+                    fillOpacity: 0.3,
+                    radius: 600 // Radio aproximado
+                })
+                .bindPopup(`
+                    <div style="width:200px;">
+                        <div style="height:120px;background-image:url('${prop.imagenPrincipal || ''}');background-size:cover;border-radius:8px;margin-bottom:8px;"></div>
+                        <b>${formatCurrency(prop.precioCLP)}</b><br>
+                        ${prop.titulo}
+                        <a href="propiedad-detalle.html?id=${prop.id}" style="display:block;margin-top:8px;color:var(--orange-primary);font-weight:600;">Ver Ficha</a>
+                    </div>
+                `);
                 marker.addTo(this.map);
                 this.markers.push(marker);
             }

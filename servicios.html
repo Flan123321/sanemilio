@@ -57,6 +57,49 @@
         .service-card:hover::before {
             transform: scaleY(1);
         }
+
+        /* ─── Premium Animations & Styles ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 25px 50px -12px rgba(11, 26, 46, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px -15px rgba(230, 85, 40, 0.15);
+            border-color: rgba(230, 85, 40, 0.3);
+        }
+        
+        .glow-bg {
+            position: absolute;
+            filter: blur(100px);
+            z-index: 0;
+            border-radius: 50%;
+            animation: pulse-glow 10s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.15; }
+            50% { transform: scale(1.3) translate(5%, 5%); opacity: 0.25; }
+            100% { transform: scale(0.9) translate(-5%, -5%); opacity: 0.15; }
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -117,20 +160,20 @@
             <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-24">
                 
                 <!-- Left Column: Tangible Services Image -->
-                <div class="w-full lg:w-5/12 relative mt-10 lg:mt-0 flex flex-col justify-end">
+                <div class="w-full lg:w-5/12 relative mt-10 lg:mt-0 flex flex-col justify-end reveal delay-100">
                     <!-- Decoración verde musgo sutil -->
-                    <div class="absolute -top-10 -left-10 w-64 h-64 bg-[#4A5D23]/10 rounded-full blur-3xl mix-blend-multiply"></div>
+                    <div class="glow-bg bg-[#4A5D23] w-96 h-96 -top-10 -left-10"></div>
                     
                     <div class="relative z-10 lg:-ml-8 rounded-[2rem] overflow-hidden shadow-[0_40px_80px_rgba(11,26,46,0.25)] border-4 border-[#FDFBF7] transform lg:-translate-y-6 transition-all duration-1000 hover:-translate-y-10 group bg-gray-100">
                         <img src="services_hero.png" alt="Servicios Inmobiliarios San Emilio" class="w-full h-auto min-h-[400px] lg:min-h-[600px] object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out">
                     </div>
 
                     <!-- Acento terracota -->
-                    <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-[#E65528]/15 rounded-full blur-3xl mix-blend-multiply"></div>
+                    <div class="glow-bg bg-[#E65528] w-72 h-72 -bottom-10 -right-10" style="animation-delay: -3s;"></div>
                 </div>
 
                 <!-- Right Column: Editorial Typography & Content -->
-                <div class="w-full lg:w-7/12 flex flex-col justify-center pt-8 pb-4">
+                <div class="w-full lg:w-7/12 flex flex-col justify-center pt-8 pb-4 reveal delay-200">
                     
                     <div class="flex items-center gap-2 text-sm text-navy-600 mb-8 font-semibold uppercase tracking-widest">
                         <a href="index.html" class="hover:text-orange-primary transition">Inicio</a>
@@ -151,11 +194,11 @@
                     </p>
                     
                     <!-- Párrafo Descriptivo Principal -->
-                    <div class="bg-white/60 backdrop-blur-xl p-8 rounded-[1.5rem] shadow-lg border border-white/50 relative overflow-hidden">
+                    <div class="glass-card p-8 rounded-[1.5rem] relative overflow-hidden reveal delay-300">
                         <div class="absolute top-0 left-0 w-1.5 h-full bg-[#E65528] opacity-80"></div>
                         <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Enfoque Boutique</h3>
                         <p class="text-gray-700 text-lg leading-relaxed font-light">
-                            Nos alejamos del corretaje masivo. Operamos bajo estrictos protocolos de confidencialidad, utilizando Acuerdos "Anti-Puente" y análisis de *Yield* para proteger tu patrimonio y asegurar transacciones impecables técnica y jurídicamente.
+                            Nos alejamos del corretaje masivo. Operamos bajo estrictos protocolos de confidencialidad y análisis técnico para proteger tu patrimonio y asegurar transacciones impecables técnica y jurídicamente.
                         </p>
                     </div>
 
@@ -178,7 +221,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Service 1 -->
-                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                <div class="service-card glass-card p-8 rounded-2xl reveal delay-100">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,7 +252,7 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                <div class="service-card glass-card p-8 rounded-2xl reveal delay-200">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -239,7 +282,7 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                <div class="service-card glass-card p-8 rounded-2xl reveal delay-300">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -269,7 +312,7 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                <div class="service-card glass-card p-8 rounded-2xl reveal delay-100">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -300,7 +343,7 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                <div class="service-card glass-card p-8 rounded-2xl reveal delay-200">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -331,7 +374,7 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="service-card bg-cream p-8 rounded-2xl card-hover">
+                <div class="service-card glass-card p-8 rounded-2xl reveal delay-300">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-orange-primary to-orange-dark rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -366,40 +409,40 @@
     </section>
 
     <!-- Process Section -->
-    <section class="py-24 bg-cream">
+    <section class="py-24 bg-cream overflow-hidden">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <span
                     class="inline-block px-4 py-2 bg-orange-primary/10 text-orange-primary font-semibold rounded-full text-sm mb-4">NUESTRO
                     PROCESO</span>
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-4">¿Cómo trabajamos?</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Un proceso simple y transparente de principio a fin
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Un proceso estratégico y transparente de principio a fin
                 </p>
             </div>
 
             <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-                <div class="text-center">
+                <div class="text-center reveal delay-100">
                     <div
                         class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
                         1</div>
-                    <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">OSINT & Inteligencia</h3>
+                    <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Evaluación Técnica</h3>
                     <p class="text-gray-600">Levantamiento de datos duros, estudio normativo y evaluación financiera del activo.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center reveal delay-200">
                     <div
                         class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
                         2</div>
                     <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Auditoría Jurídica</h3>
                     <p class="text-gray-600">Revisión de títulos y saneamiento legal preventivo para asegurar una transición limpia.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center reveal delay-300">
                     <div
                         class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
                         3</div>
                     <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Structuring & Marketing</h3>
                     <p class="text-gray-600">Elaboración del Dossier Inmobiliario y ejecución de estrategias "Off-Market" o en portales.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center reveal delay-400">
                     <div
                         class="w-20 h-20 bg-gradient-to-br from-orange-primary to-orange-dark rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-xl">
                         4</div>

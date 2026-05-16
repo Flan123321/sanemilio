@@ -148,60 +148,51 @@
         </div>
     </header>
 
-    <!-- Editorial Hero Section -->
-    <section class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--cream-bg) 55%);">
-        
-        <!-- Subtle Pattern Overlay (crema tint) -->
-        <div class="absolute inset-0 z-0 opacity-5" 
-             style="background-image: repeating-linear-gradient(45deg, #152844 0, #152844 1px, transparent 1px, transparent 20px);">
+    <!-- Parallax Hero Cards -->
+    <section class="relative w-full">
+        <!-- Card 1: Main Title -->
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-cream pt-20">
+            <div class="absolute inset-0 z-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #152844 0, #152844 1px, transparent 1px, transparent 20px);"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center reveal">
+                <div class="flex items-center justify-center gap-2 text-sm text-navy-600 mb-8 font-semibold uppercase tracking-widest">
+                    <a href="index.html" class="hover:text-orange-primary transition">Inicio</a>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="text-orange-primary">Servicios</span>
+                </div>
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-[72px] text-navy-900 leading-[1.05] tracking-tight mb-8 max-w-5xl mx-auto">
+                    Asesoría Inmobiliaria Exclusiva
+                </h1>
+                <div class="animate-bounce opacity-50 mt-12">
+                    <svg class="w-8 h-8 mx-auto text-orange-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </div>
+            </div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-24">
-                
-                <!-- Left Column: Tangible Services Image -->
-                <div class="w-full lg:w-5/12 relative mt-10 lg:mt-0 flex flex-col justify-end reveal delay-100">
-                    <!-- Decoración verde musgo sutil -->
-                    <div class="glow-bg bg-[#4A5D23] w-96 h-96 -top-10 -left-10"></div>
-                    
-                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_40px_80px_rgba(11,26,46,0.25)] border-4 border-[#FDFBF7] transform lg:-translate-y-6 transition-all duration-1000 hover:-translate-y-10 group bg-gray-100 max-w-xs md:max-w-sm mx-auto">
-                        <img src="src/WhatsApp%20Image%202026-05-15%20at%204.04.14%20PM.jpeg" alt="Tatiana Morales - San Emilio Propiedades" class="w-full aspect-[4/5] object-cover object-top scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out">
+        <!-- Card 2: Tatiana Intro -->
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-navy-900 border-t border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 max-w-6xl mx-auto reveal delay-100">
+                    <div class="w-48 h-48 md:w-72 md:h-72 flex-shrink-0 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+                        <img src="src/WhatsApp%20Image%202026-05-15%20at%204.04.14%20PM.jpeg" alt="Tatiana Morales" class="w-full h-full object-cover object-top">
                     </div>
-
-                    <!-- Acento terracota -->
-                    <div class="glow-bg bg-[#E65528] w-72 h-72 -bottom-10 -right-10" style="animation-delay: -3s;"></div>
-                </div>
-
-                <!-- Right Column: Editorial Typography & Content -->
-                <div class="w-full lg:w-7/12 flex flex-col justify-center pt-8 pb-4 reveal delay-200">
-                    
-                    <div class="flex items-center gap-2 text-sm text-navy-600 mb-8 font-semibold uppercase tracking-widest">
-                        <a href="index.html" class="hover:text-orange-primary transition">Inicio</a>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                        <span class="text-orange-primary">Servicios</span>
-                    </div>
-
-                    <!-- Título Editorial -->
-                    <h1 class="font-serif text-5xl md:text-6xl lg:text-[72px] text-navy-900 leading-[1.05] tracking-tight mb-8">
-                        Asesoría Inmobiliaria Exclusiva
-                    </h1>
-                    
-                    <!-- Subtítulo -->
-                    <p class="font-sans text-xl md:text-2xl text-navy-700 font-light mb-12 max-w-2xl leading-[1.6]">
-                        Soy <span class="font-semibold text-orange-primary">Tatiana Morales</span>, Directora Ejecutiva. Lidero personalmente la estructuración, adquisición y gestión de tus activos con más de 18 años de trayectoria.
-                    </p>
-                    
-                    <!-- Párrafo Descriptivo Principal -->
-                    <div class="glass-card p-8 rounded-[1.5rem] relative overflow-hidden reveal delay-300">
-                        <div class="absolute top-0 left-0 w-1.5 h-full bg-[#E65528] opacity-80"></div>
-                        <h3 class="font-serif text-2xl font-bold text-navy-900 mb-3">Compromiso y Enfoque Boutique</h3>
-                        <p class="text-gray-700 text-lg leading-relaxed font-light">
-                            Me alejo del corretaje masivo para ofrecerte un acompañamiento real e integral. Opero bajo estrictos protocolos de confidencialidad y análisis técnico profundo, asegurando que cada decisión sobre tu patrimonio sea impecable técnica y jurídicamente.
+                    <div class="flex-1 text-center lg:text-left text-white">
+                        <p class="font-sans text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed">
+                            Soy <span class="font-bold text-orange-primary">Tatiana Morales</span>, Directora Ejecutiva. Lidero personalmente la estructuración, adquisición y gestión de tus activos con más de 18 años de trayectoria.
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Card 3: Boutique Approach -->
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-cream border-t border-navy-900/10 shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <div class="glass-card p-8 lg:p-16 rounded-[2rem] max-w-4xl mx-auto reveal delay-200">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#E65528] opacity-80"></div>
+                    <h3 class="font-serif text-3xl font-bold text-navy-900 mb-6">Compromiso y Enfoque Boutique</h3>
+                    <p class="text-gray-700 text-xl leading-relaxed font-light">
+                        Me alejo del corretaje masivo para ofrecerte un acompañamiento real e integral. Opero bajo estrictos protocolos de confidencialidad y análisis técnico profundo, asegurando que cada decisión sobre tu patrimonio sea impecable técnica y jurídicamente.
+                    </p>
                 </div>
             </div>
         </div>

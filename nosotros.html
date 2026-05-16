@@ -179,55 +179,52 @@
             </nav>
         </div>
     </header>
-    <!-- Editorial Hero Section -->
-    <section class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--cream-bg) 55%);">
-        
-        <!-- Subtle Pattern Overlay (crema tint) -->
-        <div class="absolute inset-0 z-0 opacity-5" 
-             style="background-image: repeating-linear-gradient(45deg, #152844 0, #152844 1px, transparent 1px, transparent 20px);">
-        </div>
-        
-        <!-- Glowing Orbs -->
-        <div class="glow-bg bg-[#E65528] w-96 h-96 top-20 left-10"></div>
-        <div class="glow-bg bg-[#4A5D23] w-96 h-96 bottom-10 right-20" style="animation-delay: -5s;"></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto flex flex-col justify-center text-center pt-8 lg:pt-16 pb-12 reveal">
-                
-                <!-- Título Editorial -->
-                <h1 class="font-serif text-5xl md:text-6xl lg:text-[72px] text-navy-900 leading-[1.05] tracking-tight mb-8">
+    <!-- Parallax Hero Cards -->
+    <section class="relative w-full">
+        <!-- Card 1: Main Title -->
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-cream pt-20">
+            <div class="absolute inset-0 z-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #152844 0, #152844 1px, transparent 1px, transparent 20px);"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center reveal">
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-[72px] text-navy-900 leading-[1.05] tracking-tight mb-8 max-w-4xl mx-auto">
                     Certeza Jurídica e Inteligencia de Mercado en La Araucanía
                 </h1>
-                
-                <!-- Subtítulo -->
-                <p class="font-sans text-xl md:text-2xl text-navy-700 font-light mb-12 mx-auto max-w-3xl leading-[1.6] reveal delay-100">
+                <p class="font-sans text-xl md:text-2xl text-navy-700 font-light mb-12 mx-auto max-w-3xl leading-[1.6]">
                     No somos simples intermediarios; somos estrategas en la gestión, protección y rentabilización de tu patrimonio inmobiliario.
                 </p>
-                
-                <!-- Párrafo Descriptivo con fondo de vidrio -->
-                <div class="glass-card p-8 lg:p-12 rounded-[1.5rem] mb-12 relative overflow-hidden text-left w-full mx-auto reveal delay-200">
-                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#4A5D23] opacity-80"></div>
-                    <p class="text-gray-700 text-lg md:text-xl leading-relaxed font-light">
-                        Establecidos en Temuco y con operaciones desde 2008, San Emilio Propiedades nació para resolver la mayor deficiencia del mercado local: la falta de rigor técnico. Integramos análisis financiero avanzado, estudios de mercado profundos y auditoría legal preventiva para asegurar que cada transacción residencial, comercial o silvoagropecuaria se ejecute con absoluta precisión y cero sorpresas legales.
+                <div class="animate-bounce opacity-50 mt-8">
+                    <svg class="w-8 h-8 mx-auto text-orange-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: History/Approach -->
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-navy-900 border-t border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <div class="glass-card bg-white/5 border-white/10 p-8 lg:p-16 rounded-[2rem] max-w-4xl mx-auto backdrop-blur-xl reveal delay-100">
+                    <div class="w-16 h-1 bg-orange-primary mx-auto mb-8"></div>
+                    <p class="text-white text-xl md:text-2xl leading-relaxed font-light">
+                        Establecidos en Temuco y con operaciones desde 2008, San Emilio Propiedades nació para resolver la mayor deficiencia del mercado local: la falta de rigor técnico. Integramos análisis financiero avanzado, estudios de mercado profundos y auditoría legal preventiva para asegurar que cada transacción se ejecute con absoluta precisión.
                     </p>
                 </div>
+            </div>
+        </div>
 
-                <!-- Tarjeta de Perfil Elegante -->
-                <div class="glass-card p-8 lg:p-12 rounded-[1.5rem] w-full mx-auto relative text-left reveal delay-300">
-                    <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                        <div class="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-white/60 shadow-xl shadow-orange-primary/20">
-                            <img src="src/WhatsApp%20Image%202026-05-15%20at%204.04.14%20PM.jpeg" alt="Tatiana Morales Jaramillo" class="w-full h-full object-cover object-center" loading="lazy">
-                        </div>
-                        <div class="flex-1 text-center md:text-left">
-                            <h3 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-2">Tatiana Morales Jaramillo</h3>
-                            <p class="text-[#E65528] font-semibold text-xs md:text-sm uppercase tracking-widest mb-6 font-sans">
-                                Directora Ejecutiva
-                            </p>
-                            <p class="text-navy-800 font-serif italic text-xl md:text-2xl opacity-90 leading-relaxed relative lg:pl-10 pl-8">
-                                <span class="text-[#4A5D23] font-serif text-5xl md:text-6xl absolute -top-4 left-0 md:-left-2 opacity-20">"</span>
-                                El éxito de una operación no se mide en la velocidad de venta, sino en la seguridad legal y la maximización del valor (Yield) para nuestro cliente.
-                            </p>
-                        </div>
+        <!-- Card 3: Tatiana Profile -->
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-cream border-t border-navy-900/10 shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="glass-card p-8 lg:p-12 rounded-[2rem] max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-center reveal delay-200">
+                    <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="src/WhatsApp%20Image%202026-05-15%20at%204.04.14%20PM.jpeg" alt="Tatiana Morales Jaramillo" class="w-full h-full object-cover object-center" loading="lazy">
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="font-serif text-3xl md:text-4xl font-bold text-navy-900 mb-2">Tatiana Morales Jaramillo</h3>
+                        <p class="text-[#E65528] font-semibold text-sm md:text-base uppercase tracking-widest mb-6 font-sans">
+                            Directora Ejecutiva
+                        </p>
+                        <p class="text-navy-800 font-serif italic text-2xl md:text-3xl opacity-90 leading-relaxed relative lg:pl-10 pl-8">
+                            <span class="text-[#4A5D23] font-serif text-6xl md:text-7xl absolute -top-6 left-0 md:-left-2 opacity-20">"</span>
+                            El verdadero valor de una gestión inmobiliaria no está solo en cerrar negocios, sino en generar confianza, seguridad y oportunidades sostenibles para cada cliente.
+                        </p>
                     </div>
                 </div>
             </div>

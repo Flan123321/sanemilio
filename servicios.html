@@ -151,17 +151,25 @@
     <!-- Parallax Hero Cards -->
     <section class="relative w-full">
         <!-- Card 1: Main Title -->
-        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-cream pt-20">
-            <div class="absolute inset-0 z-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #152844 0, #152844 1px, transparent 1px, transparent 20px);"></div>
-            <div class="container mx-auto px-6 relative z-10 text-center reveal">
-                <div class="flex items-center justify-center gap-2 text-sm text-navy-600 mb-8 font-semibold uppercase tracking-widest">
-                    <a href="index.html" class="hover:text-orange-primary transition">Inicio</a>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    <span class="text-orange-primary">Servicios</span>
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden relative">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="src/geralt-family-7678491_1920.jpg" alt="Familia feliz" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-navy-900/30 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-navy-900/60 via-transparent to-navy-900/60"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 text-center reveal pt-20">
+                <div class="glass-card bg-white/95 border-white/50 p-8 lg:p-16 rounded-[2rem] max-w-5xl mx-auto backdrop-blur-xl shadow-2xl">
+                    <div class="flex items-center justify-center gap-2 text-sm text-navy-600 mb-8 font-semibold uppercase tracking-widest">
+                        <a href="index.html" class="hover:text-orange-primary transition">Inicio</a>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <span class="text-orange-primary">Servicios</span>
+                    </div>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-[72px] text-navy-900 leading-[1.05] tracking-tight mb-4">
+                        Asesoría Inmobiliaria Exclusiva
+                    </h1>
                 </div>
-                <h1 class="font-serif text-5xl md:text-6xl lg:text-[72px] text-navy-900 leading-[1.05] tracking-tight mb-8 max-w-5xl mx-auto">
-                    Asesoría Inmobiliaria Exclusiva
-                </h1>
             </div>
         </div>
 

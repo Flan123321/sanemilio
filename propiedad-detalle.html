@@ -297,7 +297,7 @@
                     </section>
 
                     <!-- Map -->
-                    <section style="margin-top:40px;">
+                    <section id="mapSection" style="margin-top:40px;">
                         <h2 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:#0B1A2E; margin-bottom:8px; padding-bottom:10px; border-bottom:2px solid #f0ece7;">Ubicación</h2>
                         <p style="font-size:14px; color:#888; margin-bottom:16px;">Ubicación aproximada de la propiedad en el mapa.</p>
                         <div id="map"></div>
@@ -309,10 +309,8 @@
                     <div class="contact-card">
                         <div class="card-header">
                             <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px;">
-                                <div style="width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,0.15); border:2px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)">
-                                        <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                                    </svg>
+                                <div style="width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,0.15); border:2px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;">
+                                    <img src="src/WhatsApp%20Image%202026-05-15%20at%204.04.14%20PM.jpeg" alt="Tatiana Morales" style="width:100%; height:100%; object-fit:cover; object-position:center;">
                                 </div>
                                 <div>
                                     <div style="font-weight:700; color:#fff; font-size:15px;">Tatiana Morales</div>
@@ -572,7 +570,7 @@
                 // Fix map rendering by invalidating size after the container becomes visible
                 setTimeout(() => map.invalidateSize(), 100);
             } else {
-                $('map').style.display = 'none';
+                $('mapSection').style.display = 'none';
             }
 
             // Show content

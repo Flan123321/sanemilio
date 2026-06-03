@@ -75,6 +75,13 @@ body {
     font-size: 16px;
 }
 
+/* Container max-width constraint for desktop to fit the requested compact zoom */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px !important;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -185,7 +192,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 120px;
+    height: 96px;
     padding: 0 16px;
     transition: height 0.3s ease;
 }
@@ -204,7 +211,7 @@ p {
 }
 
 .logo img {
-    height: 100px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -2024,7 +2031,7 @@ section {
 /* ── Inner layout del contenido ── */
 .hero-v2__inner {
     max-width: 760px;
-    padding: 64px 0 100px;
+    padding: 48px 0 80px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -2087,20 +2094,20 @@ section {
 /* Las 2 primeras líneas: color blanco con peso diferenciado */
 .hero-v2__title-line:nth-child(1) {
     font-weight: 700;
-    font-size: clamp(28px, 3.8vw, 50px);
+    font-size: clamp(24px, 3.2vw, 40px);
     color: rgba(255,255,255,0.80);
     letter-spacing: -0.02em;
 }
 
 .hero-v2__title-line:nth-child(2) {
     font-weight: 800;
-    font-size: clamp(36px, 5vw, 66px);
+    font-size: clamp(32px, 4.2vw, 52px);
 }
 
 /* Tercera línea: grande, blanca, con acento naranja bajo */
 .hero-v2__title-line:nth-child(3) {
     font-weight: 900;
-    font-size: clamp(40px, 5.8vw, 74px);
+    font-size: clamp(36px, 5vw, 60px);
     letter-spacing: -0.04em;
     line-height: 1.05;
 }
@@ -2112,7 +2119,7 @@ section {
     text-shadow: none !important;
     position: relative;
     display: inline-block;
-    padding-bottom: 6px;
+    padding-bottom: 4px;
 }
 
 .hero-v2__title-highlight::after {
@@ -2135,11 +2142,11 @@ section {
 
 /* ── Descripción ── */
 .hero-v2__desc {
-    font-size: clamp(15px, 1.5vw, 18px);
+    font-size: clamp(14px, 1.2vw, 16px);
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.82);
-    margin: 0 0 40px 0;
-    max-width: 600px;
+    margin: 0 0 32px 0;
+    max-width: 540px;
     text-shadow: 0 1px 8px rgba(0,0,0,0.4);
     font-weight: 400;
 }
@@ -2169,9 +2176,9 @@ section {
     gap: 10px;
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 15px;
-    padding: 15px 28px;
-    border-radius: 14px;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 12px;
     text-decoration: none;
     transition:
         transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),

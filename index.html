@@ -55,7 +55,7 @@
 
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind Styles -->
@@ -65,13 +65,20 @@
 </head>
 
 <body class="font-sans bg-cream">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo-container">
+            <img src="src/logo.svg" alt="San Emilio Propiedades" class="preloader__logo">
+        </div>
+    </div>
+
     <!-- ═══ HEADER PREMIUM ═══ -->
     <header class="header" id="header">
         <div class="container mx-auto px-6">
             <nav class="navbar">
-                <!-- Logo SVG -->
-                <a href="index.html" class="logo" aria-label="San Emilio Propiedades - Inicio">
-                    <img src="src/logo.svg" alt="San Emilio Propiedades" style="height: 60px; width: auto;">
+                <!-- Logo -->
+                <a href="index.html" class="logo site-logo" aria-label="San Emilio Propiedades - Inicio">
+                    <img src="src/logo.svg" alt="San Emilio Propiedades" class="site-logo__svg" style="height:100px; width:auto; object-fit:contain;" loading="eager">
                 </a>
 
                 <!-- Nav Links -->
@@ -117,95 +124,63 @@
             </nav>
         </div>
     </header>
-    <!-- Hero Section - Modern & Vibrant -->
-    <section class="relative min-h-screen flex items-center overflow-hidden pt-32 md:pt-36">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-br from-navy-900/60 via-navy-700/40 to-transparent"></div>
-            <img src="clickerhappy-kitchen-2165756_1280.jpg" alt="Modern Kitchen" class="w-full h-full object-cover"
-                style="filter: brightness(0.85);" width="1280" height="853" fetchpriority="high">
+    <!-- ═══ HERO ═══ -->
+    <section class="hero-v2" id="hero" aria-label="Portada San Emilio Propiedades">
+
+        <!-- Fondo con Ken Burns -->
+        <div class="hero-v2__bg" aria-hidden="true">
+            <img
+                src="clickerhappy-kitchen-2165756_1280.jpg"
+                alt=""
+                class="hero-v2__img"
+                width="1280" height="853"
+                fetchpriority="high"
+                decoding="async"
+            >
+            <div class="hero-v2__overlay"></div>
         </div>
 
-        <!-- Animated Accent Lines -->
-        <div
-            class="absolute top-0 left-0 w-1 h-64 bg-gradient-to-b from-orange-primary to-transparent opacity-80 animate-pulse">
-        </div>
-        <div class="absolute bottom-0 right-0 w-64 h-1 bg-gradient-to-l from-orange-primary to-transparent opacity-80 animate-pulse"
-            style="animation-delay: 1s"></div>
+        <!-- Contenido -->
+        <div class="container mx-auto px-6 relative z-10 w-full">
+            <div class="hero-v2__inner">
 
-        <!-- Content Container -->
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-3xl">
-
-                <!-- Main Title -->
-                <h1 class="font-serif text-white mb-6 leading-tight animate-fade-in-up">
-                    <span class="block text-4xl md:text-5xl lg:text-6xl font-bold">Más que propiedades,</span>
-                    <span class="block text-4xl md:text-5xl lg:text-6xl font-bold mt-2">encontramos tu próximo</span>
-                    <span class="block text-4xl md:text-5xl lg:text-6xl font-bold mt-2 text-orange-primary">hogar en la
-                        Araucanía</span>
+                <h1 class="hero-v2__title">
+                    <span class="hero-v2__title-line hero-v2--anim-1">Más que propiedades,</span>
+                    <span class="hero-v2__title-line hero-v2--anim-2">encontramos tu</span>
+                    <span class="hero-v2__title-line hero-v2__title-highlight hero-v2--anim-3">próximo hogar.</span>
                 </h1>
 
-                <!-- Description -->
-                <p class="text-white/90 text-base md:text-lg font-light leading-relaxed mb-8 max-w-xl animate-fade-in-up"
-                    style="animation-delay: 0.2s">
-                    Tu corredora de propiedades de confianza para la compra y venta de casas, departamentos y parcelas en Temuco, Puerto Montt y toda la Araucanía. Certeza jurídica y experiencia local desde 2008.
+                <p class="hero-v2__desc hero-v2--anim-4">
+                    Corredora de propiedades en Temuco, Puerto Montt y toda la Araucanía.<br class="hero-v2__br">
+                    Compra y venta de casas, departamentos, parcelas y terrenos.
                 </p>
 
-                <!-- CTA Buttons -->
-                <div class="flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 0.4s">
-                    <a href="#buscar"
-                        class="group relative inline-flex items-center gap-2 bg-orange-primary hover:bg-orange-dark text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-primary/50">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                <div class="hero-v2__ctas hero-v2--anim-5">
+                    <a href="#buscar" class="hero-v2__cta hero-v2__cta--primary" id="hero-cta-buscar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
                         </svg>
                         Buscar Propiedades
-                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <svg class="hero-v2__cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
-                    <a href="contacto.html"
-                        class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-                            </path>
-                        </svg>
-                        Contactar Asesor
+                    <a href="contacto.html" class="hero-v2__cta hero-v2__cta--ghost" id="hero-cta-contacto">
+                        Hablar con un asesor
                     </a>
                 </div>
-
-                <!-- Stats Cards -->
-                <dl class="grid grid-cols-3 gap-4 mt-12 animate-fade-in-up" style="animation-delay: 0.6s">
-                    <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50 flex flex-col">
-                        <dd class="text-3xl font-bold text-white mb-1 order-1">18+</dd>
-                        <dt class="text-white/70 text-sm font-medium order-2">Años Experiencia</dt>
-                    </div>
-                    <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50 flex flex-col">
-                        <dd class="text-3xl font-bold text-white mb-1 order-1">500+</dd>
-                        <dt class="text-white/70 text-sm font-medium order-2">Familias Felices</dt>
-                    </div>
-                    <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:border-orange-primary/50 flex flex-col">
-                        <dd class="text-3xl font-bold text-white mb-1 order-1">98%</dd>
-                        <dt class="text-white/70 text-sm font-medium order-2">Satisfacción</dt>
-                    </div>
-                </dl>
 
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
-                </path>
+        <!-- Scroll indicator -->
+        <div class="hero-v2__scroll" aria-hidden="true">
+            <span class="hero-v2__scroll-line"></span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 9l-7 7-7-7"/>
             </svg>
         </div>
+
     </section>
 
     <!-- Smart Search Section -->
@@ -369,7 +344,7 @@
                 </a>
 
                 <!-- Arica y Parinacota -->
-                <a href="contacto.html?mensaje=region-arica"
+                <a href="propiedades.html?region=Arica y Parinacota"
                     class="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500"
                         style="background-image: url('regiones/arica y parinacota.jpg'); background-size: cover; background-position: center;">
@@ -459,7 +434,7 @@
                 </a>
 
                 <!-- Metropolitana -->
-                <a href="propiedades.html?region=Metropolitana"
+                <a href="propiedades.html?region=Metropolitana de Santiago"
                     class="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-800"
                         style="background-image: url('regiones/viajantes-santiago.jpg'); background-size: cover; background-position: center;">
@@ -474,7 +449,7 @@
                 </a>
 
                 <!-- O'Higgins -->
-                <a href="propiedades.html?region=O'Higgins"
+                <a href="propiedades.html?region=Libertador Gral. Bernardo O'Higgins"
                     class="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="absolute inset-0 bg-gradient-to-br from-rose-500 to-pink-600"
                         style="background-image: url('regiones/ohiggins.webp'); background-size: cover; background-position: center;">
@@ -616,7 +591,7 @@
                 <!-- Brand -->
                 <div class="md:col-span-1">
                     <a href="index.html" class="inline-block mb-6 hover:opacity-90 transition-opacity duration-200">
-                        <img src="src/logo.svg" alt="San Emilio Propiedades" style="height:64px; width:auto; object-fit:contain;">
+                        <img src="src/logo.svg" alt="San Emilio Propiedades" class="site-logo__svg" style="height:110px; width:auto; object-fit:contain;">
                     </a>
                     <p class="text-gray-400 leading-relaxed mb-6 text-sm">
                         Más que propiedades, conectamos personas con hogares.

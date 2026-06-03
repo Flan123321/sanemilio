@@ -114,12 +114,19 @@
 </head>
 
 <body class="font-sans bg-cream">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo-container">
+            <img src="src/logo.svg" alt="San Emilio Propiedades" class="preloader__logo">
+        </div>
+    </div>
+
     <!-- ═══ HEADER PREMIUM ═══ -->
     <header class="header" id="header">
         <div class="container mx-auto px-6">
             <nav class="navbar">
-                <a href="index.html" class="logo" aria-label="San Emilio Propiedades - Inicio">
-                    <img src="src/logo.svg" alt="San Emilio Propiedades" style="height: 60px; width: auto;">
+                <a href="index.html" class="logo site-logo" aria-label="San Emilio Propiedades - Inicio">
+                    <img src="src/logo.svg" alt="San Emilio Propiedades" class="site-logo__svg" style="height:100px; width:auto; object-fit:contain;" loading="eager">
                 </a>
 
                 <ul class="nav-menu" id="navMenu" role="list">
@@ -500,7 +507,7 @@
                     </a>
                 </div>
                 
-                <div class="mt-16 text-center text-navy-800 bg-orange-primary/5 p-8 rounded-2xl border border-orange-primary/10">
+                <div class="mt-16 cta-card text-center text-navy-800 bg-orange-primary/5 p-8 rounded-2xl border border-orange-primary/10">
                     <h3 class="font-serif text-2xl font-bold mb-4">Encontramos la propiedad ideal para ti</h3>
                     <p class="text-lg mb-6 max-w-3xl mx-auto font-light">Tenemos propiedades exclusivas y oportunidades que muchas veces no alcanzan a publicarse. Cuéntanos qué estás buscando y nuestro equipo de San Emilio Propiedades te ayudará a encontrar oportunidades exclusivas según tu presupuesto y estilo de vida.</p>
                     <div class="flex flex-col sm:flex-row justify-center gap-6 text-sm font-medium">
@@ -519,7 +526,7 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div class="md:col-span-1">
                     <a href="index.html" class="inline-block mb-6 hover:opacity-90 transition-opacity duration-200">
-                        <img src="src/logo.svg" alt="San Emilio Propiedades" style="height:64px; width:auto; object-fit:contain;">
+                        <img src="src/logo.svg" alt="San Emilio Propiedades" class="site-logo__svg" style="height:110px; width:auto; object-fit:contain;">
                     </a>
                     <p class="text-gray-400 leading-relaxed mb-6">Más que propiedades, conectamos personas con hogares.</p>
                     <div class="flex gap-4">

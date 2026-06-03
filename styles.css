@@ -207,6 +207,7 @@ p {
     width: auto;
     object-fit: contain;
     display: block;
+    background: transparent;
     transition: transform var(--transition-base);
 }
 

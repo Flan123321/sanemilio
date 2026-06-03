@@ -1903,18 +1903,20 @@ section {
 /* ── Layout base ── */
 .hero-v2 {
     position: relative;
-    min-height: 100svh;          /* dvh fallback a svh */
-    min-height: 100dvh;
+    min-height: 75vh;
+    max-height: 700px;
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: 120px;           /* altura del header fijo */
+    padding-top: 96px;           /* altura del header fijo */
     isolation: isolate;
 }
 
 @media (max-width: 1023px) {
     .hero-v2 {
-        padding-top: 96px;
+        min-height: 65vh;
+        max-height: 600px;
+        padding-top: 80px;
     }
 }
 
@@ -1938,7 +1940,7 @@ section {
 
 @keyframes hero-kenburns {
     0%   { transform: scale(1.0)  translate(0%,    0%); }
-    100% { transform: scale(1.10) translate(-1.5%, -1%); }
+    100% { transform: scale(1.03) translate(-0.8%, -0.4%); }
 }
 
 /* ── Overlays (legibilidad de texto) ── */
@@ -2493,58 +2495,6 @@ section {
     margin-top: 64px !important;
 }
 
-/* ===== PRELOADER SCREEN ===== */
-body.preloader-active {
-    overflow: hidden !important;
-}
 
-.preloader {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    background: #0B1A2E;
-    z-index: 10000; /* above everything else */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    transform: translateX(0);
-}
-
-.preloader.slide-right {
-    transform: translateX(100%);
-}
-
-.preloader__logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.preloader__logo {
-    height: 120px;
-    width: auto;
-    object-fit: contain;
-    animation: preloader-pulse 2s ease-in-out infinite;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.preloader__logo.spin {
-    animation: none; /* stop pulsing when spinning */
-    transform: rotate(360deg) scale(1);
-}
-
-@keyframes preloader-pulse {
-    0%, 100% {
-        transform: scale(0.95);
-        opacity: 0.85;
-    }
-    50% {
-        transform: scale(1.05);
-        opacity: 1;
-    }
-}
 
 

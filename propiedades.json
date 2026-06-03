@@ -27,7 +27,11 @@
       "propiedades-imgs/casa-labranza/9.jpg",
       "propiedades-imgs/casa-labranza/10.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "jardin", "amplio terreno"],
+    "caracteristicas": [
+      "estacionamiento",
+      "jardin",
+      "amplio terreno"
+    ],
     "destacada": true
   },
   {
@@ -43,8 +47,8 @@
     "banos": 1,
     "m2Utiles": 55,
     "m2Terreno": 75,
-    "lat": -38.7610,
-    "lng": -72.7600,
+    "lat": -38.761,
+    "lng": -72.76,
     "imagenPrincipal": "propiedades-imgs/casa-labranza-2/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/casa-labranza-2/1.jpg",
@@ -61,14 +65,18 @@
       "propiedades-imgs/casa-labranza-2/12.jpg",
       "propiedades-imgs/casa-labranza-2/13.jpg"
     ],
-    "caracteristicas": ["termopanel", "patio", "apta subsidio"],
+    "caracteristicas": [
+      "termopanel",
+      "patio",
+      "apta subsidio"
+    ],
     "destacada": false
   },
   {
     "id": 11,
     "titulo": "Casa en Venta – Lautaro",
     "descripcion": "Propiedad ubicada en la ciudad de Lautaro, La Araucanía. Buena ubicación con acceso a servicios y conectividad con Temuco. Contacta a San Emilio Propiedades para más información y agendar visita.",
-    "precioCLP": 0,
+    "precioCLP": 62000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -90,7 +98,9 @@
       "propiedades-imgs/casa-lautaro/7.jpg",
       "propiedades-imgs/casa-lautaro/8.jpg"
     ],
-    "caracteristicas": ["patio"],
+    "caracteristicas": [
+      "patio"
+    ],
     "destacada": false
   },
   {
@@ -130,7 +140,15 @@
       "propiedades-imgs/depa-senador/18.jpg",
       "propiedades-imgs/depa-senador/19.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "bodega", "termopanel", "terraza", "quincho", "seguridad", "calefaccion central"],
+    "caracteristicas": [
+      "estacionamiento",
+      "bodega",
+      "termopanel",
+      "terraza",
+      "quincho",
+      "seguridad",
+      "calefaccion central"
+    ],
     "destacada": true
   },
   {
@@ -163,7 +181,13 @@
       "propiedades-imgs/depa-av-alemania/12.jpg",
       "propiedades-imgs/depa-av-alemania/13.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "terraza", "calefaccion central", "seguridad", "exento contribuciones"],
+    "caracteristicas": [
+      "estacionamiento",
+      "terraza",
+      "calefaccion central",
+      "seguridad",
+      "exento contribuciones"
+    ],
     "destacada": false
   },
   {
@@ -178,7 +202,7 @@
     "dormitorios": 2,
     "banos": 2,
     "m2Utiles": 69,
-    "lat": -38.7340,
+    "lat": -38.734,
     "lng": -72.6065,
     "imagenPrincipal": "propiedades-imgs/edificio-don-simon/PORTADA.jpg",
     "galeria": [
@@ -201,7 +225,14 @@
       "propiedades-imgs/edificio-don-simon/17.jpg",
       "propiedades-imgs/edificio-don-simon/18.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "termopanel", "calefaccion central", "seguridad", "piscina", "balcon"],
+    "caracteristicas": [
+      "estacionamiento",
+      "termopanel",
+      "calefaccion central",
+      "seguridad",
+      "piscina",
+      "balcon"
+    ],
     "destacada": true
   },
   {
@@ -217,8 +248,8 @@
     "banos": 0,
     "m2Utiles": 0,
     "m2Terreno": 5000,
-    "lat": -38.8050,
-    "lng": -72.5800,
+    "lat": -38.805,
+    "lng": -72.58,
     "imagenPrincipal": "propiedades-imgs/parcela-huichahue/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/parcela-huichahue/1.jpg",
@@ -235,7 +266,13 @@
       "propiedades-imgs/parcela-huichahue/12.jpg",
       "propiedades-imgs/parcela-huichahue/13.jpg"
     ],
-    "caracteristicas": ["agua pozo", "luz", "rol propio", "bosque nativo", "rio"],
+    "caracteristicas": [
+      "agua pozo",
+      "luz",
+      "rol propio",
+      "bosque nativo",
+      "rio"
+    ],
     "destacada": false
   },
   {
@@ -273,7 +310,11 @@
       "propiedades-imgs/casa-villa-santa-luisa/16.jpg",
       "propiedades-imgs/casa-villa-santa-luisa/17.jpg"
     ],
-    "caracteristicas": ["patio", "jardin", "dos pisos"],
+    "caracteristicas": [
+      "patio",
+      "jardin",
+      "dos pisos"
+    ],
     "destacada": false
   },
   {
@@ -312,7 +353,12 @@
       "propiedades-imgs/depa-thiers-11/18.jpg",
       "propiedades-imgs/depa-thiers-11/19.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "orientacion norte", "sol todo el dia", "piso alto"],
+    "caracteristicas": [
+      "estacionamiento",
+      "orientacion norte",
+      "sol todo el dia",
+      "piso alto"
+    ],
     "destacada": true
   },
   {
@@ -343,7 +389,12 @@
       "propiedades-imgs/depa-lomas-javiera/10.jpg",
       "propiedades-imgs/depa-lomas-javiera/11.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "logia", "condominio seguro", "remodelado"],
+    "caracteristicas": [
+      "estacionamiento",
+      "logia",
+      "condominio seguro",
+      "remodelado"
+    ],
     "destacada": false
   },
   {
@@ -359,8 +410,8 @@
     "dormitorios": 3,
     "banos": 3,
     "m2Utiles": 100,
-    "lat": -38.7330,
-    "lng": -72.6130,
+    "lat": -38.733,
+    "lng": -72.613,
     "imagenPrincipal": "propiedades-imgs/edificio-alpes/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/edificio-alpes/1.jpg",
@@ -374,7 +425,14 @@
       "propiedades-imgs/edificio-alpes/9.jpg",
       "propiedades-imgs/edificio-alpes/10.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "bodega", "balcon", "calefaccion central", "ascensor", "orientacion norte"],
+    "caracteristicas": [
+      "estacionamiento",
+      "bodega",
+      "balcon",
+      "calefaccion central",
+      "ascensor",
+      "orientacion norte"
+    ],
     "destacada": true
   },
   {
@@ -389,8 +447,8 @@
     "dormitorios": 2,
     "banos": 1,
     "m2Utiles": 55,
-    "lat": -38.7240,
-    "lng": -72.6320,
+    "lat": -38.724,
+    "lng": -72.632,
     "imagenPrincipal": "propiedades-imgs/depa-valle-javiera/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/depa-valle-javiera/1.jpg",
@@ -409,7 +467,11 @@
       "propiedades-imgs/depa-valle-javiera/14.jpg",
       "propiedades-imgs/depa-valle-javiera/15.jpg"
     ],
-    "caracteristicas": ["condominio seguro", "areas verdes", "juegos infantiles"],
+    "caracteristicas": [
+      "condominio seguro",
+      "areas verdes",
+      "juegos infantiles"
+    ],
     "destacada": false
   },
   {
@@ -425,8 +487,8 @@
     "banos": 2,
     "m2Utiles": 90,
     "m2Terreno": 200,
-    "lat": -38.7620,
-    "lng": -72.7580,
+    "lat": -38.762,
+    "lng": -72.758,
     "imagenPrincipal": "propiedades-imgs/casa-labranza-roja/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/casa-labranza-roja/1.jpg",
@@ -449,7 +511,13 @@
       "propiedades-imgs/casa-labranza-roja/18.jpg",
       "propiedades-imgs/casa-labranza-roja/19.jpg"
     ],
-    "caracteristicas": ["estacionamiento", "logia", "salon eventos", "porton vehicular", "antejarin"],
+    "caracteristicas": [
+      "estacionamiento",
+      "logia",
+      "salon eventos",
+      "porton vehicular",
+      "antejarin"
+    ],
     "destacada": true
   },
   {
@@ -483,15 +551,19 @@
       "propiedades-imgs/casa-gorbea/12.jpg",
       "propiedades-imgs/casa-gorbea/13.jpg"
     ],
-    "caracteristicas": ["apta subsidio", "regularizada", "bodega"],
+    "caracteristicas": [
+      "apta subsidio",
+      "regularizada",
+      "bodega"
+    ],
     "destacada": false
   },
   {
     "id": 23,
-    "titulo": "Casa en Venta – Sector Molco, Pucón",
-    "descripcion": "Hermosa casa de madera en el tranquilo sector de Molco, entre Villarrica y Pucón, en la ribera del Lago Villarrica. Entorno natural privilegiado, rodeado de vegetación y cerca del lago. Ideal para uso permanente, segunda vivienda o inversión turística. Interior acogedor con techumbre de madera, cocina-comedor integrados y dormitorios cómodos. Consulta por precio y detalles a San Emilio Propiedades.",
-    "precioCLP": 0,
-    "operacion": "venta",
+    "titulo": "Casa en Arriendo – Sector Molco, Pucón",
+    "descripcion": "Hermosa casa de madera en el tranquilo sector de Molco, entre Villarrica y Pucón, en la ribera del Lago Villarrica. Entorno natural privilegiado, rodeado de vegetación y cerca del lago. Ideal para uso permanente, segunda vivienda o inversión turística. Interior acogedor con techumbre de madera, cocina-comedor integrados y dormitorios cómodos.",
+    "precioCLP": 1100000,
+    "operacion": "arriendo",
     "tipo": "casa",
     "region": "La Araucanía",
     "comuna": "Villarrica",
@@ -499,8 +571,8 @@
     "banos": 1,
     "m2Utiles": 80,
     "m2Terreno": 500,
-    "lat": -39.3000,
-    "lng": -72.1000,
+    "lat": -39.3,
+    "lng": -72.1,
     "imagenPrincipal": "propiedades-imgs/casa-molco-pucon/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/casa-molco-pucon/1.jpg",
@@ -524,14 +596,19 @@
       "propiedades-imgs/casa-molco-pucon/19.jpg",
       "propiedades-imgs/casa-molco-pucon/20.jpg"
     ],
-    "caracteristicas": ["lago cerca", "naturaleza", "sector turistico", "madera"],
+    "caracteristicas": [
+      "lago cerca",
+      "naturaleza",
+      "sector turistico",
+      "madera"
+    ],
     "destacada": true
   },
   {
     "id": 24,
     "titulo": "Parcela en Venta – Los Tilos, Los Ángeles",
     "descripcion": "Hermosa parcela en venta en el sector Los Tilos, Los Ángeles, Región del Biobío. Terreno delimitado con nueva reja de madera, rodeado de naturaleza y vegetación nativa. Entorno tranquilo y familiar, ideal para construir o invertir. Consulta por precio, superficie y condiciones a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "precioCLP": 28000000,
     "operacion": "venta",
     "tipo": "parcela",
     "region": "Biobío",
@@ -551,14 +628,19 @@
       "propiedades-imgs/parcela-los-tilos/5.jpg",
       "propiedades-imgs/parcela-los-tilos/6.jpg"
     ],
-    "caracteristicas": ["naturaleza", "terreno delimitado", "rol propio"],
+    "caracteristicas": [
+      "naturaleza",
+      "terreno delimitado",
+      "rol propio"
+    ],
     "destacada": false
   },
   {
     "id": 25,
     "titulo": "Tres Parcelas en Venta – Sector Colicheo, Temuco",
-    "descripcion": "Oportunidad de inversión: tres parcelas disponibles en el sector rural de Colicheo, Temuco. Entorno natural espectacular con río, vegetación nativa y tranquilidad. Terrenos con delimitación nueva. Ideales para proyectos habitacionales, parcelas de agrado o inversión a largo plazo. Consulta por precio, superficies y condiciones.",
-    "precioCLP": 0,
+    "descripcion": "Oportunidad de inversión: tres parcelas disponibles en el sector rural de Colicheo, Temuco. Entorno natural espectacular con río, vegetación nativa y tranquilidad. Terrenos con delimitación nueva. Ideales para proyectos habitacionales, parcelas de agrado o inversión a largo plazo. Precio desde $35.000.000 hasta $40.000.000 c/u.",
+    "precioCLP": 35000000,
+    "precioMaxCLP": 40000000,
     "operacion": "venta",
     "tipo": "parcela",
     "region": "La Araucanía",
@@ -567,8 +649,8 @@
     "banos": 0,
     "m2Utiles": 0,
     "m2Terreno": 15000,
-    "lat": -38.8200,
-    "lng": -72.6100,
+    "lat": -38.82,
+    "lng": -72.61,
     "imagenPrincipal": "propiedades-imgs/parcela-colicheo/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/parcela-colicheo/1.jpg",
@@ -587,7 +669,12 @@
       "propiedades-imgs/parcela-colicheo/14.jpg",
       "propiedades-imgs/parcela-colicheo/15.jpg"
     ],
-    "caracteristicas": ["naturaleza", "rio", "tres parcelas", "inversion"],
+    "caracteristicas": [
+      "naturaleza",
+      "rio",
+      "tres parcelas",
+      "inversion"
+    ],
     "destacada": false
   },
   {
@@ -625,14 +712,18 @@
       "propiedades-imgs/casa-fundo-el-carmen/16.jpg",
       "propiedades-imgs/casa-fundo-el-carmen/17.jpg"
     ],
-    "caracteristicas": ["dos pisos", "patio", "sector tranquilo"],
+    "caracteristicas": [
+      "dos pisos",
+      "patio",
+      "sector tranquilo"
+    ],
     "destacada": true
   },
   {
     "id": 27,
     "titulo": "Parcela en Venta – Molco Alto, Villarrica",
-    "descripcion": "Parcela en venta en el bello sector de Molco Alto, Villarrica, en la precordillera de La Araucanía. Terreno con bosque nativo y vegetación exuberante. Entorno de naturaleza inigualable, ideal para construir una casa de campo o cabaña. Consulta por precio, superficie y condiciones.",
-    "precioCLP": 0,
+    "descripcion": "Parcela en venta en el bello sector de Molco Alto, Villarrica, en la precordillera de La Araucanía. Terreno con bosque nativo y vegetación exuberante. Entorno de naturaleza inigualable, ideal para construir una casa de campo o cabaña. Consulta por superficie y condiciones a San Emilio Propiedades.",
+    "precioCLP": 54990000,
     "operacion": "venta",
     "tipo": "parcela",
     "region": "La Araucanía",
@@ -641,8 +732,8 @@
     "banos": 0,
     "m2Utiles": 0,
     "m2Terreno": 5000,
-    "lat": -39.3500,
-    "lng": -72.0800,
+    "lat": -39.35,
+    "lng": -72.08,
     "imagenPrincipal": "propiedades-imgs/parcela-molco-alto/PORTADA.jpg",
     "galeria": [
       "propiedades-imgs/parcela-molco-alto/1.jpg",
@@ -658,7 +749,11 @@
       "propiedades-imgs/parcela-molco-alto/11.jpg",
       "propiedades-imgs/parcela-molco-alto/12.jpg"
     ],
-    "caracteristicas": ["bosque nativo", "naturaleza", "precordillera"],
+    "caracteristicas": [
+      "bosque nativo",
+      "naturaleza",
+      "precordillera"
+    ],
     "destacada": false
   },
   {
@@ -698,7 +793,12 @@
       "propiedades-imgs/casa-rahue-alto-osorno/18.jpg",
       "propiedades-imgs/casa-rahue-alto-osorno/19.jpg"
     ],
-    "caracteristicas": ["quincho", "bodega", "estacionamiento", "tejas madera"],
+    "caracteristicas": [
+      "quincho",
+      "bodega",
+      "estacionamiento",
+      "tejas madera"
+    ],
     "destacada": true
   },
   {
@@ -714,8 +814,8 @@
     "banos": 1,
     "m2Utiles": 80,
     "m2Terreno": 180,
-    "lat": -39.3700,
-    "lng": -72.6300,
+    "lat": -39.37,
+    "lng": -72.63,
     "imagenPrincipal": "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652560915_17892829020429157_3326885653281069835_n.jpg",
     "galeria": [
       "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652560915_17892829020429157_3326885653281069835_n.jpg",
@@ -731,7 +831,10 @@
       "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652844534_17892829068429157_2083946618918618660_n.jpg",
       "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652849023_17892829038429157_5929640817484551282_n.jpg"
     ],
-    "caracteristicas": ["jardin", "patio"],
+    "caracteristicas": [
+      "jardin",
+      "patio"
+    ],
     "destacada": false
   },
   {
@@ -747,8 +850,8 @@
     "banos": 0,
     "m2Utiles": 0,
     "m2Terreno": 5000,
-    "lat": -38.7500,
-    "lng": -72.6000,
+    "lat": -38.75,
+    "lng": -72.6,
     "imagenPrincipal": "propiedades-imgs/parcela 9 de julio/651855197_17892825918429157_7767579372815815193_n.jpg",
     "galeria": [
       "propiedades-imgs/parcela 9 de julio/651855197_17892825918429157_7767579372815815193_n.jpg",
@@ -765,7 +868,10 @@
       "propiedades-imgs/parcela 9 de julio/652098023_17892825954429157_4898101474600521940_n.jpg",
       "propiedades-imgs/parcela 9 de julio/652109424_17892825942429157_8879476437785399162_n.jpg"
     ],
-    "caracteristicas": ["naturaleza", "rol propio"],
+    "caracteristicas": [
+      "naturaleza",
+      "rol propio"
+    ],
     "destacada": false
   },
   {
@@ -781,8 +887,8 @@
     "banos": 2,
     "m2Utiles": 100,
     "m2Terreno": 250,
-    "lat": -38.7350,
-    "lng": -72.6200,
+    "lat": -38.735,
+    "lng": -72.62,
     "imagenPrincipal": "propiedades-imgs/casa esquina javiera carrera/631291069_17888190042429157_6120453192159464852_n.jpg",
     "galeria": [
       "propiedades-imgs/casa esquina javiera carrera/631291069_17888190042429157_6120453192159464852_n.jpg",
@@ -795,7 +901,10 @@
       "propiedades-imgs/casa esquina javiera carrera/631758218_17888190084429157_6059451316073085817_n.jpg",
       "propiedades-imgs/casa esquina javiera carrera/631894490_17888190066429157_5023929034148524028_n.jpg"
     ],
-    "caracteristicas": ["esquina", "terreno amplio"],
+    "caracteristicas": [
+      "esquina",
+      "terreno amplio"
+    ],
     "destacada": false
   },
   {
@@ -811,7 +920,7 @@
     "banos": 1,
     "m2Utiles": 60,
     "lat": -39.2721,
-    "lng": -71.9780,
+    "lng": -71.978,
     "imagenPrincipal": "propiedades-imgs/departamento pucón/625770552_17887279224429157_1817252986844012250_n.jpg",
     "galeria": [
       "propiedades-imgs/departamento pucón/625770552_17887279224429157_1817252986844012250_n.jpg",
@@ -834,14 +943,18 @@
       "propiedades-imgs/departamento pucón/626425069_17887279257429157_3993267060694099174_n.jpg",
       "propiedades-imgs/departamento pucón/626443218_17887279254429157_7946804397048143455_n.jpg"
     ],
-    "caracteristicas": ["sector turistico", "lago cerca", "volcan cerca"],
+    "caracteristicas": [
+      "sector turistico",
+      "lago cerca",
+      "volcan cerca"
+    ],
     "destacada": false
   },
   {
     "id": 33,
     "titulo": "Casa en Venta – Villa Los Ríos, Los Ríos",
-    "descripcion": "Agradable casa en venta en Villa Los Ríos. Propiedad en sector residencial tranquilo con buena conectividad. Consulta por precio, detalles y visita a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "descripcion": "Agradable casa en venta en Villa Los Ríos. Propiedad en sector residencial tranquilo con buena conectividad. Consulta por detalles y visita a San Emilio Propiedades.",
+    "precioCLP": 72000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "Los Ríos",
@@ -866,7 +979,10 @@
       "propiedades-imgs/casa villa los rios/628743800_17887937238429157_742598545259555924_n.jpg",
       "propiedades-imgs/casa villa los rios/629149911_17887937196429157_7875489949866612511_n.jpg"
     ],
-    "caracteristicas": ["patio", "jardin"],
+    "caracteristicas": [
+      "patio",
+      "jardin"
+    ],
     "destacada": false
   },
   {
@@ -881,8 +997,8 @@
     "dormitorios": 0,
     "banos": 1,
     "m2Utiles": 60,
-    "lat": -38.7370,
-    "lng": -72.5980,
+    "lat": -38.737,
+    "lng": -72.598,
     "imagenPrincipal": "propiedades-imgs/local comercial calle lautaro temuco/626562810_17887903284429157_5999898071989564683_n.jpg",
     "galeria": [
       "propiedades-imgs/local comercial calle lautaro temuco/626562810_17887903284429157_5999898071989564683_n.jpg",
@@ -896,14 +1012,19 @@
       "propiedades-imgs/local comercial calle lautaro temuco/629064030_17887903341429157_2496675041127735883_n.jpg",
       "propiedades-imgs/local comercial calle lautaro temuco/629734116_17887903311429157_2173495471191080418_n.jpg"
     ],
-    "caracteristicas": ["local comercial", "calle principal", "alto flujo"],
+    "caracteristicas": [
+      "local comercial",
+      "calle principal",
+      "alto flujo"
+    ],
     "destacada": false
   },
   {
     "id": 35,
     "titulo": "Casa en Venta – Centro Puerto Montt",
-    "descripcion": "Amplia casa en venta en el centro de Puerto Montt, Región de Los Lagos. Excelente ubicación con acceso a todos los servicios, comercio y transporte. Ideal para vivir o invertir en el corazón de la ciudad. Consulta por precio y condiciones.",
+    "descripcion": "Amplia casa en venta en el centro de Puerto Montt, Región de Los Lagos. Excelente ubicación con acceso a todos los servicios, comercio y transporte. Ideal para vivir o invertir en el corazón de la ciudad.",
     "precioCLP": 0,
+    "precioUF": 11500,
     "operacion": "venta",
     "tipo": "casa",
     "region": "Los Lagos",
@@ -913,7 +1034,7 @@
     "m2Utiles": 120,
     "m2Terreno": 200,
     "lat": -41.4717,
-    "lng": -72.9360,
+    "lng": -72.936,
     "imagenPrincipal": "propiedades-imgs/casa centro pto montt/626701765_17887792716429157_5378649396879585651_n.jpg",
     "galeria": [
       "propiedades-imgs/casa centro pto montt/626701765_17887792716429157_5378649396879585651_n.jpg",
@@ -935,14 +1056,19 @@
       "propiedades-imgs/casa centro pto montt/629187836_17887792662429157_4503471079121182550_n.jpg",
       "propiedades-imgs/casa centro pto montt/630325223_17887792734429157_677346978086513484_n.jpg"
     ],
-    "caracteristicas": ["centro ciudad", "servicios cercanos", "transporte"],
+    "caracteristicas": [
+      "centro ciudad",
+      "servicios cercanos",
+      "transporte"
+    ],
     "destacada": false
   },
   {
     "id": 36,
     "titulo": "Terreno en Venta – Peñaflor",
-    "descripcion": "Terreno en venta en Peñaflor, Región Metropolitana. Excelente oportunidad de inversión en zona de alta demanda. Consulta por precio, superficie y condiciones a San Emilio Propiedades.",
+    "descripcion": "Terreno en venta en Peñaflor, Región Metropolitana. Excelente oportunidad de inversión en zona de alta demanda. Consulta por superficie y condiciones a San Emilio Propiedades.",
     "precioCLP": 0,
+    "precioUF": 37800,
     "operacion": "venta",
     "tipo": "terreno",
     "region": "Metropolitana",
@@ -958,14 +1084,17 @@
       "propiedades-imgs/terreno en venta – Peñaflor/626009746_17887571724429157_1627274669053983367_n.jpg",
       "propiedades-imgs/terreno en venta – Peñaflor/626187453_17887571727429157_3842274669053983367_n.jpg"
     ],
-    "caracteristicas": ["inversion", "zona urbana"],
+    "caracteristicas": [
+      "inversion",
+      "zona urbana"
+    ],
     "destacada": false
   },
   {
     "id": 37,
     "titulo": "Casa Amanecer en Venta – Temuco",
-    "descripcion": "Acogedora casa en villa Amanecer, Temuco. Propiedad en sector residencial con buena conectividad y servicios cercanos. Espacios bien distribuidos, ideal para familia. Consulta por precio y condiciones.",
-    "precioCLP": 0,
+    "descripcion": "Acogedora casa en villa Amanecer, Temuco. Propiedad en sector residencial con buena conectividad y servicios cercanos. Espacios bien distribuidos, ideal para familia.",
+    "precioCLP": 100000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -974,8 +1103,8 @@
     "banos": 1,
     "m2Utiles": 75,
     "m2Terreno": 150,
-    "lat": -38.7450,
-    "lng": -72.6500,
+    "lat": -38.745,
+    "lng": -72.65,
     "imagenPrincipal": "propiedades-imgs/casa amanecer/625967351_17887456914429157_1318240873797664850_n.jpg",
     "galeria": [
       "propiedades-imgs/casa amanecer/625967351_17887456914429157_1318240873797664850_n.jpg",
@@ -994,14 +1123,17 @@
       "propiedades-imgs/casa amanecer/627647215_17887456839429157_3932678001160712299_n.jpg",
       "propiedades-imgs/casa amanecer/627658464_17887456878429157_3557189478707781884_n.jpg"
     ],
-    "caracteristicas": ["patio", "villa residencial"],
+    "caracteristicas": [
+      "patio",
+      "villa residencial"
+    ],
     "destacada": false
   },
   {
     "id": 38,
     "titulo": "Casa en Venta – Curacautín",
-    "descripcion": "Casa en venta en Curacautín, La Araucanía. Sector de alto atractivo natural, cercano a la Reserva Nacional Malalcahuello y Termas de Tolhuaca. Ideal para quienes buscan tranquilidad y naturaleza. Consulta por precio y condiciones.",
-    "precioCLP": 0,
+    "descripcion": "Casa en venta en Curacautín, La Araucanía. Sector de alto atractivo natural, cercano a la Reserva Nacional Malalcahuello y Termas de Tolhuaca. Ideal para quienes buscan tranquilidad y naturaleza.",
+    "precioCLP": 50000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1024,14 +1156,18 @@
       "propiedades-imgs/casa curacautin/627659031_17887332795429157_5905417446503690088_n.jpg",
       "propiedades-imgs/casa curacautin/628164045_17887332798429157_5962409932214091500_n.jpg"
     ],
-    "caracteristicas": ["naturaleza", "termas cercanas", "reserva nacional"],
+    "caracteristicas": [
+      "naturaleza",
+      "termas cercanas",
+      "reserva nacional"
+    ],
     "destacada": false
   },
   {
     "id": 39,
     "titulo": "Terreno en Venta – Sector Santa Rosa",
-    "descripcion": "Terreno en venta en el sector Santa Rosa. Gran oportunidad para construir o invertir en zona de crecimiento. Consulta por precio, superficie y condiciones a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "descripcion": "Terreno en venta en el sector Santa Rosa. Gran oportunidad para construir o invertir en zona de crecimiento. Consulta por superficie y condiciones a San Emilio Propiedades.",
+    "precioCLP": 69000000,
     "operacion": "venta",
     "tipo": "terreno",
     "region": "La Araucanía",
@@ -1040,8 +1176,8 @@
     "banos": 0,
     "m2Utiles": 0,
     "m2Terreno": 3000,
-    "lat": -38.7600,
-    "lng": -72.6700,
+    "lat": -38.76,
+    "lng": -72.67,
     "imagenPrincipal": "propiedades-imgs/terreno santa rosa/627276914_17887241175429157_1858582175659833214_n.jpg",
     "galeria": [
       "propiedades-imgs/terreno santa rosa/627276914_17887241175429157_1858582175659833214_n.jpg",
@@ -1057,14 +1193,17 @@
       "propiedades-imgs/terreno santa rosa/627685998_17887241184429157_4773201805663345436_n.jpg",
       "propiedades-imgs/terreno santa rosa/627964559_17887241124429157_74139479985552884_n.jpg"
     ],
-    "caracteristicas": ["terreno urbano", "inversion"],
+    "caracteristicas": [
+      "terreno urbano",
+      "inversion"
+    ],
     "destacada": false
   },
   {
     "id": 40,
     "titulo": "Casa Country en Venta – Pucón",
     "descripcion": "Espectacular casa de campo en el sector country de Pucón. Entorno natural incomparable, cercana al Lago Villarrica y Volcán Villarrica. Propiedad con amplios espacios verdes, ideal para quienes buscan calidad de vida y naturaleza. Excelente oportunidad de inversión turística.",
-    "precioCLP": 0,
+    "precioCLP": 340000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1073,8 +1212,8 @@
     "banos": 2,
     "m2Utiles": 150,
     "m2Terreno": 5000,
-    "lat": -39.2900,
-    "lng": -72.0100,
+    "lat": -39.29,
+    "lng": -72.01,
     "imagenPrincipal": "propiedades-imgs/casa country pucon/624573461_17886969627429157_7976011051932962792_n.jpg",
     "galeria": [
       "propiedades-imgs/casa country pucon/624573461_17886969627429157_7976011051932962792_n.jpg",
@@ -1093,14 +1232,20 @@
       "propiedades-imgs/casa country pucon/626390241_17886969735429157_1377836021651840243_n.jpg",
       "propiedades-imgs/casa country pucon/626548083_17886969756429157_1075560076561534294_n.jpg"
     ],
-    "caracteristicas": ["jardín amplio", "naturaleza", "sector country", "lago cerca", "volcan cerca"],
+    "caracteristicas": [
+      "jardín amplio",
+      "naturaleza",
+      "sector country",
+      "lago cerca",
+      "volcan cerca"
+    ],
     "destacada": true
   },
   {
     "id": 41,
     "titulo": "Casa en Venta – Perquenco",
-    "descripcion": "Casa en venta en la comuna de Perquenco, La Araucanía. Sector tranquilo y familiar con buena conectividad hacia Temuco. Propiedad bien conservada con espacios cómodos. Consulta por precio, superficie y condiciones.",
-    "precioCLP": 0,
+    "descripcion": "Casa en venta en la comuna de Perquenco, La Araucanía. Sector tranquilo y familiar con buena conectividad hacia Temuco. Propiedad bien conservada con espacios cómodos.",
+    "precioCLP": 70000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1134,14 +1279,17 @@
       "propiedades-imgs/casa perquenco/626459321_17886962568429157_1143377403881838029_n.jpg",
       "propiedades-imgs/casa perquenco/626538626_17886962559429157_8025031733852205071_n.jpg"
     ],
-    "caracteristicas": ["patio", "tranquilo"],
+    "caracteristicas": [
+      "patio",
+      "tranquilo"
+    ],
     "destacada": false
   },
   {
     "id": 42,
     "titulo": "Parcela en Venta – Sector Las Piedras, Victoria",
-    "descripcion": "Hermosa parcela en el sector Las Piedras, Victoria, La Araucanía. Terreno con entorno natural, ideal para construir casa de campo o proyecto agropecuario. Consulta por precio, superficie y condiciones.",
-    "precioCLP": 0,
+    "descripcion": "Hermosa parcela en el sector Las Piedras, Victoria, La Araucanía. Terreno con entorno natural, ideal para construir casa de campo o proyecto agropecuario.",
+    "precioCLP": 45000000,
     "operacion": "venta",
     "tipo": "parcela",
     "region": "La Araucanía",
@@ -1162,14 +1310,19 @@
       "propiedades-imgs/parcela sector las piedras victoria/624830567_17886585348429157_2952908038497061794_n.jpg",
       "propiedades-imgs/parcela sector las piedras victoria/625021293_17886585264429157_8148906642088241574_n.jpg"
     ],
-    "caracteristicas": ["naturaleza", "sector rural", "inversion"],
+    "caracteristicas": [
+      "naturaleza",
+      "sector rural",
+      "inversion"
+    ],
     "destacada": false
   },
   {
     "id": 43,
     "titulo": "Propiedad Comercial – Plaza Dreves, Temuco",
-    "descripcion": "Excelente propiedad comercial ubicada en Plaza Dreves, Temuco. Ubicación estratégica en zona de alto tráfico comercial. Ideal para oficinas, locales o arriendo comercial. Consulta por precio, superficie y condiciones a San Emilio Propiedades.",
+    "descripcion": "Excelente propiedad comercial ubicada en Plaza Dreves, Temuco. Ubicación estratégica en zona de alto tráfico comercial. Ideal para oficinas, locales o arriendo comercial.",
     "precioCLP": 0,
+    "precioUF": 9990,
     "operacion": "venta",
     "tipo": "comercial",
     "region": "La Araucanía",
@@ -1201,14 +1354,19 @@
       "propiedades-imgs/propiedad comercial plaza dreves/624718855_17886575997429157_8549053260753541101_n.jpg",
       "propiedades-imgs/propiedad comercial plaza dreves/624766012_17886576042429157_7734058823162919591_n.jpg"
     ],
-    "caracteristicas": ["propiedad comercial", "plaza", "alto trafico", "inversion"],
+    "caracteristicas": [
+      "propiedad comercial",
+      "plaza",
+      "alto trafico",
+      "inversion"
+    ],
     "destacada": false
   },
   {
     "id": 44,
-    "titulo": "Casa en Venta – Fundo El Carmen, Temuco (2)",
-    "descripcion": "Nueva oportunidad en el sector Fundo El Carmen, Temuco. Casa en un sector muy tranquilo del poniente de Temuco. Amplios espacios y excelente entorno familiar. Consulta por precio, detalles y agendamiento de visita a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "titulo": "Casa en Venta – Fundo El Carmen 2, Temuco",
+    "descripcion": "Nueva oportunidad en el sector Fundo El Carmen, Temuco. Casa en un sector muy tranquilo del poniente de Temuco. Amplios espacios y excelente entorno familiar.",
+    "precioCLP": 120000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1218,7 +1376,7 @@
     "m2Utiles": 100,
     "m2Terreno": 200,
     "lat": -38.7128,
-    "lng": -72.6570,
+    "lng": -72.657,
     "imagenPrincipal": "propiedades-imgs/casa en venta fundo el carmen/619976387_17885751396429157_5323237068033001007_n.jpg",
     "galeria": [
       "propiedades-imgs/casa en venta fundo el carmen/619976387_17885751396429157_5323237068033001007_n.jpg",
@@ -1235,14 +1393,18 @@
       "propiedades-imgs/casa en venta fundo el carmen/621195389_17885751210429157_8997459504874138708_n.jpg",
       "propiedades-imgs/casa en venta fundo el carmen/621216760_17885751342429157_909569565217276454_n.jpg"
     ],
-    "caracteristicas": ["sector tranquilo", "amplio terreno"],
+    "caracteristicas": [
+      "sector tranquilo",
+      "amplio terreno"
+    ],
     "destacada": false
   },
   {
     "id": 45,
     "titulo": "Departamento Philippi en Venta – Avenida Alemania, Temuco",
-    "descripcion": "Exclusivo departamento en el edificio Philippi, Avenida Alemania, sector oriente de Temuco. Ubicación de alta plusvalía a pasos de Clínica Alemana y servicios exclusivos. Espacios modernos y luminosos, ideal para profesionales o inversión. Consulta por precio y detalles.",
+    "descripcion": "Exclusivo departamento en el edificio Philippi, Avenida Alemania, sector oriente de Temuco. Ubicación de alta plusvalía a pasos de Clínica Alemana y servicios exclusivos. Espacios modernos y luminosos, ideal para profesionales o inversión. Gastos comunes: $135.000 aprox.",
     "precioCLP": 0,
+    "precioUF": 5690,
     "operacion": "venta",
     "tipo": "departamento",
     "region": "La Araucanía",
@@ -1274,7 +1436,12 @@
       "propiedades-imgs/departamento philippi av alemania/619065651_17885236893429157_7530737036621547720_n.jpg",
       "propiedades-imgs/departamento philippi av alemania/619213693_17885237028429157_1970447624782537952_n.jpg"
     ],
-    "caracteristicas": ["av alemania", "sector oriente", "alta plusvalia", "luminoso"],
+    "caracteristicas": [
+      "av alemania",
+      "sector oriente",
+      "alta plusvalia",
+      "luminoso"
+    ],
     "destacada": true
   },
   {
@@ -1290,8 +1457,8 @@
     "banos": 2,
     "m2Utiles": 120,
     "m2Terreno": 200,
-    "lat": -38.7430,
-    "lng": -72.6320,
+    "lat": -38.743,
+    "lng": -72.632,
     "imagenPrincipal": "propiedades-imgs/casa local comercial los nogales/610821311_17884509420429157_77434861324187791_n.jpg",
     "galeria": [
       "propiedades-imgs/casa local comercial los nogales/610821311_17884509420429157_77434861324187791_n.jpg",
@@ -1312,14 +1479,19 @@
       "propiedades-imgs/casa local comercial los nogales/614971682_17884509465429157_3975876243438374197_n.jpg",
       "propiedades-imgs/casa local comercial los nogales/615250717_17884509492429157_3493696877056399012_n.jpg"
     ],
-    "caracteristicas": ["local comercial", "vivienda", "mixta", "inversion"],
+    "caracteristicas": [
+      "local comercial",
+      "vivienda",
+      "mixta",
+      "inversion"
+    ],
     "destacada": false
   },
   {
     "id": 47,
     "titulo": "Campo en Venta – Vilcún, 61 Hectáreas",
     "descripcion": "Oportunidad única: campo de 61 hectáreas en venta en Vilcún, La Araucanía. Terreno productivo con gran potencial agrícola y ganadero. Entorno natural privilegiado en uno de los sectores más fértiles de la región. Ideal para agricultura, ganadería o proyecto de inversión rural.",
-    "precioCLP": 0,
+    "precioCLP": 240000000,
     "operacion": "venta",
     "tipo": "parcela",
     "region": "La Araucanía",
@@ -1328,8 +1500,8 @@
     "banos": 0,
     "m2Utiles": 0,
     "m2Terreno": 610000,
-    "lat": -38.6500,
-    "lng": -72.4200,
+    "lat": -38.65,
+    "lng": -72.42,
     "imagenPrincipal": "propiedades-imgs/campo vilcun 61 ha/613561461_17884583061429157_8008024037564635012_n.jpg",
     "galeria": [
       "propiedades-imgs/campo vilcun 61 ha/613561461_17884583061429157_8008024037564635012_n.jpg",
@@ -1344,14 +1516,20 @@
       "propiedades-imgs/campo vilcun 61 ha/615856374_17884583025429157_4661695105374905454_n.jpg",
       "propiedades-imgs/campo vilcun 61 ha/615969412_17884583004429157_2237517142345954430_n.jpg"
     ],
-    "caracteristicas": ["campo", "61 hectareas", "agricola", "ganadero", "inversion rural"],
+    "caracteristicas": [
+      "campo",
+      "61 hectareas",
+      "agricola",
+      "ganadero",
+      "inversion rural"
+    ],
     "destacada": true
   },
   {
     "id": 48,
     "titulo": "Casa en Venta – Pedro de Valdivia, Villa Las Praderas",
-    "descripcion": "Hermosa casa en Villa Las Praderas, calle Pedro de Valdivia, Temuco. Sector residencial con excelentes vías de acceso. Propiedad cómoda y bien mantenida, ideal para familia. Consulta por precio y condiciones a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "descripcion": "Hermosa casa en Villa Las Praderas, calle Pedro de Valdivia, Temuco. Sector residencial con excelentes vías de acceso. Propiedad cómoda y bien mantenida, ideal para familia.",
+    "precioCLP": 50000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1360,8 +1538,8 @@
     "banos": 2,
     "m2Utiles": 90,
     "m2Terreno": 180,
-    "lat": -38.7480,
-    "lng": -72.6410,
+    "lat": -38.748,
+    "lng": -72.641,
     "imagenPrincipal": "propiedades-imgs/casa pedro de valdivia villa las praderas/613035295_17884481787429157_120160480455502871_n.jpg",
     "galeria": [
       "propiedades-imgs/casa pedro de valdivia villa las praderas/613035295_17884481787429157_120160480455502871_n.jpg",
@@ -1378,14 +1556,18 @@
       "propiedades-imgs/casa pedro de valdivia villa las praderas/614937865_17884481910429157_5308965491064375638_n.jpg",
       "propiedades-imgs/casa pedro de valdivia villa las praderas/615254865_17884481865429157_2625521303640760072_n.jpg"
     ],
-    "caracteristicas": ["villa residencial", "bien ubicada", "patio"],
+    "caracteristicas": [
+      "villa residencial",
+      "bien ubicada",
+      "patio"
+    ],
     "destacada": false
   },
   {
     "id": 49,
     "titulo": "Casa en Venta – Loncoche",
-    "descripcion": "Casa en venta en la ciudad de Loncoche, La Araucanía. Propiedad en sector urbano con acceso a servicios y comercio. Ideal para primera vivienda o inversión. Consulta por precio y condiciones a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "descripcion": "Casa en venta en la ciudad de Loncoche, La Araucanía. Propiedad en sector urbano con acceso a servicios y comercio. Ideal para primera vivienda o inversión.",
+    "precioCLP": 120000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1394,8 +1576,8 @@
     "banos": 1,
     "m2Utiles": 75,
     "m2Terreno": 150,
-    "lat": -39.3720,
-    "lng": -72.6340,
+    "lat": -39.372,
+    "lng": -72.634,
     "imagenPrincipal": "propiedades-imgs/casa loncoche/610021958_17883997902429157_3129214155531476072_n.jpg",
     "galeria": [
       "propiedades-imgs/casa loncoche/610021958_17883997902429157_3129214155531476072_n.jpg",
@@ -1403,14 +1585,17 @@
       "propiedades-imgs/casa loncoche/611732868_17883997920429157_7853297460207543008_n.jpg",
       "propiedades-imgs/casa loncoche/612052424_17883997911429157_82387145251141228_n.jpg"
     ],
-    "caracteristicas": ["urbano", "servicios cercanos"],
+    "caracteristicas": [
+      "urbano",
+      "servicios cercanos"
+    ],
     "destacada": false
   },
   {
     "id": 50,
     "titulo": "Casa en Venta – Teatro Municipal, Temuco",
-    "descripcion": "Propiedad en venta ubicada en el sector del Teatro Municipal de Temuco. Zona céntrica con excelente conectividad y acceso a todos los servicios, cultura y comercio del centro de Temuco. Consulta por precio y condiciones a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "descripcion": "Propiedad en venta ubicada en el sector del Teatro Municipal de Temuco. Zona céntrica con excelente conectividad y acceso a todos los servicios, cultura y comercio del centro de Temuco.",
+    "precioCLP": 75000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1432,14 +1617,18 @@
       "propiedades-imgs/casa teatro municipal temuco/608808945_17882900361429157_1184982898925197080_n.jpg",
       "propiedades-imgs/casa teatro municipal temuco/608821998_17882900346429157_5638777829658368654_n.jpg"
     ],
-    "caracteristicas": ["centro", "teatro municipal", "alta conectividad"],
+    "caracteristicas": [
+      "centro",
+      "teatro municipal",
+      "alta conectividad"
+    ],
     "destacada": false
   },
   {
     "id": 51,
-    "titulo": "Local Comercial en Arriendo – Temuco",
-    "descripcion": "Local comercial disponible para arriendo en Temuco. Excelente ubicación con alto flujo de clientes. Ideal para cualquier tipo de negocio o emprendimiento. Consulta por precio y condiciones a San Emilio Propiedades.",
-    "precioCLP": 0,
+    "titulo": "Local Comercial Farmacia en Arriendo – Temuco",
+    "descripcion": "Local comercial disponible para arriendo en Temuco, actualmente destinado a farmacia. Excelente ubicación con alto flujo de clientes. Ideal para farmacia, negocio o emprendimiento.",
+    "precioCLP": 1150000,
     "operacion": "arriendo",
     "tipo": "comercial",
     "region": "La Araucanía",
@@ -1447,8 +1636,8 @@
     "dormitorios": 0,
     "banos": 1,
     "m2Utiles": 50,
-    "lat": -38.7380,
-    "lng": -72.5990,
+    "lat": -38.738,
+    "lng": -72.599,
     "imagenPrincipal": "propiedades-imgs/local comercial temuco arriendo/607518436_17882859927429157_8525507005056209527_n.jpg",
     "galeria": [
       "propiedades-imgs/local comercial temuco arriendo/607518436_17882859927429157_8525507005056209527_n.jpg",
@@ -1464,14 +1653,18 @@
       "propiedades-imgs/local comercial temuco arriendo/608159297_17882859891429157_4099559527548053161_n.jpg",
       "propiedades-imgs/local comercial temuco arriendo/608425674_17882859828429157_503880206606972038_n.jpg"
     ],
-    "caracteristicas": ["local comercial", "arriendo", "alto flujo"],
+    "caracteristicas": [
+      "local comercial",
+      "arriendo",
+      "alto flujo"
+    ],
     "destacada": false
   },
   {
     "id": 52,
     "titulo": "Terreno en Venta – Trizano con Pedro de Valdivia, Temuco",
-    "descripcion": "Terreno en venta en la intersección de calle Trizano con Pedro de Valdivia, Temuco. Excelente ubicación en sector de crecimiento urbano. Ideal para construir o invertir. Consulta por precio, superficie y condiciones.",
-    "precioCLP": 0,
+    "descripcion": "Terreno en venta en la intersección de calle Trizano con Pedro de Valdivia, Temuco. Excelente ubicación en sector de crecimiento urbano. Ideal para construir o invertir.",
+    "precioCLP": 300000000,
     "operacion": "venta",
     "tipo": "terreno",
     "region": "La Araucanía",
@@ -1480,21 +1673,25 @@
     "banos": 0,
     "m2Utiles": 0,
     "m2Terreno": 1500,
-    "lat": -38.7470,
-    "lng": -72.6350,
+    "lat": -38.747,
+    "lng": -72.635,
     "imagenPrincipal": "propiedades-imgs/terreno trizano con pedro de valdivia/605118987_17882294820429157_7199296873037847004_n.jpg",
     "galeria": [
       "propiedades-imgs/terreno trizano con pedro de valdivia/605118987_17882294820429157_7199296873037847004_n.jpg",
       "propiedades-imgs/terreno trizano con pedro de valdivia/605184823_17882294829429157_305782661225053826_n.jpg"
     ],
-    "caracteristicas": ["terreno urbano", "esquina", "inversion"],
+    "caracteristicas": [
+      "terreno urbano",
+      "esquina",
+      "inversion"
+    ],
     "destacada": false
   },
   {
     "id": 53,
     "titulo": "Parcela en Venta – Curacautín",
     "descripcion": "Hermosa parcela en venta en Curacautín, La Araucanía. Sector de alto valor natural cercano a Reserva Nacional Malalcahuello y Termas de Tolhuaca. Ideal para construir refugio, cabaña o desarrollo turístico. Entorno natural inigualable.",
-    "precioCLP": 0,
+    "precioCLP": 37500000,
     "operacion": "venta",
     "tipo": "parcela",
     "region": "La Araucanía",
@@ -1524,7 +1721,12 @@
       "propiedades-imgs/parcela curacautin/604416198_17882127783429157_4603069849350154309_n.jpg",
       "propiedades-imgs/parcela curacautin/604568484_17882127699429157_354217524019120199_n.jpg"
     ],
-    "caracteristicas": ["naturaleza", "reserva nacional", "termas", "turismo"],
+    "caracteristicas": [
+      "naturaleza",
+      "reserva nacional",
+      "termas",
+      "turismo"
+    ],
     "destacada": false
   }
 ]

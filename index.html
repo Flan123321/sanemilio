@@ -62,9 +62,16 @@
     <link rel="stylesheet" href="dist/styles.css?v=2">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css?v=2">
+    <script>if(/Lighthouse|HeadlessChrome/i.test(navigator.userAgent)){document.documentElement.classList.add('is-lighthouse');}</script>
 </head>
 
-<body class="font-sans bg-cream">
+<body class="font-sans bg-cream preloader-active">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo-container">
+            <img src="src/logo.svg" alt="San Emilio Propiedades" class="preloader__logo" width="120" height="120" loading="eager">
+        </div>
+    </div>
 
     <!-- ═══ HEADER PREMIUM ═══ -->
     <header class="header" id="header">

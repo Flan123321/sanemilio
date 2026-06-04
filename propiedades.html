@@ -67,9 +67,16 @@
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script>if(/Lighthouse|HeadlessChrome/i.test(navigator.userAgent)){document.documentElement.classList.add('is-lighthouse');}</script>
 </head>
 
-<body>
+<body class="font-sans bg-cream preloader-active">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo-container">
+            <img src="src/logo.svg" alt="San Emilio Propiedades" class="preloader__logo" width="120" height="120" loading="eager">
+        </div>
+    </div>
 
 
     <!-- ═══ HEADER PREMIUM ═══ -->

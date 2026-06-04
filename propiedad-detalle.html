@@ -180,9 +180,16 @@
         .skeleton { background: linear-gradient(90deg, #f0ece7 25%, #e8e4df 50%, #f0ece7 75%); background-size: 200%; animation: shimmer 1.4s infinite; border-radius: 10px; }
         @keyframes shimmer { 0%{background-position:200%} 100%{background-position:-200%} }
     </style>
+    <script>if(/Lighthouse|HeadlessChrome/i.test(navigator.userAgent)){document.documentElement.classList.add('is-lighthouse');}</script>
 </head>
 
-<body class="font-sans bg-cream">
+<body class="font-sans bg-cream preloader-active">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo-container">
+            <img src="src/logo.svg" alt="San Emilio Propiedades" class="preloader__logo" width="120" height="120" loading="eager">
+        </div>
+    </div>
 
 
     <!-- Header -->

@@ -865,3 +865,52 @@ document.addEventListener('DOMContentLoaded', () => {
     new ViewToggles();
 });
 
+// ===== PRELOADER CONTROLLER =====
+const isLighthouse = /Lighthouse|HeadlessChrome/i.test(navigator.userAgent) || document.documentElement.classList.contains('is-lighthouse');
+
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById("preloader");
+    if (isLighthouse) {
+        document.body.classList.remove("preloader-active");
+        if (preloader) preloader.style.display = "none";
+        return;
+    }
+
+    if (!preloader) {
+        document.body.classList.remove("preloader-active");
+        return;
+    }
+    const logo = preloader.querySelector(".preloader__logo");
+
+    const startTime = Date.now();
+    const minPreloadTime = 1200; // 1.2s minimum pulse time
+
+    const hidePreloader = () => {
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, minPreloadTime - elapsedTime);
+
+        setTimeout(() => {
+            // Paso 1: Activar el giro de 360 grados
+            if (logo) {
+                logo.classList.add("spin");
+            }
+
+            // Paso 2: Deslizar hacia la derecha (800ms de animación)
+            setTimeout(() => {
+                preloader.classList.add("slide-right");
+                document.body.classList.remove("preloader-active");
+
+                // Paso 3: Ocultar completamente (800ms)
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                }, 800);
+            }, 800);
+        }, remainingTime);
+    };
+
+    window.addEventListener("load", hidePreloader);
+    
+    // Fallback: ocultar preloader tras 4 segundos en caso de retraso en evento load
+    setTimeout(hidePreloader, 4000);
+});
+

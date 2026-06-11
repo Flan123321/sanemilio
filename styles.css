@@ -2379,7 +2379,7 @@ section {
     }
 
     .hero-v2__inner {
-        padding: 20px 0 100px;
+        padding: 60px 0 120px;
     }
 
     .hero-v2__stats {
@@ -2423,7 +2423,7 @@ section {
 
 @media (max-width: 480px) {
     .hero-v2__inner {
-        padding: 10px 0 120px;
+        padding: 80px 0 140px;
     }
 
     .hero-v2__stats {

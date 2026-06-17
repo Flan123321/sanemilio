@@ -398,7 +398,7 @@
     <!-- Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1781660106"></script>
 
     <script>
     (() => {
@@ -448,7 +448,7 @@
 
             let propiedades;
             try {
-                const res = await fetch('propiedades.json');
+                const res = await fetch('propiedades.json?t=' + new Date().getTime());
                 propiedades = await res.json();
             } catch {
                 showError(); return;
@@ -478,9 +478,7 @@
 
             // Price
             const precioEl = $('propPrecio');
-            if (prop.precioTexto) {
-                precioEl.textContent = prop.precioTexto;
-            } else if (prop.precioCLP && prop.precioCLP > 0) {
+            if (prop.precioCLP && prop.precioCLP > 0) {
                 precioEl.textContent = fmt(prop.precioCLP);
             } else if (prop.precioUF) {
                 precioEl.textContent = `UF ${prop.precioUF.toLocaleString('es-CL')}`;

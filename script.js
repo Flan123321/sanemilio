@@ -285,7 +285,9 @@ class PropertyManager {
 
             const price = document.createElement('div');
             price.className = 'property-price';
-            if (prop.precioCLP && prop.precioCLP > 0) {
+            if (prop.precioTexto) {
+                price.textContent = prop.precioTexto;
+            } else if (prop.precioCLP && prop.precioCLP > 0) {
                 price.textContent = formatCurrency(prop.precioCLP);
             } else if (prop.precioUF) {
                 price.textContent = `UF ${prop.precioUF.toLocaleString('es-CL')}`;

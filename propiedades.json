@@ -1001,7 +1001,7 @@
     "id": 31,
     "titulo": "Casa Esquina en Venta – Javiera Carrera, Temuco",
     "descripcion": "Excelente propiedad de esquina en calle Javiera Carrera, Temuco. Ubicación privilegiada con acceso desde dos calles. Ideal para vivienda o desarrollo comercial. Contacta a San Emilio Propiedades para más información.",
-    "precioCLP": 85000000,
+    "precioCLP": 200000000,
     "operacion": "venta",
     "tipo": "casa",
     "region": "La Araucanía",
@@ -1029,49 +1029,6 @@
       "terreno amplio"
     ],
     "destacada": false
-  },
-  {
-    "id": 26,
-    "titulo": "Hermosa Casa en Venta – Fundo El Carmen, Temuco",
-    "descripcion": "Amplia y hermosa casa de dos pisos en venta en el sector Fundo El Carmen, Temuco. Fachada gris-azul con amplias ventanas. Dos plantas bien distribuidas con múltiples dormitorios, baños, living comedor, cocina y patio. Precio: $175 millones. Excelente oportunidad en uno de los sectores más tranquilos y codiciados del poniente de Temuco.",
-    "precioCLP": 175000000,
-    "operacion": "venta",
-    "tipo": "casa",
-    "region": "La Araucanía",
-    "comuna": "Temuco",
-    "dormitorios": 4,
-    "banos": 2,
-    "m2Utiles": 120,
-    "m2Terreno": 250,
-    "lat": -38.7128,
-    "lng": -72.6564,
-    "imagenPrincipal": "propiedades-imgs/casa-fundo-el-carmen/portada.jpg",
-    "galeria": [
-      "propiedades-imgs/casa-fundo-el-carmen/portada.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/1.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/10.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/11.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/12.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/13.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/14.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/15.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/17.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/18.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/2.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/3.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/4.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/5.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/6.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/7.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/8.jpg",
-      "propiedades-imgs/casa-fundo-el-carmen/9.jpg"
-    ],
-    "caracteristicas": [
-      "dos pisos",
-      "patio",
-      "sector tranquilo"
-    ],
-    "destacada": true
   },
   {
     "id": 44,

@@ -2710,40 +2710,6 @@
     "destacada": false
   },
   {
-    "id": 94,
-    "titulo": "Propiedad en Se Arrienda Departamento Valle Javiera",
-    "descripcion": "",
-    "precioCLP": 60000000,
-    "operacion": "arriendo",
-    "tipo": "departamento",
-    "region": "La Araucanía",
-    "comuna": "Temuco",
-    "dormitorios": 3,
-    "banos": 2,
-    "imagenPrincipal": "propiedades-imgs/SE ARRIENDA Departamento valle javiera/portada.jpg",
-    "galeria": [
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/portada.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/684259404_17900856651429157_7236702725537913962_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/685766297_17900856669429157_5215125886762401604_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/687258008_17900856642429157_5834385131109206436_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/687397127_17900856633429157_470402425161801951_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/687726585_17900856666429157_2009110531124669884_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688164725_17900856714429157_7535198798651282388_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688506588_17900856678429157_5866884952628770693_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688578672_17900856705429157_1971150830055948774_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688822639_17900856624429157_3565580762104384645_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688872966_17900856615429157_1739598026205473653_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688964805_17900856723429157_7420632137442790227_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/689024773_17900856606429157_8284378125561340255_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/689808832_17900856687429157_2728292532812043126_n.jpg",
-      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/694321508_17900856696429157_2587249204011300211_n.jpg"
-    ],
-    "caracteristicas": [
-      "estacionamiento"
-    ],
-    "destacada": false
-  },
-  {
     "id": 95,
     "titulo": "Propiedad en Se Vende O Arrienda Duplex Temuco",
     "descripcion": "",

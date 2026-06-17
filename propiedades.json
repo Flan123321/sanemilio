@@ -2688,44 +2688,6 @@
     "destacada": false
   },
   {
-    "id": 92,
-    "titulo": "Propiedad en Rahuealtoosorno",
-    "descripcion": "",
-    "precioCLP": 150000000,
-    "operacion": "venta",
-    "tipo": "casa",
-    "region": "Los Lagos",
-    "comuna": "Osorno",
-    "dormitorios": 3,
-    "banos": 2,
-    "imagenPrincipal": "propiedades-imgs/rahuealtoosorno/portada.jpg",
-    "galeria": [
-      "propiedades-imgs/rahuealtoosorno/portada.jpg",
-      "propiedades-imgs/rahuealtoosorno/670004922_17897261208429157_1874242483530329652_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670261082_17897261106429157_5795119743893145670_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670264531_17897261088429157_3071712006421969292_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670266295_17897261097429157_4370702435694256102_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670327438_17897261199429157_8048859043762625023_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670329946_17897261163429157_3635153162153010710_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670384713_17897261235429157_4722093239141707304_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670400519_17897261124429157_6200620805026638718_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670404051_17897261079429157_6772161709196190868_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670405307_17897261115429157_1051119335957974875_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670486321_17897261145429157_4454385680086294992_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670524189_17897261226429157_5165164008991461943_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670823378_17897261190429157_923912578853987220_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670859494_17897261172429157_6964250393466428494_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/670903723_17897261136429157_5214056073312330996_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/671152047_17897261181429157_3663949514488580228_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/671852747_17897261154429157_8674070520052141178_n.jpg",
-      "propiedades-imgs/rahuealtoosorno/673766055_17897261217429157_2148643574341287015_n.jpg"
-    ],
-    "caracteristicas": [
-      "estacionamiento"
-    ],
-    "destacada": false
-  },
-  {
     "id": 93,
     "titulo": "Propiedad en Refugios De Coñaripe",
     "descripcion": "",

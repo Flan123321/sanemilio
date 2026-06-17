@@ -1725,5 +1725,1537 @@
       "turismo"
     ],
     "destacada": false
+  },
+  {
+    "id": 54,
+    "titulo": "Propiedad en 2,5 Ha Cerca De Temuco Sector San Luis",
+    "descripcion": "Excelente oportunidad. Propiedad en 2,5 Ha Cerca De Temuco Sector San Luis ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/2,5 ha cerca de temuco sector san luis/561502288_17874220671429157_6937573017610606834_n.jpg",
+    "galeria": [
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/561502288_17874220671429157_6937573017610606834_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/563604331_17874220509429157_5627231438883063345_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/562835640_17874220500429157_90664306578260192_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/559259579_17874220491429157_8238387625760817745_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/562567284_17874220722429157_3958284337946439665_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/562540854_17874220680429157_7693075526052354066_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/562391271_17874220518429157_5488357009257807178_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/562385601_17874220713429157_5654598712257277948_n.jpg",
+      "propiedades-imgs/2,5 ha cerca de temuco sector san luis/561802201_17874220386429157_3628396854177661667_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 55,
+    "titulo": "Propiedad en Arrienda Casa En Labranza Roja",
+    "descripcion": "Excelente oportunidad. Propiedad en Arrienda Casa En Labranza Roja ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "arriendo",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/686971629_17900563128429157_4373444947408980934_n.jpg",
+    "galeria": [
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/686971629_17900563128429157_4373444947408980934_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/687302686_17900563119429157_5247683370863449537_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684162430_17900563224429157_5041369452407316058_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684842788_17900563287429157_3330923174612115476_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684508687_17900563242429157_8029645738446274223_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/686516743_17900563197429157_1903567622659450528_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/688899475_17900563146429157_4109047630621928120_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684654149_17900563185429157_8855005863507361037_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684226581_17900563296429157_6555710520707172221_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/689282147_17900563215429157_3676442759179412495_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684704208_17900563233429157_310376538227835211_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/688220940_17900563143429157_3829870795168276437_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684638935_17900563155429157_8171733440741387883_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/684237037_17900563269429157_7235968040732221213_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA EN LABRANZA roja/686202223_17900563194429157_1904658974907360830_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 56,
+    "titulo": "Propiedad en Arrienda Casa – Villa Santa Luisa Temuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Arrienda Casa – Villa Santa Luisa Temuco ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "arriendo",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/696104914_17901701283429157_882674369989507446_n.jpg",
+    "galeria": [
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/696104914_17901701283429157_882674369989507446_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/696164773_17901701148429157_1878657721001418972_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/696122983_17901701160429157_6559603285163422205_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/694618204_17901701139429157_2785431755791745724_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/691949401_17901701178429157_5272508924081848824_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/696933567_17901701241429157_4219166771804044671_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/696753402_17901701187429157_209391463487376640_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/698583097_17901701130429157_7734010656362490046_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/695182866_17901701109429157_3851838075427812800_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/697142000_17901701232429157_1829995942308108537_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/695788105_17901701214429157_4097513624943279629_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/698473544_17901701169429157_3722139173133952776_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/696150822_17901701274429157_490553879419098315_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/695301248_17901701262429157_3850801830680910599_n.jpg",
+      "propiedades-imgs/ARRIENDA CASA – VILLA SANTA LUISA TEMUCO/695795431_17901701196429157_3865659516484655817_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 57,
+    "titulo": "Propiedad en Arrienda Departamento Remodelado – Condominio Lomas De Javiera, Temuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Arrienda Departamento Remodelado – Condominio Lomas De Javiera, Temuco ubicada en el sector de Temuco, Región de La Araucanía. Esta departamento cuenta con excelentes accesos y conectividad. El precio de venta es de $60.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 60000000,
+    "operacion": "arriendo",
+    "tipo": "departamento",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/689498092_17900855547429157_7129467523774690738_n.jpg",
+    "galeria": [
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/689498092_17900855547429157_7129467523774690738_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/684259404_17900855592429157_4408495786822859666_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/688097855_17900855556429157_8730539648119291480_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/685863046_17900855583429157_2609748838489411875_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/688141915_17900855601429157_3640098395544847367_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/694241618_17900855628429157_2839003107347476448_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/689885040_17900855565429157_2904174137493678687_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/689041018_17900855610429157_5364878928039263271_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/686188281_17900855637429157_2867739438915893059_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/688032951_17900855625429157_3356858700117185511_n.jpg",
+      "propiedades-imgs/arrienda departamento remodelado – Condominio Lomas de Javiera, Temuco/688255039_17900855574429157_6419137640362759068_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 58,
+    "titulo": "Propiedad en Arrienda Thiers 11",
+    "descripcion": "Excelente oportunidad. Propiedad en Arrienda Thiers 11 ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "arriendo",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/ARRIENDA thiers 11/702545549_17902724727429157_8903238897618551797_n.jpg",
+    "galeria": [
+      "propiedades-imgs/ARRIENDA thiers 11/702545549_17902724727429157_8903238897618551797_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703260698_17902724847429157_2239233291634147975_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/702731968_17902724829429157_1901362363367962079_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703503749_17902724838429157_2801138668840735770_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/702695991_17902724877429157_4320762924493172213_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703111858_17902724706429157_8584781714442487019_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703844644_17902724757429157_8702565453635061878_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703906925_17902724748429157_4956523454214366541_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703571805_17902724799429157_7515117579134647109_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/702763779_17902724790429157_6465025822917388841_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703519877_17902724697429157_2926546119031279203_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/702280943_17902724820429157_4067238319908866295_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/704057377_17902724715429157_4583344133901428967_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/703519877_17902724781429157_1071620108449811985_n.jpg",
+      "propiedades-imgs/ARRIENDA thiers 11/702912006_17902724739429157_9109419290981991789_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 59,
+    "titulo": "Propiedad en Campo Freire",
+    "descripcion": "Excelente oportunidad. Propiedad en Campo Freire ubicada en el sector de Freire, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Freire",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/campo freire/563899693_17874312495429157_2861591507691436818_n.jpg",
+    "galeria": [
+      "propiedades-imgs/campo freire/563899693_17874312495429157_2861591507691436818_n.jpg",
+      "propiedades-imgs/campo freire/564032262_17874312504429157_7755651545912505064_n.jpg",
+      "propiedades-imgs/campo freire/562879365_17874312531429157_163409495425577870_n.jpg",
+      "propiedades-imgs/campo freire/561753115_17874312534429157_4791930426489575300_n.jpg",
+      "propiedades-imgs/campo freire/561177596_17874312477429157_5199329598745217982_n.jpg",
+      "propiedades-imgs/campo freire/562798811_17874312486429157_5074881861743252363_n.jpg",
+      "propiedades-imgs/campo freire/562487368_17874312516429157_8827275015779148404_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 60,
+    "titulo": "Propiedad en Casa Antigua Casco Antiguo Temuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Antigua Casco Antiguo Temuco ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa antigua casco antiguo temuco/582184420_17877945537429157_1950539878194614786_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa antigua casco antiguo temuco/582184420_17877945537429157_1950539878194614786_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/581340956_17877945534429157_7987739740532779267_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/581853397_17877945528429157_5730405117971485579_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/582016622_17877945525429157_2480065229398963488_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/583869773_17877945522429157_5272195082290939633_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/582020581_17877945462429157_5741660731060869361_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/582542283_17877945510429157_8724693230161495365_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/583009318_17877945513429157_9141031268094161980_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/583090093_17877945453429157_172149728267276656_n.jpg",
+      "propiedades-imgs/casa antigua casco antiguo temuco/583238822_17877945531429157_2887638484370417807_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 61,
+    "titulo": "Propiedad en Casa Condominio La Foresta",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Condominio La Foresta ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa condominio la foresta/554818096_17872778865429157_5802319767164428738_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa condominio la foresta/554818096_17872778865429157_5802319767164428738_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/553027790_17872778784429157_7290112936882588174_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/555040899_17872778826429157_8660619629024447502_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/556442745_17872778802429157_236948805223498343_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/554494752_17872778877429157_1233879970358168670_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/553729135_17872778907429157_4035887850490750999_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/554939439_17872778775429157_4998675512000326714_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/554382091_17872778793429157_3359361682116842929_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/555212721_17872778847429157_7640021202426527650_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/553587502_17872778835429157_8553378589675224194_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/554759023_17872778814429157_7349925517098451381_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/553582868_17872778898429157_1928738892023279645_n.jpg",
+      "propiedades-imgs/casa condominio la foresta/556256927_17872778889429157_6389259362647865944_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 62,
+    "titulo": "Propiedad en Casa En Venta Fundo El Carmen",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa En Venta Fundo El Carmen ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa en venta fundo el carmen/620328158_17885751264429157_4604219362229763520_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa en venta fundo el carmen/620328158_17885751264429157_4604219362229763520_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620907250_17885751285429157_7514633054498118421_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620786847_17885751177429157_707909094327417498_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620976988_17885751330429157_7429066712130336384_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620771756_17885751168429157_6041802389634737881_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620511179_17885751387429157_9050076087375750415_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620702752_17885751246429157_3037322524743567181_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/621195389_17885751210429157_8997459504874138708_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620929371_17885751186429157_7028023682474401452_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/621216760_17885751342429157_909569565217276454_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/619976387_17885751396429157_5323237068033001007_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/620820117_17885751219429157_1919525937232425277_n.jpg",
+      "propiedades-imgs/casa en venta fundo el carmen/621127055_17885751201429157_2198354307000871584_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 63,
+    "titulo": "Propiedad en Casa En Venta Loncoche",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa En Venta Loncoche ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa en venta loncoche/653706979_17892833088429157_2852631867400563524_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa en venta loncoche/653706979_17892833088429157_2852631867400563524_n.jpg",
+      "propiedades-imgs/casa en venta loncoche/652394508_17892833106429157_8322295777995526270_n.jpg",
+      "propiedades-imgs/casa en venta loncoche/652042002_17892833076429157_9149604139852637508_n.jpg",
+      "propiedades-imgs/casa en venta loncoche/653911538_17892833097429157_6582078655949896864_n.jpg",
+      "propiedades-imgs/casa en venta loncoche/653962298_17892833079429157_6989271177551986483_n.jpg",
+      "propiedades-imgs/casa en venta loncoche/653697242_17892833058429157_3112965785435386670_n.jpg",
+      "propiedades-imgs/casa en venta loncoche/654029441_17892833043429157_6210313734114593060_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 64,
+    "titulo": "Propiedad en Casa En Venta Villa Afrodita – Calle San Valentín, Loncoche",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa En Venta Villa Afrodita – Calle San Valentín, Loncoche ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652799523_17892828987429157_6808099041444198579_n.jpg",
+    "galeria": [
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652799523_17892828987429157_6808099041444198579_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652777707_17892829032429157_331891612394994976_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652569715_17892829023429157_6307776611677374215_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/653453390_17892828966429157_5451894165246019013_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652773888_17892829071429157_927035683293548617_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652681979_17892829050429157_7458163009246530944_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/654292057_17892829062429157_2435969902360659789_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/653523567_17892828993429157_3897588860708457729_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652799511_17892829005429157_6888826124683378577_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652871281_17892829047429157_6886062587793468361_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652560915_17892829020429157_3326885653281069835_n.jpg",
+      "propiedades-imgs/CASA EN VENTA Villa Afrodita – Calle San Valentín, Loncoche/652942710_17892828990429157_2209802458325312466_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 65,
+    "titulo": "Propiedad en Casa Esquina Javiera Carrera",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Esquina Javiera Carrera ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa esquina javiera carrera/631472270_17888190078429157_6883320339708242662_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa esquina javiera carrera/631472270_17888190078429157_6883320339708242662_n.jpg",
+      "propiedades-imgs/casa esquina javiera carrera/631492109_17888190033429157_8151904851427959287_n.jpg",
+      "propiedades-imgs/casa esquina javiera carrera/631341187_17888190069429157_930997291832811842_n.jpg",
+      "propiedades-imgs/casa esquina javiera carrera/632343587_17888190024429157_9071976619218328192_n.jpg",
+      "propiedades-imgs/casa esquina javiera carrera/631291069_17888190042429157_6120453192159464852_n.jpg",
+      "propiedades-imgs/casa esquina javiera carrera/632220126_17888190060429157_1224932808961353648_n.jpg",
+      "propiedades-imgs/casa esquina javiera carrera/631979522_17888190087429157_1255653602914691358_n.jpg",
+      "propiedades-imgs/casa esquina javiera carrera/631524863_17888190057429157_5505984896756841051_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 66,
+    "titulo": "Propiedad en Casa Fundo El Carmen 4",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Fundo El Carmen 4 ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa fundo el carmen 4/543682308_17870499498429157_3315368642725332282_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa fundo el carmen 4/543682308_17870499498429157_3315368642725332282_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/542935085_17870499612429157_8325046168160228927_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/542862162_17870499510429157_8055801782179050169_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/542774371_17870499576429157_3314100903620746265_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/543633532_17870499585429157_613445547743339319_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/543714274_17870499525429157_551875754294438614_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/542832984_17870499543429157_6591428789677878934_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/543658225_17870499507429157_3406502044237100505_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/543682311_17870499588429157_5754594381822730180_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/542846608_17870499522429157_1603130975626788249_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/542860254_17870499561429157_8912353943352481816_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/543781056_17870499513429157_6374731680824334738_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/542799109_17870499540429157_3304528343710079251_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/543608795_17870499552429157_8583645647631084654_n.jpg",
+      "propiedades-imgs/casa fundo el carmen 4/543038767_17870499603429157_5971748193600206363_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 67,
+    "titulo": "Propiedad en Casa Local Comercial Fundo El Carmen",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Local Comercial Fundo El Carmen ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa local comercial fundo el carmen/556422215_17872803630429157_5522586725560204096_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa local comercial fundo el carmen/556422215_17872803630429157_5522586725560204096_n.jpg",
+      "propiedades-imgs/casa local comercial fundo el carmen/556868457_17872803618429157_387692719535023024_n.jpg",
+      "propiedades-imgs/casa local comercial fundo el carmen/554606985_17872803615429157_4436015358411018485_n.jpg",
+      "propiedades-imgs/casa local comercial fundo el carmen/555001947_17872803567429157_2551212545084350700_n.jpg",
+      "propiedades-imgs/casa local comercial fundo el carmen/556998056_17872803648429157_6832313549297753220_n.jpg",
+      "propiedades-imgs/casa local comercial fundo el carmen/554346963_17872803588429157_7460408532747430_n.jpg",
+      "propiedades-imgs/casa local comercial fundo el carmen/556822413_17872803591429157_1446369104992863225_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 68,
+    "titulo": "Propiedad en Casa Local Comercial Los Nogales",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Local Comercial Los Nogales ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa local comercial los nogales/614905980_17884509519429157_4919713077411770591_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa local comercial los nogales/614905980_17884509519429157_4919713077411770591_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613578747_17884509585429157_7685830054662337474_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/610821311_17884509420429157_77434861324187791_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/612419220_17884509537429157_6205444263694727908_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613186264_17884509573429157_7630834879368365538_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613663387_17884509453429157_1068080900235143350_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613544745_17884509546429157_747623517926649887_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613610382_17884509564429157_4964411870907952161_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/610829927_17884509483429157_5261517122199876384_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/614971682_17884509465429157_3975876243438374197_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613207542_17884509501429157_2068183388531070366_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613673440_17884509456429157_2883248555325211772_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/612589328_17884509510429157_8516172379929639838_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/613502956_17884509435429157_332161579623097182_n.jpg",
+      "propiedades-imgs/casa local comercial los nogales/614855651_17884509474429157_2524088090622076147_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 69,
+    "titulo": "Propiedad en Casa Parcela Pitrufquen",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Parcela Pitrufquen ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $25.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 25000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa parcela pitrufquen/566513645_17874872313429157_4279426463050278298_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa parcela pitrufquen/566513645_17874872313429157_4279426463050278298_n.jpg",
+      "propiedades-imgs/casa parcela pitrufquen/567129187_17874872349429157_828693125055268773_n.jpg",
+      "propiedades-imgs/casa parcela pitrufquen/566479984_17874872334429157_5259773257035038740_n.jpg",
+      "propiedades-imgs/casa parcela pitrufquen/565617560_17874872325429157_3186818933434345781_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 70,
+    "titulo": "Propiedad en Casa Parque Rayenco",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Parque Rayenco ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa parque rayenco/523924957_17864936988429157_1336137010585471462_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa parque rayenco/523924957_17864936988429157_1336137010585471462_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523728910_17864937135429157_3453462905946147101_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523414901_17864937162429157_7131682877505502113_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523561437_17864937153429157_869183928084578532_n.jpg",
+      "propiedades-imgs/casa parque rayenco/524130920_17864937069429157_7228494710407643268_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523713574_17864937117429157_5188031628838989074_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523459256_17864937132429157_4101344696938151826_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523615201_17864937006429157_3697617122240444938_n.jpg",
+      "propiedades-imgs/casa parque rayenco/524379308_17864937099429157_7585589214004031152_n.jpg",
+      "propiedades-imgs/casa parque rayenco/524276919_17864937051429157_8971695364163635601_n.jpg",
+      "propiedades-imgs/casa parque rayenco/524385117_17864937024429157_3218062045490463979_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523588633_17864937144429157_2229859537820302429_n.jpg",
+      "propiedades-imgs/casa parque rayenco/524483499_17864936997429157_5052862083815191651_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523112387_17864937042429157_6681701522363429479_n.jpg",
+      "propiedades-imgs/casa parque rayenco/523705709_17864937033429157_8752172418948871815_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 71,
+    "titulo": "Propiedad en Casa Pedro De Valdivia Lainin",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Pedro De Valdivia Lainin ubicada en el sector de Valdivia, Región de Los Ríos. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "Los Ríos",
+    "comuna": "Valdivia",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa pedro de valdivia lainin/616136287_17884805583429157_8558003046029756559_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa pedro de valdivia lainin/616136287_17884805583429157_8558003046029756559_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/615625280_17884805517429157_4347311216204333463_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/615552423_17884805547429157_8420534092038843192_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/615456487_17884805592429157_6867761140395442422_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/615367169_17884805574429157_3059699736039881967_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/615775499_17884805556429157_3440067339332660601_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/616271863_17884805520429157_2457774652863085318_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/615454103_17884805571429157_1789910964211078213_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/616196375_17884805559429157_3866161009646653589_n.jpg",
+      "propiedades-imgs/casa pedro de valdivia lainin/615857712_17884805562429157_3410370331757619524_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 72,
+    "titulo": "Propiedad en Casa Pucón 10000Uf Aprox",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Pucón 10000Uf Aprox ubicada en el sector de Pucón, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de 10.000 UF. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 0,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Pucón",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa pucón 10000uf aprox/620920529_17885752251429157_3806649569328577623_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa pucón 10000uf aprox/620920529_17885752251429157_3806649569328577623_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/621143909_17885752248429157_867921231633606052_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/621357183_17885752245429157_5636495161249059238_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/620322794_17885752173429157_4185408611812519132_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/620726294_17885752254429157_55617915104849046_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/620845236_17885752221429157_8467499247729857757_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/620730686_17885752230429157_3100491814349907818_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/621219704_17885752197429157_2748841025260547859_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/620718923_17885752218429157_2432143790301756450_n.jpg",
+      "propiedades-imgs/casa pucón 10000uf aprox/620326774_17885752182429157_3641600650431333097_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false,
+    "precioUF": 10000
+  },
+  {
+    "id": 73,
+    "titulo": "Propiedad en Casa Sector Pomona Temuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Casa Sector Pomona Temuco ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/casa sector pomona temuco/569396971_17875829340429157_9049823411397369057_n.jpg",
+    "galeria": [
+      "propiedades-imgs/casa sector pomona temuco/569396971_17875829340429157_9049823411397369057_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/569971503_17875829319429157_1406674957243486871_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/572287326_17875829358429157_2257894678790871605_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/571553334_17875829322429157_6553760817569970016_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/568999891_17875829295429157_5760184880175741028_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/570485603_17875829316429157_4386584236698997542_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/569774900_17875829349429157_7765477456844334778_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/571491444_17875829331429157_1115942499378039082_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/572159805_17875829376429157_6565768780236126281_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/573156825_17875829385429157_2531229010791557361_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/569686628_17875829418429157_7846170014779643416_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/569159476_17875829403429157_526105008733700616_n.jpg",
+      "propiedades-imgs/casa sector pomona temuco/573168027_17875829421429157_8045932925480017804_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 74,
+    "titulo": "Propiedad en Departamento Cerca Mall Temuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Departamento Cerca Mall Temuco ubicada en el sector de Temuco, Región de La Araucanía. Esta departamento cuenta con excelentes accesos y conectividad. El precio de venta es de $75.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 75000000,
+    "operacion": "venta",
+    "tipo": "departamento",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/departamento cerca mall temuco/518456383_17863162146429157_2349151358400653125_n.jpg",
+    "galeria": [
+      "propiedades-imgs/departamento cerca mall temuco/518456383_17863162146429157_2349151358400653125_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517871868_17863162158429157_6736068253385201796_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517306547_17863162188429157_8089080385477739667_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517945169_17863162137429157_7233442472234472220_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/518282313_17863162197429157_210495419395179724_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517940225_17863162089429157_7714801223860927470_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517994309_17863162077429157_284547091039681966_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517861237_17863162110429157_6884814514427465532_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/516855816_17863162128429157_7295272909366539703_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517030530_17863162167429157_6203857768511490775_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517817535_17863162119429157_3583104190159823033_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517972484_17863162176429157_3666328973622167736_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/518017893_17863162098429157_8675937295294371077_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517934247_17863162068429157_777902987950036906_n.jpg",
+      "propiedades-imgs/departamento cerca mall temuco/517320797_17863162032429157_7519039602417784617_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 75,
+    "titulo": "Propiedad en Departamento Jardin De Los Reyes 2 Dormitorios",
+    "descripcion": "Excelente oportunidad. Propiedad en Departamento Jardin De Los Reyes 2 Dormitorios ubicada en el sector de Temuco, Región de La Araucanía. Esta departamento cuenta con excelentes accesos y conectividad. El precio de venta es de $75.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 75000000,
+    "operacion": "venta",
+    "tipo": "departamento",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522915680_17864720529429157_6664267120403776122_n.jpg",
+    "galeria": [
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522915680_17864720529429157_6664267120403776122_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522408399_17864720520429157_2809952007902105737_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/521674257_17864720457429157_836401944282810829_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/523317903_17864720430429157_8101907033671061501_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522196270_17864720439429157_7437247065267880703_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/523328621_17864720448429157_2913743697404015062_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522657174_17864720547429157_2128790360503946226_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522977493_17864720493429157_4745946216689957390_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/523487319_17864720466429157_1025105999827282265_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/521943712_17864720574429157_8366341656314467769_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/523349912_17864720484429157_2361881665625409733_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522978076_17864720565429157_4280890181357892001_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522667439_17864720556429157_3467190256399730310_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/522928554_17864720502429157_8805657453333308476_n.jpg",
+      "propiedades-imgs/departamento jardin de los reyes 2 dormitorios/523452239_17864720538429157_4761066746143019326_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 76,
+    "titulo": "Propiedad en Departamento Pucón",
+    "descripcion": "Excelente oportunidad. Propiedad en Departamento Pucón ubicada en el sector de Pucón, Región de La Araucanía. Esta departamento cuenta con excelentes accesos y conectividad. El precio de venta es de $95.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 95000000,
+    "operacion": "venta",
+    "tipo": "departamento",
+    "region": "La Araucanía",
+    "comuna": "Pucón",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/departamento pucón/626621409_17887279221429157_2859294025564128547_n.jpg",
+    "galeria": [
+      "propiedades-imgs/departamento pucón/626621409_17887279221429157_2859294025564128547_n.jpg",
+      "propiedades-imgs/departamento pucón/625770552_17887279224429157_1817252986844012250_n.jpg",
+      "propiedades-imgs/departamento pucón/626519739_17887279128429157_6697557051086523028_n.jpg",
+      "propiedades-imgs/departamento pucón/626421760_17887279179429157_8475660280907597537_n.jpg",
+      "propiedades-imgs/departamento pucón/626671443_17887279137429157_7779728998030423977_n.jpg",
+      "propiedades-imgs/departamento pucón/627441160_17887279188429157_4820989605196115493_n.jpg",
+      "propiedades-imgs/departamento pucón/626439784_17887279164429157_6639982260769185751_n.jpg",
+      "propiedades-imgs/departamento pucón/626452163_17887279197429157_1784333952122936192_n.jpg",
+      "propiedades-imgs/departamento pucón/626582288_17887279206429157_8101909761906385068_n.jpg",
+      "propiedades-imgs/departamento pucón/626447275_17887279146429157_2451336281778674145_n.jpg",
+      "propiedades-imgs/departamento pucón/627002917_17887279125429157_4630349085046620058_n.jpg",
+      "propiedades-imgs/departamento pucón/627650986_17887279260429157_8385745329141981332_n.jpg",
+      "propiedades-imgs/departamento pucón/627154135_17887279170429157_6719530244944861284_n.jpg",
+      "propiedades-imgs/departamento pucón/627054901_17887279251429157_4306477449034816481_n.jpg",
+      "propiedades-imgs/departamento pucón/626819726_17887279110429157_2617155968105881295_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 77,
+    "titulo": "Propiedad en Local Comercial Calle Lautaro Temuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Local Comercial Calle Lautaro Temuco ubicada en el sector de Lautaro, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Lautaro",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/local comercial calle lautaro temuco/627300669_17887903239429157_4500486727741619552_n.jpg",
+    "galeria": [
+      "propiedades-imgs/local comercial calle lautaro temuco/627300669_17887903239429157_4500486727741619552_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/627463973_17887903275429157_8742779296440739548_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/627527792_17887903230429157_1665255033687414475_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/628691608_17887903368429157_3751386971748762129_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/627677253_17887903359429157_5284072909511556852_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/627379519_17887903356429157_6691708581954823015_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/629734116_17887903311429157_2173495471191080418_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/626562810_17887903284429157_5999898071989564683_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/627608488_17887903302429157_3834827179217286405_n.jpg",
+      "propiedades-imgs/local comercial calle lautaro temuco/629064030_17887903341429157_2496675041127735883_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 78,
+    "titulo": "Propiedad en Local Comercial Puerto Ingles Arriendo",
+    "descripcion": "Excelente oportunidad. Propiedad en Local Comercial Puerto Ingles Arriendo ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/local comercial puerto ingles arriendo/544812341_17870549247429157_8312501586021672337_n.jpg",
+    "galeria": [
+      "propiedades-imgs/local comercial puerto ingles arriendo/544812341_17870549247429157_8312501586021672337_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/544332642_17870549211429157_4818026974364616630_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/543673870_17870549190429157_414131479627808378_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/544082528_17870549202429157_4247589911854297177_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/543706889_17870549238429157_3888447471131430234_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/543687534_17870549166429157_180909505041681649_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/544114237_17870549193429157_5058883078222704125_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/543411037_17870549139429157_5747720112557124486_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/542841494_17870549127429157_8405035474832821628_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/544076671_17870549229429157_8252302089788108228_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/543993272_17870549157429157_2502508640705092411_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/543667993_17870549226429157_3446921721198036025_n.jpg",
+      "propiedades-imgs/local comercial puerto ingles arriendo/544073752_17870549148429157_4468315833275674174_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 79,
+    "titulo": "Propiedad en Los Pellines Vilcun",
+    "descripcion": "Excelente oportunidad. Propiedad en Los Pellines Vilcun ubicada en el sector de Vilcún, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Vilcún",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/los pellines vilcun/562658613_17874321471429157_6435761745662042630_n.jpg",
+    "galeria": [
+      "propiedades-imgs/los pellines vilcun/562658613_17874321471429157_6435761745662042630_n.jpg",
+      "propiedades-imgs/los pellines vilcun/562562779_17874321480429157_6266838772298425921_n.jpg",
+      "propiedades-imgs/los pellines vilcun/564157719_17874321489429157_834806993399956975_n.jpg",
+      "propiedades-imgs/los pellines vilcun/564100240_17874321498429157_1733983482185244934_n.jpg",
+      "propiedades-imgs/los pellines vilcun/564917482_17874321546429157_7014306662814597311_n.jpg",
+      "propiedades-imgs/los pellines vilcun/562532401_17874321462429157_2892038646587903287_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 80,
+    "titulo": "Propiedad en Molco Pucón",
+    "descripcion": "Excelente oportunidad. Propiedad en Molco Pucón ubicada en el sector de Pucón, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Pucón",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/molco pucón/670843546_17897408481429157_403416432326608590_n.jpg",
+    "galeria": [
+      "propiedades-imgs/molco pucón/670843546_17897408481429157_403416432326608590_n.jpg",
+      "propiedades-imgs/molco pucón/671125708_17897408544429157_8563581151222522912_n.jpg",
+      "propiedades-imgs/molco pucón/670271391_17897408613429157_4085690727361881493_n.jpg",
+      "propiedades-imgs/molco pucón/671065987_17897408571429157_6704991502413071144_n.jpg",
+      "propiedades-imgs/molco pucón/670732563_17897408580429157_969098983426617953_n.jpg",
+      "propiedades-imgs/molco pucón/671050574_17897408598429157_4432316143742765971_n.jpg",
+      "propiedades-imgs/molco pucón/671852319_17897408643429157_2815754928645126491_n.jpg",
+      "propiedades-imgs/molco pucón/670390506_17897408616429157_2856301663312375231_n.jpg",
+      "propiedades-imgs/molco pucón/670379468_17897408631429157_7315474269855046702_n.jpg",
+      "propiedades-imgs/molco pucón/671022318_17897408490429157_4606359085322365171_n.jpg",
+      "propiedades-imgs/molco pucón/670871918_17897408535429157_586202565763392549_n.jpg",
+      "propiedades-imgs/molco pucón/671864737_17897408553429157_7720554414623199449_n.jpg",
+      "propiedades-imgs/molco pucón/670392859_17897408517429157_8583483071329513789_n.jpg",
+      "propiedades-imgs/molco pucón/670808974_17897408499429157_4781736332727540303_n.jpg",
+      "propiedades-imgs/molco pucón/671828027_17897408508429157_7723037410607233997_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 81,
+    "titulo": "Propiedad en Parcela 9 De Julio",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcela 9 De Julio ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $25.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 25000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcela 9 de julio/652736635_17892825957429157_2583098413866861098_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcela 9 de julio/652736635_17892825957429157_2583098413866861098_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/652331497_17892825975429157_7813734006927885922_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/653396115_17892826056429157_711231176244118327_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/652772642_17892825966429157_7231360116026174273_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/653414967_17892825894429157_4023765914483010147_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/653053072_17892825948429157_7677989532647854245_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/651855197_17892825918429157_7767579372815815193_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/653956715_17892825921429157_7901557327274798769_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/652794604_17892825915429157_1453850432446137735_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/654419900_17892825939429157_5654977871211175633_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/652619428_17892826029429157_1835804865777916595_n.jpg",
+      "propiedades-imgs/parcela 9 de julio/652799791_17892825930429157_8892637061263258941_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 82,
+    "titulo": "Propiedad en Parcela Los Tilos Los Angeles",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcela Los Tilos Los Angeles ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $30.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 30000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/PARCELA LOS TILOS LOS ANGELES/672360543_18342411262243749_6731450080387853458_n.jpg",
+    "galeria": [
+      "propiedades-imgs/PARCELA LOS TILOS LOS ANGELES/672360543_18342411262243749_6731450080387853458_n.jpg",
+      "propiedades-imgs/PARCELA LOS TILOS LOS ANGELES/671825271_18342411265243749_6368325931795934609_n.jpg",
+      "propiedades-imgs/PARCELA LOS TILOS LOS ANGELES/670144170_18342411220243749_3221701751399388310_n.jpg",
+      "propiedades-imgs/PARCELA LOS TILOS LOS ANGELES/670492951_18342411256243749_8364335658748159280_n.jpg",
+      "propiedades-imgs/PARCELA LOS TILOS LOS ANGELES/670439925_18342411229243749_7792490836020525160_n.jpg",
+      "propiedades-imgs/PARCELA LOS TILOS LOS ANGELES/671825271_18342411238243749_4613424582421860335_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 83,
+    "titulo": "Propiedad en Parcela Molco Alto",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcela Molco Alto ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $35.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 35000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcela molco alto/656087038_17894269812429157_5505041519300495215_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcela molco alto/656087038_17894269812429157_5505041519300495215_n.jpg",
+      "propiedades-imgs/parcela molco alto/657162697_17894269836429157_1569476643083606511_n.jpg",
+      "propiedades-imgs/parcela molco alto/656600080_17894269848429157_2533356969557294121_n.jpg",
+      "propiedades-imgs/parcela molco alto/656325596_17894269839429157_1993146909547051964_n.jpg",
+      "propiedades-imgs/parcela molco alto/656817355_17894269821429157_872726153401489637_n.jpg",
+      "propiedades-imgs/parcela molco alto/656024341_17894269803429157_6763805788305435957_n.jpg",
+      "propiedades-imgs/parcela molco alto/658025203_17894269875429157_811096204604473441_n.jpg",
+      "propiedades-imgs/parcela molco alto/656325588_17894269794429157_5658729569839975200_n.jpg",
+      "propiedades-imgs/parcela molco alto/657050267_17894269863429157_2358215199689810728_n.jpg",
+      "propiedades-imgs/parcela molco alto/656086750_17894269866429157_1114759943517025488_n.jpg",
+      "propiedades-imgs/parcela molco alto/656020580_17894269776429157_7434944271919134075_n.jpg",
+      "propiedades-imgs/parcela molco alto/657053365_17894269785429157_1624086201162791052_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 84,
+    "titulo": "Propiedad en Parcela Rio Donguil Gorbea",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcela Rio Donguil Gorbea ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $35.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 35000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcela rio donguil gorbea/528678277_17866634451429157_4981333928176112111_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcela rio donguil gorbea/528678277_17866634451429157_4981333928176112111_n.jpg",
+      "propiedades-imgs/parcela rio donguil gorbea/528897152_17866634433429157_8040991628836335974_n.jpg",
+      "propiedades-imgs/parcela rio donguil gorbea/529284823_17866634442429157_8258877624067920507_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 85,
+    "titulo": "Propiedad en Parcela Santa Justa Metrenco",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcela Santa Justa Metrenco ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $30.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 30000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcela santa justa metrenco/561299379_17873761116429157_6655606223963130983_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcela santa justa metrenco/561299379_17873761116429157_6655606223963130983_n.jpg",
+      "propiedades-imgs/parcela santa justa metrenco/559370596_17873761137429157_9187731971013997690_n.jpg",
+      "propiedades-imgs/parcela santa justa metrenco/558976793_17873761146429157_1886766868454739093_n.jpg",
+      "propiedades-imgs/parcela santa justa metrenco/560614054_17873761107429157_6897197324591893258_n.jpg",
+      "propiedades-imgs/parcela santa justa metrenco/559306056_17873761092429157_7138600377344688713_n.jpg",
+      "propiedades-imgs/parcela santa justa metrenco/559868365_17873761125429157_166396507075038094_n.jpg",
+      "propiedades-imgs/parcela santa justa metrenco/559891541_17873761095429157_909252684446762928_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 86,
+    "titulo": "Propiedad en Parcela Sector El Liuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcela Sector El Liuco ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $35.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 35000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcela sector el liuco/589102701_17879682069429157_7781892028158577773_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcela sector el liuco/589102701_17879682069429157_7781892028158577773_n.jpg",
+      "propiedades-imgs/parcela sector el liuco/590925289_17879682051429157_391383238137761147_n.jpg",
+      "propiedades-imgs/parcela sector el liuco/589032837_17879682048429157_2582887417843200611_n.jpg",
+      "propiedades-imgs/parcela sector el liuco/591140759_17879681961429157_7806880404064924765_n.jpg",
+      "propiedades-imgs/parcela sector el liuco/589829299_17879681970429157_8382509878049629189_n.jpg",
+      "propiedades-imgs/parcela sector el liuco/589102697_17879681988429157_4745021166349793030_n.jpg",
+      "propiedades-imgs/parcela sector el liuco/590863834_17879681979429157_3422614184384847104_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 87,
+    "titulo": "Propiedad en Parcelación Club De Campo Tres Cumbres Puerto Montt",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcelación Club De Campo Tres Cumbres Puerto Montt ubicada en el sector de Puerto Montt, Región de Los Lagos. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $25.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 25000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "Los Lagos",
+    "comuna": "Puerto Montt",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523361965_17864947188429157_2890189432907561295_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523361965_17864947188429157_2890189432907561295_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523623605_17864947107429157_7428601572643165271_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523112381_17864947104429157_1995105819441661496_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/522696835_17864947197429157_9058033123598108561_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/522678950_17864947080429157_6498568445200651453_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523571795_17864947152429157_8536222720564317512_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523623605_17864947179429157_7957656129912218164_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/524393338_17864947071429157_631082475486590269_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523944757_17864947134429157_6443117248137574985_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/522677851_17864947170429157_3752351705683862859_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523400854_17864947062429157_2934258244077081979_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523114123_17864947116429157_3603244281326826167_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523340061_17864947125429157_2222395884219692694_n.jpg",
+      "propiedades-imgs/parcelación club de campo tres cumbres puerto montt/523085767_17864947089429157_7963259563333024345_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 88,
+    "titulo": "Propiedad en Parcelas 2 Hectareas Puerto Montt",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcelas 2 Hectareas Puerto Montt ubicada en el sector de Puerto Montt, Región de Los Lagos. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $35.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 35000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "Los Lagos",
+    "comuna": "Puerto Montt",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcelas 2 hectareas puerto montt/527566332_17866175010429157_1011498469308611009_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527566332_17866175010429157_1011498469308611009_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/528265942_17866174989429157_15332282043846967_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527236735_17866175019429157_7409373405096450296_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527677770_17866174953429157_4378034337484783011_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527440667_17866174938429157_2872589465677788875_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/528245763_17866174929429157_467522952095703534_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527301310_17866174974429157_2935481227310191193_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527463909_17866174992429157_811475014781483610_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/526618597_17866174920429157_3652772755483981173_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527055566_17866174962429157_496204565260577518_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/528336920_17866174965429157_1977412490811777659_n.jpg",
+      "propiedades-imgs/parcelas 2 hectareas puerto montt/527499201_17866175001429157_8793341108235992826_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 89,
+    "titulo": "Propiedad en Parcelas Alto Mune",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcelas Alto Mune ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $35.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 35000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcelas alto mune/Captura de pantalla 2026-06-10 173819.png",
+    "galeria": [
+      "propiedades-imgs/parcelas alto mune/Captura de pantalla 2026-06-10 173819.png"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 90,
+    "titulo": "Propiedad en Parcelas Pucón",
+    "descripcion": "Excelente oportunidad. Propiedad en Parcelas Pucón ubicada en el sector de Pucón, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $30.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 30000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Pucón",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/parcelas pucón/544323750_17870675589429157_2222757025751948875_n.jpg",
+    "galeria": [
+      "propiedades-imgs/parcelas pucón/544323750_17870675589429157_2222757025751948875_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 91,
+    "titulo": "Propiedad en Quicha Mahuida Traiguen",
+    "descripcion": "Excelente oportunidad. Propiedad en Quicha Mahuida Traiguen ubicada en el sector de Traiguén, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Traiguén",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/quicha mahuida traiguen/542836413_17870372925429157_2056422999034482696_n.jpg",
+    "galeria": [
+      "propiedades-imgs/quicha mahuida traiguen/542836413_17870372925429157_2056422999034482696_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/542738118_17870372988429157_9007168908642604500_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/542247578_17870372880429157_8641969717384075122_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/543552980_17870372934429157_3077919053036660117_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/542726440_17870372862429157_217108828580021078_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/543699119_17870372871429157_7194689165551944145_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/543599207_17870372907429157_7486648398322442932_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/544776415_17870372853429157_1628792537296041202_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/542588721_17870372889429157_8988012638934481301_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/542807918_17870372898429157_1978074789038474001_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/544081670_17870372991429157_3539233249823116960_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/542859848_17870372916429157_8947602536186107513_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/543667375_17870372973429157_8739784726553879638_n.jpg",
+      "propiedades-imgs/quicha mahuida traiguen/543703182_17870372964429157_3465220331917219609_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 92,
+    "titulo": "Propiedad en Rahuealtoosorno",
+    "descripcion": "Excelente oportunidad. Propiedad en Rahuealtoosorno ubicada en el sector de Osorno, Región de Los Lagos. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "Los Lagos",
+    "comuna": "Osorno",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/rahuealtoosorno/671758942_17897261070429157_5240410607776078389_n.jpg",
+    "galeria": [
+      "propiedades-imgs/rahuealtoosorno/671758942_17897261070429157_5240410607776078389_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670327438_17897261199429157_8048859043762625023_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670859494_17897261172429157_6964250393466428494_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670264531_17897261088429157_3071712006421969292_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670404051_17897261079429157_6772161709196190868_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670266295_17897261097429157_4370702435694256102_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670524189_17897261226429157_5165164008991461943_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670823378_17897261190429157_923912578853987220_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670329946_17897261163429157_3635153162153010710_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/671152047_17897261181429157_3663949514488580228_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670261082_17897261106429157_5795119743893145670_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670004922_17897261208429157_1874242483530329652_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/671852747_17897261154429157_8674070520052141178_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/670405307_17897261115429157_1051119335957974875_n.jpg",
+      "propiedades-imgs/rahuealtoosorno/673766055_17897261217429157_2148643574341287015_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 93,
+    "titulo": "Propiedad en Refugios De Coñaripe",
+    "descripcion": "Excelente oportunidad. Propiedad en Refugios De Coñaripe ubicada en el sector de Panguipulli, Región de Los Ríos. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "Los Ríos",
+    "comuna": "Panguipulli",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/refugios de coñaripe/563563492_17874502188429157_7729137668330336913_n.jpg",
+    "galeria": [
+      "propiedades-imgs/refugios de coñaripe/563563492_17874502188429157_7729137668330336913_n.jpg",
+      "propiedades-imgs/refugios de coñaripe/564424703_17874502248429157_846368105162379242_n.jpg",
+      "propiedades-imgs/refugios de coñaripe/565956140_17874502227429157_671779912095298903_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 94,
+    "titulo": "Propiedad en Se Arrienda Departamento Valle Javiera",
+    "descripcion": "Excelente oportunidad. Propiedad en Se Arrienda Departamento Valle Javiera ubicada en el sector de Temuco, Región de La Araucanía. Esta departamento cuenta con excelentes accesos y conectividad. El precio de venta es de $60.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 60000000,
+    "operacion": "arriendo",
+    "tipo": "departamento",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/SE ARRIENDA Departamento valle javiera/694321508_17900856696429157_2587249204011300211_n.jpg",
+    "galeria": [
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/694321508_17900856696429157_2587249204011300211_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688061565_17900856597429157_2667467636470859150_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688164725_17900856714429157_7535198798651282388_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688822639_17900856624429157_3565580762104384645_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688506588_17900856678429157_5866884952628770693_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/689024773_17900856606429157_8284378125561340255_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688964805_17900856723429157_7420632137442790227_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688872966_17900856615429157_1739598026205473653_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/689808832_17900856687429157_2728292532812043126_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/687397127_17900856633429157_470402425161801951_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/688578672_17900856705429157_1971150830055948774_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/687258008_17900856642429157_5834385131109206436_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/687726585_17900856666429157_2009110531124669884_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/684259404_17900856651429157_7236702725537913962_n.jpg",
+      "propiedades-imgs/SE ARRIENDA Departamento valle javiera/685766297_17900856669429157_5215125886762401604_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 95,
+    "titulo": "Propiedad en Se Vende O Arrienda Duplex Temuco",
+    "descripcion": "Excelente oportunidad. Propiedad en Se Vende O Arrienda Duplex Temuco ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/se vende o arrienda duplex temuco/524188993_17865177807429157_2561005045960283592_n.jpg",
+    "galeria": [
+      "propiedades-imgs/se vende o arrienda duplex temuco/524188993_17865177807429157_2561005045960283592_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 96,
+    "titulo": "Propiedad en Sitio Vilcun",
+    "descripcion": "Excelente oportunidad. Propiedad en Sitio Vilcun ubicada en el sector de Vilcún, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Vilcún",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/sitio vilcun/572543024_17875724976429157_8627964080056585904_n.jpg",
+    "galeria": [
+      "propiedades-imgs/sitio vilcun/572543024_17875724976429157_8627964080056585904_n.jpg",
+      "propiedades-imgs/sitio vilcun/569211425_17875724979429157_983498258056697964_n.jpg",
+      "propiedades-imgs/sitio vilcun/565041260_17875724961429157_8197128051222777250_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 97,
+    "titulo": "Propiedad en Termas Huife",
+    "descripcion": "Excelente oportunidad. Propiedad en Termas Huife ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/termas huife/570473589_17875624173429157_3043118931743884368_n.jpg",
+    "galeria": [
+      "propiedades-imgs/termas huife/570473589_17875624173429157_3043118931743884368_n.jpg",
+      "propiedades-imgs/termas huife/568908117_17875624110429157_163449444065504406_n.jpg",
+      "propiedades-imgs/termas huife/568754127_17875624164429157_8528937508282418263_n.jpg",
+      "propiedades-imgs/termas huife/564363317_17875624137429157_5162104674676560788_n.jpg",
+      "propiedades-imgs/termas huife/569361076_17875624155429157_8221246859961450007_n.jpg",
+      "propiedades-imgs/termas huife/569181435_17875624125429157_2634971818708559056_n.jpg",
+      "propiedades-imgs/termas huife/568751073_17875624128429157_1125392392280806990_n.jpg",
+      "propiedades-imgs/termas huife/569013962_17875624146429157_4585494610107153670_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 98,
+    "titulo": "Propiedad en Terreno Industrial Lautaro",
+    "descripcion": "Excelente oportunidad. Propiedad en Terreno Industrial Lautaro ubicada en el sector de Lautaro, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Lautaro",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/terreno industrial lautaro/563414358_17874321831429157_8931777467283514261_n.jpg",
+    "galeria": [
+      "propiedades-imgs/terreno industrial lautaro/563414358_17874321831429157_8931777467283514261_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/562392245_17874321867429157_4362089337214000953_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/560435981_17874321840429157_4592159322693591123_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/561845720_17874321849429157_6446325212980471058_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/561184758_17874321864429157_8499037018343371236_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/562721011_17874321885429157_2623961873632049867_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/564728359_17874321813429157_8031016059322639483_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/564358477_17874321822429157_5039987819545638909_n.jpg",
+      "propiedades-imgs/terreno industrial lautaro/562531103_17874321876429157_7506161987483944662_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 99,
+    "titulo": "Propiedad en Terreno Pedro De Valdivia",
+    "descripcion": "Excelente oportunidad. Propiedad en Terreno Pedro De Valdivia ubicada en el sector de Valdivia, Región de Los Ríos. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "Los Ríos",
+    "comuna": "Valdivia",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/terreno pedro de valdivia/544109944_17870223582429157_7844244035789126796_n.jpg",
+    "galeria": [
+      "propiedades-imgs/terreno pedro de valdivia/544109944_17870223582429157_7844244035789126796_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/543703563_17870223564429157_3152090984659620699_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/544058079_17870223591429157_6642686364305118306_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/541974875_17870223522429157_3208598034015010367_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/543660093_17870223531429157_4738663158924055895_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/540538436_17870223573429157_1448995872000318405_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/543690337_17870223504429157_5094268674760273113_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/542301846_17870223540429157_3806479246502746133_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/540693835_17870223495429157_1311979776046979611_n.jpg",
+      "propiedades-imgs/terreno pedro de valdivia/541536678_17870223549429157_1583130748914347102_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 100,
+    "titulo": "Propiedad en Tres Parcelas Colicheo",
+    "descripcion": "Excelente oportunidad. Propiedad en Tres Parcelas Colicheo ubicada en el sector de Temuco, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $30.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 30000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/tres parcelas colicheo/671129793_18342567928243749_6541778815259921772_n.jpg",
+    "galeria": [
+      "propiedades-imgs/tres parcelas colicheo/671129793_18342567928243749_6541778815259921772_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670610171_18342567937243749_2708591365597250615_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670450503_18342567910243749_940987065399286676_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670836880_18342567946243749_2288434086343397339_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/671753141_18342567859243749_913194088442331787_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670269248_18342567847243749_7816739284693986279_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/671077105_18342567919243749_8070059926189547162_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670835468_18342567838243749_4618364554239059115_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670450512_18342567898243749_4266542247886813230_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670902626_18342567820243749_5600881249711469625_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/671774013_18342567835243749_5027192748074858963_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670727526_18342567877243749_7971740693280628717_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670466541_18342567868243749_2212833878140158646_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/670851332_18342567889243749_8043237465772698388_n.jpg",
+      "propiedades-imgs/tres parcelas colicheo/673835292_18342567805243749_8182387687818531097_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 101,
+    "titulo": "Propiedad en Vende Casa En Gorbea",
+    "descripcion": "Excelente oportunidad. Propiedad en Vende Casa En Gorbea ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/VENDE CASA EN GORBEA/673805573_17898425133429157_2863962275530096952_n.jpg",
+    "galeria": [
+      "propiedades-imgs/VENDE CASA EN GORBEA/673805573_17898425133429157_2863962275530096952_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/671178566_17898425031429157_4914547128677880188_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/671181506_17898425124429157_8717178606645175153_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/671260726_17898425109429157_3561854502274847826_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/672270107_17898425076429157_8541777952298373363_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/673774306_17898425046429157_4825018265212793417_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/671812909_17898425079429157_5104429888593867431_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/672245934_17898425094429157_2064830420929385635_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/671828017_17898425049429157_7243425522010014150_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/670943779_17898425151429157_4253337524460634014_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/672452819_17898425097429157_4998621708603550768_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/671814920_17898425058429157_3072535596384681395_n.jpg",
+      "propiedades-imgs/VENDE CASA EN GORBEA/671780109_17898425148429157_1570890685060954345_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 102,
+    "titulo": "Propiedad en Vende Casa Población Lanin",
+    "descripcion": "Excelente oportunidad. Propiedad en Vende Casa Población Lanin ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $120.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 120000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/vende casa población lanin/542297978_17870372625429157_4230264386958628545_n.jpg",
+    "galeria": [
+      "propiedades-imgs/vende casa población lanin/542297978_17870372625429157_4230264386958628545_n.jpg",
+      "propiedades-imgs/vende casa población lanin/542373532_17870372568429157_2005955558110283727_n.jpg",
+      "propiedades-imgs/vende casa población lanin/544057217_17870372541429157_2598541552739824374_n.jpg",
+      "propiedades-imgs/vende casa población lanin/544784703_17870372604429157_1163033837888579884_n.jpg",
+      "propiedades-imgs/vende casa población lanin/542848836_17870372550429157_2157074453414552425_n.jpg",
+      "propiedades-imgs/vende casa población lanin/542862618_17870372559429157_8268790442894119874_n.jpg",
+      "propiedades-imgs/vende casa población lanin/543033497_17870372610429157_3778487584117445717_n.jpg",
+      "propiedades-imgs/vende casa población lanin/544796771_17870372607429157_269263604160988_n.jpg",
+      "propiedades-imgs/vende casa población lanin/543631930_17870372532429157_3458942905219114840_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 103,
+    "titulo": "Propiedad en Vende Hermosa Y Amplia Casa En Fundo El Carmen  Azul",
+    "descripcion": "Excelente oportunidad. Propiedad en Vende Hermosa Y Amplia Casa En Fundo El Carmen  Azul ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $80.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 80000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/659556355_17894806137429157_7262175579081408721_n.jpg",
+    "galeria": [
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/659556355_17894806137429157_7262175579081408721_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657737858_17894806284429157_2786555733565289160_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657257715_17894806215429157_8374218286566121537_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/658080574_17894806248429157_1691226135084031246_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/658853254_17894806182429157_6009561063376265392_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657240179_17894806209429157_7017350732247895308_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657788848_17894806302429157_880477841870603511_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/656292371_17894806212429157_5355277056188071897_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/659684269_17894806218429157_3648904237630356390_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657053473_17894806281429157_5890845607801860876_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657192670_17894806155429157_2301276383523863809_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657582830_17894806146429157_4543742859482641619_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/658757000_17894806179429157_7459017511372463190_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/656291098_17894806227429157_6641264914427203419_n.jpg",
+      "propiedades-imgs/vende hermosa y amplia casa en Fundo El Carmen  azul/657843965_17894806239429157_7607156902960742411_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 104,
+    "titulo": "Propiedad en Venta O Arriendo Parcela Freire Sector Los Pelales",
+    "descripcion": "Excelente oportunidad. Propiedad en Venta O Arriendo Parcela Freire Sector Los Pelales ubicada en el sector de Freire, Región de La Araucanía. Esta parcela cuenta con excelentes accesos y conectividad. El precio de venta es de $25.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 25000000,
+    "operacion": "venta",
+    "tipo": "parcela",
+    "region": "La Araucanía",
+    "comuna": "Freire",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/venta o arriendo parcela freire sector los pelales/562818371_17874314511429157_1996348403746609643_n.jpg",
+    "galeria": [
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/562818371_17874314511429157_1996348403746609643_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/563600312_17874314469429157_7116041135848544873_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/561843748_17874314478429157_616227510188914184_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/562043955_17874314439429157_4215795402629439879_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/563467087_17874314460429157_2703780691903248814_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/561549181_17874314448429157_9204719493011424919_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/563182664_17874314400429157_4633343112368370107_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/564204775_17874314412429157_9015872645603733030_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/561871030_17874314541429157_186665367231548062_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/563316213_17874314520429157_398728909272766806_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/562878235_17874314550429157_4643874730366188958_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/562489545_17874314529429157_2329274939049619593_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/562748839_17874314571429157_7564080248677306750_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/563427844_17874314583429157_4213224065646464191_n.jpg",
+      "propiedades-imgs/venta o arriendo parcela freire sector los pelales/562035562_17874314601429157_2877575460693402149_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 105,
+    "titulo": "Propiedad en Venta – Edificio Alpes",
+    "descripcion": "Excelente oportunidad. Propiedad en Venta – Edificio Alpes ubicada en el sector de Temuco, Región de La Araucanía. Esta casa cuenta con excelentes accesos y conectividad. El precio de venta es de $150.000.000. Contáctanos en San Emilio Propiedades para más detalles y agendar una visita.",
+    "precioCLP": 150000000,
+    "operacion": "venta",
+    "tipo": "casa",
+    "region": "La Araucanía",
+    "comuna": "Temuco",
+    "dormitorios": 3,
+    "banos": 2,
+    "imagenPrincipal": "propiedades-imgs/venta – Edificio Alpes/689517001_17901012852429157_3704863212377745970_n.jpg",
+    "galeria": [
+      "propiedades-imgs/venta – Edificio Alpes/689517001_17901012852429157_3704863212377745970_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/689444458_17901012834429157_9007478231352295043_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/696232117_17901012786429157_4907154698177695889_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/691431092_17901012765429157_5781712019753960975_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/688295699_17901012804429157_4228049694770648562_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/688183974_17901012777429157_1766815894908803742_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/687682570_17901012813429157_8777909229105074304_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/688769653_17901012825429157_3616299853053756548_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/688888300_17901012795429157_634241087944095218_n.jpg",
+      "propiedades-imgs/venta – Edificio Alpes/688265306_17901012756429157_8200845352811199614_n.jpg"
+    ],
+    "caracteristicas": [
+      "estacionamiento"
+    ],
+    "destacada": false
   }
 ]
